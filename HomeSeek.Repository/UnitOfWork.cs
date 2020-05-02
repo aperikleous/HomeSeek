@@ -9,11 +9,15 @@ namespace HomeSeek.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
+      
         private readonly MyDatabase _context;
+
+        public PlaceRepository Places { get; private set; }
 
         public UnitOfWork(MyDatabase context)
         {
             _context = context;
+            Places = new PlaceRepository(_context);
             //Courses = new CourseRepository(_context);
             //Authors = new AuthorRepository(_context);
         }

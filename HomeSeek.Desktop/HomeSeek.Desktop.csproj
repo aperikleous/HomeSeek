@@ -49,5 +49,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HomeSeek.Database\HomeSeek.Database.csproj">
+      <Project>{AB965162-27A4-47D7-A357-2322163E9260}</Project>
+      <Name>HomeSeek.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeSeek.Entities\HomeSeek.Entities.csproj">
+      <Project>{DCCC8C66-27DD-41D6-99EA-F02B50804542}</Project>
+      <Name>HomeSeek.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeSeek.Repository\HomeSeek.Repository.csproj">
+      <Project>{9D25FC4A-3D7D-4C6D-80CC-07D9133E095F}</Project>
+      <Name>HomeSeek.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

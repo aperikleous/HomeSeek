@@ -11,13 +11,13 @@ namespace HomeSeek.Repository
 {
     public class AddressRepository : Repository<Address>
     {
-        public AddressRepository(ApplicationDbContext context) : base(context)
+        public AddressRepository(MyDatabase context) : base(context)
         {
         }
 
-        public ApplicationDbContext ApplicationDbContext
+        public MyDatabase MyDatabase
         {
-            get { return Context as ApplicationDbContext; }
+            get { return Context as MyDatabase; }
         }
     }
 }

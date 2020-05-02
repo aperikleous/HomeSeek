@@ -11,9 +11,9 @@ namespace HomeSeek.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly ApplicationDbContext Context;
+        protected readonly MyDatabase Context;
 
-        public Repository(ApplicationDbContext context)
+        public Repository(MyDatabase context)
         {
             Context = context;
         }
