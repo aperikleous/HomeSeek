@@ -8,8 +8,7 @@ namespace HomeSeek.Repository
 {
     public interface IUnitOfWork : IDisposable
     {
-        //ICourseRepository Courses { get; }
-        //IAuthorRepository Authors { get; }
+        IPlaceRepository Places { get; }
         int Complete();
     }
 }

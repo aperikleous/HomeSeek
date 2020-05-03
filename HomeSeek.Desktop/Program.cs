@@ -15,7 +15,11 @@ namespace HomeSeek.Desktop
             using (var unitOfWork = new UnitOfWork(new MyDatabase()))
             {
                 // Example1
-                var places = unitOfWork.Places.GetAll();
+                var places = unitOfWork.Places.GetAll() ;
+                foreach (var item in places)
+                {
+                    Console.WriteLine(item.ApartmentName);
+                }
 
                // Example2
                //var courses = unitOfWork.Courses.GetCoursesWithAuthors(1, 4);
@@ -24,7 +28,7 @@ namespace HomeSeek.Desktop
                //var author = unitOfWork.Authors.GetAuthorWithCourses(1);
                // unitOfWork.Courses.RemoveRange(author.Courses);
                // unitOfWork.Authors.Remove(author);
-                unitOfWork.Complete();
+                //unitOfWork.Complete();
             }
 
         }

@@ -19,5 +19,6 @@ namespace HomeSeek.Database
         {
             return new ApplicationDbContext();
         }
+
     }
 }
