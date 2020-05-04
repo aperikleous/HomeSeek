@@ -17,15 +17,10 @@ namespace HomeSeek.Repository
         {
             _context = context;
             Places = new PlaceRepository(_context);
-            //Courses = new CourseRepository(_context);
-            //Authors = new AuthorRepository(_context);
+
         }
 
         public IPlaceRepository Places { get; private set; }
-
-
-        //public ICourseRepository Courses { get; private set; }
-        //public IAuthorRepository Authors { get; private set; }
 
         public int Complete()
         {

@@ -18,15 +18,17 @@ namespace HomeSeek.Entities
         public DateTime CheckOutDate { get; set; }
         [CustomValidation(typeof(ValidationMethods), "GreaterThanZero")]
         public int DaysOfStaying { get; set; }
-        [DataType(DataType.Currency, ErrorMessage = "Price should contain only numbers."), CustomValidation(typeof(ValidationMethods), "GreaterThanZero")]
-        public decimal TotalPrice { get; set; }
+        [Required, Display(Name = "Payment Time")]
+        public DateTime PaymentDate { get; set; }
+        [Required, Display(Name = "Total Amount"), DataType(DataType.Currency, ErrorMessage = "Total amount should contain only numbers."), CustomValidation(typeof(ValidationMethods), "GreaterThanZero")]
+        public decimal TotalAmount { get; set; }
+        [Required, Display(Name = "Total Fees"), DataType(DataType.Currency, ErrorMessage = "Total fees should contain only numbers."), CustomValidation(typeof(ValidationMethods), "GreaterThanZero")]
+        public decimal TotalFees { get; set; }
 
 
         //Navigation Properties
-        public virtual Transaction Transaction { get; set; }
         public virtual Place Place { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
-        public virtual Review Review { get; set; }
 
 
         //Validation for Check out and Check in

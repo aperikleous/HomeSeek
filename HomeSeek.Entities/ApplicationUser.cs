@@ -32,6 +32,8 @@ namespace HomeSeek.Entities
 
         //Navigation Properties
         public virtual ICollection<Reservation> Reservations { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
+
     }
 
 }

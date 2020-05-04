@@ -17,6 +17,8 @@ namespace HomeSeek.Entities
         public string PostalCode { get; set; }
         public CountiesOfGreece Counties { get; set; }
         public Countries Countries { get; set; }
+        public decimal Latitude { get; set; }
+        public decimal Longitude { get; set; }
 
         //Navigation Properties
         public virtual ICollection<Place> Places { get; set; }

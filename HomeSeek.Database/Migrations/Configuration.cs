@@ -35,21 +35,15 @@
 
             //================= Seeding Reservations =================
             //Reservation template = new Reservation() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
-            Reservation r1 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalPrice = 210M };
-            Reservation r2 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalPrice = 675M };
-            Reservation r3 = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalPrice = 2290M };
+            Reservation r1 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = 210M, PaymentDate = new DateTime(2020, 5, 4), TotalFees = 21M };
+            Reservation r2 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = 675M,PaymentDate = new DateTime(2020, 6, 15), TotalFees = 67.5M };
+            Reservation r3 = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalAmount = 2290M,PaymentDate = new DateTime(2020, 7, 25), TotalFees = 229M };
 
             //================= Seeding Reviews =================
             //Review template = new Review() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
             Review rev1 = new Review() { Accuracy = 10, Checkin = 9, Cleanliness = 10, Location = 10, Value = 10, SubDate = new DateTime(2020, 6, 6), OverallRating = 9.1, Comment = "ola teleia" };
             Review rev2 = new Review() { Accuracy = 9, Checkin = 10, Cleanliness = 9, Location = 10, Value = 10, SubDate = new DateTime(2020, 7, 23), OverallRating = 9.1, Comment = "apisteuto service" };
             Review rev3 = new Review() { Accuracy = 8, Checkin = 9, Cleanliness = 8, Location = 10, Value = 10, SubDate = new DateTime(2020, 8, 31), OverallRating = 9.5, Comment = "Super" };
-
-            //================= Seeding Transactions =================
-            //Transaction template = new Transaction() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
-            Transaction t1 = new Transaction() { PaymentDate = new DateTime(2020, 5, 4), TotalAmount = 500, TotalFees = 120 };
-            Transaction t2 = new Transaction() { PaymentDate = new DateTime(2020, 6, 15), TotalAmount = 200, TotalFees = 80 };
-            Transaction t3 = new Transaction() { PaymentDate = new DateTime(2020, 7, 25), TotalAmount = 800, TotalFees = 160 };
 
             //================= Seeding Application User =================
             //ApplicationUser template = new ApplicationUser() { UserName = "", LastName = "", FirstName = "", City = "", DateOfBirth = new DateTime(1989, 08, 01) };
@@ -83,17 +77,17 @@
             p2.Photos = new List<Photo>() { ph2 };
             p3.Photos = new List<Photo>() { ph3 };
 
-            r1.Review = rev1;
-            r2.Review = rev2;
-            r3.Review = rev3;
+            p1.Reviews = new List<Review>() { rev1 };
+            p2.Reviews = new List<Review>() { rev2 };
+            p3.Reviews = new List<Review>() { rev3 };
+
+            rev1.ApplicationUser = ap1;
+            rev2.ApplicationUser = ap2;
+            rev3.ApplicationUser = ap3;
 
             r1.Place = p1;
             r2.Place = p2;
             r3.Place = p3;
-
-            r1.Transaction = t1;
-            r2.Transaction = t2;
-            r3.Transaction = t3;
 
             r1.ApplicationUser = ap1;
             r2.ApplicationUser = ap2;
@@ -101,7 +95,6 @@
 
 
             context.Reviews.AddOrUpdate(x => x.Accuracy, rev1, rev2, rev3);
-            context.Transactions.AddOrUpdate(x => x.TotalAmount, t1, t2, t3);
             context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3);
             context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3);
             context.Reservations.AddOrUpdate(x => x.DaysOfStaying, r1, r2, r3);

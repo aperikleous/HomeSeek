@@ -35,8 +35,7 @@ namespace HomeSeek.Entities
         public virtual Amenities Amenities { get; set; }
         public virtual ICollection<Reservation> Reservations { get; set; }
         public virtual ICollection<Photo> Photos { get; set; }
-
-        [Required]
+        public virtual ICollection<Review> Reviews { get; set; }
         public virtual Address Address { get; set; }
     }
 }

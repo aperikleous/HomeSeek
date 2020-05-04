@@ -10,7 +10,6 @@ namespace HomeSeek.Entities
 {
     public class Review
     {
-        [ForeignKey("Reservation")]
         public int ReviewId { get; set; }
         [Range(0, 10, ErrorMessage = "Values should be between 0 - 10.")]
         public int Accuracy { get; set; }
@@ -30,6 +29,7 @@ namespace HomeSeek.Entities
 
 
         //Navigation Properties
-        public virtual Reservation Reservation { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual Place Place { get; set; }
     }
 }
