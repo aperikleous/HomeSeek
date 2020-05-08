@@ -184,8 +184,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddressesController.cs" />
+    <Compile Include="Controllers\AmenitiesController.cs" />
+    <Compile Include="Controllers\ApplicationUsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PhotosController.cs" />
+    <Compile Include="Controllers\PlacesController.cs" />
+    <Compile Include="Controllers\ReservationsController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,9 +208,59 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\color.css" />
+    <Content Include="css\dashboard-style.css" />
+    <Content Include="css\invoice.css" />
+    <Content Include="css\plugins.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\shop.css" />
+    <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\datedropper.svg" />
+    <Content Include="fonts\fa-brands-400.svg" />
+    <Content Include="fonts\fa-duotone-900.svg" />
+    <Content Include="fonts\fa-light-300.svg" />
+    <Content Include="fonts\fa-regular-400.svg" />
+    <Content Include="fonts\fa-solid-900.svg" />
+    <Content Include="fonts\lg.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\all\1.jpg" />
+    <Content Include="images\all\59.jpg" />
+    <Content Include="images\all\menu\1.jpg" />
+    <Content Include="images\api.png" />
+    <Content Include="images\api\1.jpg" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\avatar\1.jpg" />
+    <Content Include="images\avatar\7.png" />
+    <Content Include="images\avatar\avatar-bg.png" />
+    <Content Include="images\bg\1.jpg" />
+    <Content Include="images\bg\hero\1.jpg" />
+    <Content Include="images\clients\1.png" />
+    <Content Include="images\clouds.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\gallery\thumbnail\1.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\map-bg.png" />
+    <Content Include="images\marker-placeholder.png" />
+    <Content Include="images\marker2.png" />
+    <Content Include="images\shop\1.jpg" />
+    <Content Include="images\shop\2.jpg" />
+    <Content Include="images\team\1.jpg" />
+    <Content Include="images\wave-top.png" />
+    <Content Include="js\charts.js" />
+    <Content Include="js\dashboard.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\map-add.js" />
+    <Content Include="js\map-listing.js" />
+    <Content Include="js\map-plugins.js" />
+    <Content Include="js\map-single.js" />
+    <Content Include="js\pjs.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\shop.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -227,6 +284,32 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="fonts\datedropper.eot" />
+    <Content Include="fonts\datedropper.ttf" />
+    <Content Include="fonts\datedropper.woff" />
+    <Content Include="fonts\fa-brands-400.eot" />
+    <Content Include="fonts\fa-brands-400.ttf" />
+    <Content Include="fonts\fa-brands-400.woff" />
+    <Content Include="fonts\fa-brands-400.woff2" />
+    <Content Include="fonts\fa-duotone-900.eot" />
+    <Content Include="fonts\fa-duotone-900.ttf" />
+    <Content Include="fonts\fa-duotone-900.woff" />
+    <Content Include="fonts\fa-duotone-900.woff2" />
+    <Content Include="fonts\fa-light-300.eot" />
+    <Content Include="fonts\fa-light-300.ttf" />
+    <Content Include="fonts\fa-light-300.woff" />
+    <Content Include="fonts\fa-light-300.woff2" />
+    <Content Include="fonts\fa-regular-400.eot" />
+    <Content Include="fonts\fa-regular-400.ttf" />
+    <Content Include="fonts\fa-regular-400.woff" />
+    <Content Include="fonts\fa-regular-400.woff2" />
+    <Content Include="fonts\fa-solid-900.eot" />
+    <Content Include="fonts\fa-solid-900.ttf" />
+    <Content Include="fonts\fa-solid-900.woff" />
+    <Content Include="fonts\fa-solid-900.woff2" />
+    <Content Include="fonts\lg.eot" />
+    <Content Include="fonts\lg.ttf" />
+    <Content Include="fonts\lg.woff" />
     <None Include="Scripts\jquery-3.5.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.0.js" />
     <Content Include="Scripts\jquery-3.5.0.min.js" />
@@ -353,6 +436,41 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Places\Create.cshtml" />
+    <Content Include="Views\Places\Delete.cshtml" />
+    <Content Include="Views\Places\Details.cshtml" />
+    <Content Include="Views\Places\Edit.cshtml" />
+    <Content Include="Views\Places\Index.cshtml" />
+    <Content Include="Views\Amenities\Create.cshtml" />
+    <Content Include="Views\Amenities\Delete.cshtml" />
+    <Content Include="Views\Amenities\Details.cshtml" />
+    <Content Include="Views\Amenities\Edit.cshtml" />
+    <Content Include="Views\Amenities\Index.cshtml" />
+    <Content Include="Views\Photos\Create.cshtml" />
+    <Content Include="Views\Photos\Delete.cshtml" />
+    <Content Include="Views\Photos\Details.cshtml" />
+    <Content Include="Views\Photos\Edit.cshtml" />
+    <Content Include="Views\Photos\Index.cshtml" />
+    <Content Include="Views\Addresses\Create.cshtml" />
+    <Content Include="Views\Addresses\Delete.cshtml" />
+    <Content Include="Views\Addresses\Details.cshtml" />
+    <Content Include="Views\Addresses\Edit.cshtml" />
+    <Content Include="Views\Addresses\Index.cshtml" />
+    <Content Include="Views\ApplicationUsers\Create.cshtml" />
+    <Content Include="Views\ApplicationUsers\Delete.cshtml" />
+    <Content Include="Views\ApplicationUsers\Details.cshtml" />
+    <Content Include="Views\ApplicationUsers\Edit.cshtml" />
+    <Content Include="Views\ApplicationUsers\Index.cshtml" />
+    <Content Include="Views\Reservations\Create.cshtml" />
+    <Content Include="Views\Reservations\Delete.cshtml" />
+    <Content Include="Views\Reservations\Details.cshtml" />
+    <Content Include="Views\Reservations\Edit.cshtml" />
+    <Content Include="Views\Reservations\Index.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Details.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -376,6 +494,10 @@
     <ProjectReference Include="..\HomeSeek.Entities\HomeSeek.Entities.csproj">
       <Project>{dccc8c66-27dd-41d6-99ea-f02b50804542}</Project>
       <Name>HomeSeek.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HomeSeek.Repository\HomeSeek.Repository.csproj">
+      <Project>{9d25fc4a-3d7d-4c6d-80cc-07d9133e095f}</Project>
+      <Name>HomeSeek.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

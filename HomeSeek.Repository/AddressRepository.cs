@@ -9,7 +9,7 @@ using HomeSeek.Database;
 
 namespace HomeSeek.Repository
 {
-    public class AddressRepository : Repository<Address>
+    public class AddressRepository : Repository<Address>,IAddressRepository
     {
         public AddressRepository(MyDatabase context) : base(context)
         {

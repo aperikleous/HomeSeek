@@ -1,0 +1,99 @@
+﻿@model IEnumerable<HomeSeek.Entities.Place>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Amenities)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApartmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Guests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bedroom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bathroom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CleanCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBooked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amenities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Guests)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bedroom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bathroom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePerDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CleanCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsBooked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem=>item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlaceId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlaceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlaceId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeSeek.Repository
 {
-    public class PhotoRepository : Repository<Photo>
+    public class PhotoRepository : Repository<Photo>,IPhotoRepository
     {
         public PhotoRepository(MyDatabase context) : base(context)
         {

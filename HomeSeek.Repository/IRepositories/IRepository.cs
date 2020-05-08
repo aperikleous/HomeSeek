@@ -9,7 +9,7 @@ namespace HomeSeek.Repository
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        TEntity GetById(int id);
+        TEntity GetById(int? id);
 
         IEnumerable<TEntity> GetAll();
 
@@ -21,6 +21,8 @@ namespace HomeSeek.Repository
         void Add(TEntity entity);
 
         void AddRange(IEnumerable<TEntity> entities);
+
+        void Edit(TEntity entity);
 
         void Remove(TEntity entity);
 

@@ -9,5 +9,6 @@ namespace HomeSeek.Repository
 {
     public interface IUserRepository:IRepository<ApplicationUser>
     {
+        ApplicationUser GetByUserId(string id);
     }
 }

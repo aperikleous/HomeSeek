@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeSeek.Repository
 {
-    public class AmenitiesRepository : Repository<Amenities>
+    public class AmenitiesRepository : Repository<Amenities>,IAmenitiesRepository
     {
         public AmenitiesRepository(MyDatabase context) : base(context)
         {

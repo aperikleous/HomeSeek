@@ -1,0 +1,93 @@
+﻿@model IEnumerable<HomeSeek.Entities.Amenities>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Place.ApartmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Count)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wifi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Heating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AirConditioning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HotWater)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstAidKit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Elevator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrivateΕntrance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FreeParking)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Place.ApartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Count)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wifi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Heating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AirConditioning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HotWater)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstAidKit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Elevator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrivateΕntrance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FreeParking)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AmenitiesId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AmenitiesId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AmenitiesId })
+        </td>
+    </tr>
+}
+
+</table>

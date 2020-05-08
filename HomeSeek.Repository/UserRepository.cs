@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeSeek.Repository
 {
-    public class UserRepository : Repository<Photo>
+    public class UserRepository : Repository<ApplicationUser> ,IUserRepository
     {
         public UserRepository(MyDatabase context) : base(context)
         {
@@ -16,6 +16,11 @@ namespace HomeSeek.Repository
         public MyDatabase MyDatabase
         {
             get { return Context as MyDatabase; }
+        }
+
+        public ApplicationUser GetByUserId(string id)
+        {
+            return MyDatabase.Users.Find(id);
         }
     }
 }

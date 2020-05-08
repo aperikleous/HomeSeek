@@ -17,10 +17,23 @@ namespace HomeSeek.Repository
         {
             _context = context;
             Places = new PlaceRepository(_context);
-
+            Amenities = new AmenitiesRepository(_context);
+            Address = new AddressRepository(_context);
+            Photo = new PhotoRepository(_context);
+            Users = new UserRepository(_context);
+            Reservations = new ReservationRepository(_context);
+            Reviews = new ReviewRepository(_context);
         }
 
         public IPlaceRepository Places { get; private set; }
+        public IAmenitiesRepository Amenities { get; private set; }
+        public IAddressRepository Address { get; private set; }
+        public IPhotoRepository Photo { get; private set; }
+        public IUserRepository Users { get; private set; }
+
+        public IReservationRepository Reservations { get; private set; }
+
+        public IReviewRepository Reviews { get; private set; }
 
         public int Complete()
         {

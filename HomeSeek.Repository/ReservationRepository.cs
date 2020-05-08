@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeSeek.Repository
 {
-    public class ReservationRepository : Repository<Reservation>
+    public class ReservationRepository : Repository<Reservation>,IReservationRepository
     {
         public ReservationRepository(MyDatabase context) : base(context)
         {

@@ -66,7 +66,6 @@
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="IRepositories\IReservationRepository.cs" />
     <Compile Include="IRepositories\IReviewRepository.cs" />
-    <Compile Include="IRepositories\ITransactionRepository.cs" />
     <Compile Include="IRepositories\IUnitOfWork.cs" />
     <Compile Include="IRepositories\IUserRepository.cs" />
     <Compile Include="PhotoRepository.cs" />
@@ -75,7 +74,6 @@
     <Compile Include="Repository.cs" />
     <Compile Include="ReservationRepository.cs" />
     <Compile Include="ReviewRepository.cs" />
-    <Compile Include="TransactionRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="UserRepository.cs" />
   </ItemGroup>

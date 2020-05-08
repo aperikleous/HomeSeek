@@ -18,10 +18,8 @@ namespace HomeSeek.Repository
             Context = context;
         }
 
-        public TEntity GetById(int id)
+        public TEntity GetById(int? id)
         {
-            // Here we are working with a DbContext, not PlutoContext. So we don't have DbSets 
-            // such as Courses or Authors, and we need to use the generic Set() method to access them.
             return Context.Set<TEntity>().Find(id);
         }
 
@@ -59,6 +57,11 @@ namespace HomeSeek.Repository
         public void AddRange(IEnumerable<TEntity> entities)
         {
             Context.Set<TEntity>().AddRange(entities);
+        }
+
+        public void Edit(TEntity entity)
+        {
+            Context.Entry(entity).State = EntityState.Modified;
         }
 
         public void Remove(TEntity entity)

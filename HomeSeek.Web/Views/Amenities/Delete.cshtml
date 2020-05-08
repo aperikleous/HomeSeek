@@ -1,0 +1,112 @@
+﻿@model HomeSeek.Entities.Amenities
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Amenities</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Place.ApartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Place.ApartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Count)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Count)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wifi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wifi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Heating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Heating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AirConditioning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AirConditioning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HotWater)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HotWater)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstAidKit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstAidKit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Elevator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Elevator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrivateΕntrance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrivateΕntrance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeParking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeParking)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

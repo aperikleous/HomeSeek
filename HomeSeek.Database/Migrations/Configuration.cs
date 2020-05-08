@@ -1,6 +1,8 @@
 ﻿namespace HomeSeek.Database.Migrations
 {
     using HomeSeek.Entities;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -16,6 +18,35 @@
 
         protected override void Seed(HomeSeek.Database.MyDatabase context)
         {
+            if (!context.Roles.Any(x => x.Name == "Admin"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole { Name = "Admin" };
+                manager.Create(role);
+            }
+
+            //create role spectator
+            if (!context.Roles.Any(x => x.Name == "Spectator"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole { Name = "Spectator" };
+                manager.Create(role);
+            }
+
+            //Φτιάχνω νέο χρήστη
+            var PasswordHash = new PasswordHasher();
+            if (!context.Users.Any(x => x.UserName == "admin@hol.net"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store); //dependancy injection
+                var user = new ApplicationUser() { UserName = "admin@hol.net", Email = "admin@hol.net", PasswordHash = PasswordHash.HashPassword("Admin1!") };  //passwordhass ->κρυπτογραφημένο κωδικό
+                manager.Create(user);
+                //αναθέτω ρόλο στο χρήστη
+                manager.AddToRole(user.Id, "Admin");
+            }
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
