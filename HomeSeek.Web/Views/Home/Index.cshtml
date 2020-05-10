@@ -1,11 +1,10 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
 <section class="hero-section" data-scrollax-parent="true">
     <div class="bg-tabs-wrap">
         <div class="bg-parallax-wrap" data-scrollax="properties: { translateY: '200px' }">
-            <div class="bg bg_tabs" data-bg="images/bg/hero/1.jpg"></div>
+            <div class="bg bg_tabs" data-bg="/images/bg/hero/home.jpg"></div>
             <div class="overlay op7"></div>
         </div>
     </div>
@@ -19,104 +18,15 @@
         </div>
         <!-- main-search-input-tabs-->
         <div class="main-search-input-tabs  tabs-act fl-wrap">
-            <ul class="tabs-menu change_bg no-list-style">
-                <li class="current"><a href="#tab-inpt1" data-bgtab="images/bg/hero/1.jpg"> Places</a></li>
-                <li><a href="#tab-inpt2" data-bgtab="images/bg/hero/1.jpg"> Events</a></li>
-                <li><a href="#tab-inpt3" data-bgtab="images/bg/hero/1.jpg"> Restaurants</a></li>
-                <li><a href="#tab-inpt4" data-bgtab="images/bg/hero/1.jpg"> Hotels</a></li>
-            </ul>
+            @*<ul class="tabs-menu change_bg no-list-style">
+
+                <li class="current"><a href="#tab-inpt4" data-bgtab="/image/bg/hero/home.jpg"> Hotels</a></li>
+            </ul>*@
             <!--tabs -->
             <div class="tabs-container fl-wrap  ">
-                <!--tab -->
+
                 <div class="tab">
-                    <div id="tab-inpt1" class="tab-content first-tab">
-                        <div class="main-search-input-wrap fl-wrap">
-                            <div class="main-search-input fl-wrap">
-                                <div class="main-search-input-item">
-                                    <label><i class="fal fa-keyboard"></i></label>
-                                    <input type="text" placeholder="What are you looking for?" value="" />
-                                </div>
-                                <div class="main-search-input-item location autocomplete-container">
-                                    <label><i class="fal fa-map-marker-check"></i></label>
-                                    <input type="text" placeholder="Location" class="autocomplete-input" id="autocompleteid" value="" />
-                                    <a href="#"><i class="fa fa-dot-circle-o"></i></a>
-                                </div>
-                                <div class="main-search-input-item">
-                                    <select data-placeholder="All Categories" class="chosen-select">
-                                        <option>All Categories</option>
-                                        <option>Shops</option>
-                                        <option>Hotels</option>
-                                        <option>Restaurants</option>
-                                        <option>Fitness</option>
-                                        <option>Events</option>
-                                    </select>
-                                </div>
-                                <button class="main-search-button color2-bg" onclick="window.location.href='listing.html'">Search <i class="far fa-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--tab end-->
-                <!--tab -->
-                <div class="tab">
-                    <div id="tab-inpt2" class="tab-content">
-                        <div class="main-search-input-wrap fl-wrap">
-                            <div class="main-search-input fl-wrap">
-                                <div class="main-search-input-item">
-                                    <label><i class="fal fa-handshake-alt"></i></label>
-                                    <input type="text" placeholder="Event Name or Place" value="" />
-                                </div>
-                                <div class="main-search-input-item">
-                                    <select data-placeholder="Loaction" class="chosen-select on-radius">
-                                        <option>All Cities</option>
-                                        <option>New York</option>
-                                        <option>London</option>
-                                        <option>Paris</option>
-                                        <option>Kiev</option>
-                                        <option>Moscow</option>
-                                        <option>Dubai</option>
-                                        <option>Rome</option>
-                                        <option>Beijing</option>
-                                    </select>
-                                </div>
-                                <div class="main-search-input-item clact date-container">
-                                    <span class="iconn-dec"><i class="fal fa-calendar"></i></span>
-                                    <input type="text" placeholder="Event Date" name="datepicker-here" value="" />
-                                    <span class="clear-singleinput"><i class="fal fa-times"></i></span>
-                                </div>
-                                <button class="main-search-button color2-bg" onclick="window.location.href='listing.html'">Search <i class="far fa-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--tab end-->
-                <!--tab -->
-                <div class="tab">
-                    <div id="tab-inpt3" class="tab-content">
-                        <div class="main-search-input-wrap fl-wrap">
-                            <div class="main-search-input fl-wrap">
-                                <div class="main-search-input-item">
-                                    <label><i class="fal fa-cheeseburger"></i></label>
-                                    <input type="text" placeholder="Restaurant Name" value="" />
-                                </div>
-                                <div class="main-search-input-item clact date-container">
-                                    <span class="iconn-dec"><i class="fal fa-calendar"></i></span>
-                                    <input type="text" placeholder="Date and Time" name="datepicker-here-time" value="" />
-                                    <span class="clear-singleinput"><i class="fal fa-times"></i></span>
-                                </div>
-                                <div class="main-search-input-item">
-                                    <label><i class="fal fa-user-friends"></i></label>
-                                    <input type="number" placeholder="Persons" value="" />
-                                </div>
-                                <button class="main-search-button color2-bg" onclick="window.location.href='listing.html'">Search <i class="far fa-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--tab end-->
-                <!--tab -->
-                <div class="tab">
-                    <div id="tab-inpt4" class="tab-content">
+                    <div id="tab-inpt4" class="tab-content first-tab">
                         <div class="main-search-input-wrap fl-wrap">
                             <div class="main-search-input fl-wrap">
                                 <div class="main-search-input-item">
@@ -145,11 +55,11 @@
         <div class="hero-categories fl-wrap">
             <h4 class="hero-categories_title">Just looking around ? Use quick search by category :</h4>
             <ul class="no-list-style">
-                <li><a href="listing.html"><i class="far fa-cheeseburger"></i><span>Restaurants</span></a></li>
+                @*<li><a href="listing.html"><i class="far fa-cheeseburger"></i><span>Restaurants</span></a></li>*@
                 <li><a href="listing.html"><i class="far fa-bed"></i><span>Hotels</span></a></li>
-                <li><a href="listing.html"><i class="far fa-shopping-bag"></i><span>Shops</span></a></li>
+                @*<li><a href="listing.html"><i class="far fa-shopping-bag"></i><span>Shops</span></a></li>
                 <li><a href="listing.html"><i class="far fa-dumbbell"></i><span>Fitness</span></a></li>
-                <li><a href="listing.html"><i class="far fa-cocktail"></i><span>Events</span></a></li>
+                <li><a href="listing.html"><i class="far fa-cocktail"></i><span>Events</span></a></li>*@
             </ul>
         </div>
     </div>
@@ -179,7 +89,7 @@
                                     <div class="geodir-category-img">
                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                            <img src="images/all/1.jpg" alt="">
+                                            <img src="/image/all/1.jpg" alt="">
                                         </a>
                                         <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
                                         <div class="geodir-category-opt">
@@ -202,7 +112,7 @@
                                                     <span class="price-level-item" data-pricerating="2"></span>
                                                     <span class="price-name-tooltip">Pricey</span>
                                                 </div>
-                                                <div class="post-author"><a href="#"><img src="images/avatar/1.jpg" alt=""><span>By , Alisa Noory</span></a></div>
+                                                <div class="post-author"><a href="#"><img src="/image/avatar/1.jpg" alt=""><span>By , Alisa Noory</span></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -221,7 +131,7 @@
                                     <div class="geodir-category-img">
                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                            <img src="images/all/1.jpg" alt="">
+                                            <img src="/image/all/1.jpg" alt="">
                                         </a>
                                         <div class="geodir_status_date gsd_close"><i class="fal fa-lock"></i>Close Now</div>
                                         <div class="geodir-category-opt">
@@ -244,7 +154,7 @@
                                                     <span class="price-level-item" data-pricerating="3"></span>
                                                     <span class="price-name-tooltip">Moderate</span>
                                                 </div>
-                                                <div class="post-author"><a href="#"><img src="images/avatar/1.jpg" alt=""><span>By , Mark Rose</span></a></div>
+                                                <div class="post-author"><a href="#"><img src="/image/avatar/1.jpg" alt=""><span>By , Mark Rose</span></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +173,7 @@
                                     <div class="geodir-category-img">
                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                            <img src="images/all/1.jpg" alt="">
+                                            <img src="/image/all/1.jpg" alt="">
                                         </a>
                                         <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
                                         <div class="geodir-category-opt">
@@ -286,7 +196,7 @@
                                                     <span class="price-level-item" data-pricerating="4"></span>
                                                     <span class="price-name-tooltip">Ultra Hight</span>
                                                 </div>
-                                                <div class="post-author"><a href="#"><img src="images/avatar/1.jpg" alt=""><span>By , Nasty Wood</span></a></div>
+                                                <div class="post-author"><a href="#"><img src="/image/avatar/1.jpg" alt=""><span>By , Nasty Wood</span></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -305,7 +215,7 @@
                                     <div class="geodir-category-img">
                                         <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
                                         <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                            <img src="images/all/1.jpg" alt="">
+                                            <img src="/image/all/1.jpg" alt="">
                                         </a>
                                         <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
                                         <div class="geodir-category-opt">
@@ -328,7 +238,7 @@
                                                     <span class="price-level-item" data-pricerating="4"></span>
                                                     <span class="price-name-tooltip">Ultra Hight</span>
                                                 </div>
-                                                <div class="post-author"><a href="#"><img src="images/avatar/1.jpg" alt=""><span>By , Kliff Antony</span></a></div>
+                                                <div class="post-author"><a href="#"><img src="/image/avatar/1.jpg" alt=""><span>By , Kliff Antony</span></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -365,7 +275,7 @@
                 <!--  listing-item-grid  -->
                 <div class="col-sm-4">
                     <div class="listing-item-grid">
-                        <div class="bg" data-bg="images/all/1.jpg"></div>
+                        <div class="bg" data-bg="/image/all/1.jpg"></div>
                         <div class="d-gr-sec"></div>
                         <div class="listing-counter color2-bg"><span>16 </span> Locations</div>
                         <div class="listing-item-grid_title">
@@ -378,7 +288,7 @@
                 <!--  listing-item-grid  -->
                 <div class="col-sm-4">
                     <div class="listing-item-grid">
-                        <div class="bg" data-bg="images/all/1.jpg"></div>
+                        <div class="bg" data-bg="/image/all/1.jpg"></div>
                         <div class="d-gr-sec"></div>
                         <div class="listing-counter color2-bg"><span>22 </span> Locations</div>
                         <div class="listing-item-grid_title">
@@ -391,7 +301,7 @@
                 <!--  listing-item-grid  -->
                 <div class="col-sm-4">
                     <div class="listing-item-grid">
-                        <div class="bg" data-bg="images/all/1.jpg"></div>
+                        <div class="bg" data-bg="/image/all/1.jpg"></div>
                         <div class="d-gr-sec"></div>
                         <div class="listing-counter color2-bg"><span>9 </span> Locations</div>
                         <div class="listing-item-grid_title">
@@ -404,7 +314,7 @@
                 <!--  listing-item-grid  -->
                 <div class="col-sm-4">
                     <div class="listing-item-grid">
-                        <div class="bg" data-bg="images/all/1.jpg"></div>
+                        <div class="bg" data-bg="/image/all/1.jpg"></div>
                         <div class="d-gr-sec"></div>
                         <div class="listing-counter color2-bg"><span>12 </span> Locations</div>
                         <div class="listing-item-grid_title">
@@ -417,7 +327,7 @@
                 <!--  listing-item-grid  -->
                 <div class="col-sm-8">
                     <div class="listing-item-grid">
-                        <div class="bg" data-bg="images/all/1.jpg"></div>
+                        <div class="bg" data-bg="/image/all/1.jpg"></div>
                         <div class="d-gr-sec"></div>
                         <div class="listing-counter color2-bg"><span>33 </span> Locations</div>
                         <div class="listing-item-grid_title">
@@ -435,7 +345,7 @@
 <!--  section  -->
 
 <section class="parallax-section small-par" data-scrollax-parent="true">
-    <div class="bg par-elem " data-bg="images/bg/1.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+    <div class="bg par-elem " data-bg="/image/bg/1.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
     <div class="overlay  op7"></div>
     <div class="container">
         <div class=" single-facts single-facts_2 fl-wrap">

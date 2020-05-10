@@ -236,6 +236,8 @@
     <Content Include="images\avatar\avatar-bg.png" />
     <Content Include="images\bg\1.jpg" />
     <Content Include="images\bg\hero\1.jpg" />
+    <Content Include="images\bg\hero\home.jpg" />
+    <Content Include="images\bg\home.jpg" />
     <Content Include="images\clients\1.png" />
     <Content Include="images\clouds.png" />
     <Content Include="images\favicon.ico" />
