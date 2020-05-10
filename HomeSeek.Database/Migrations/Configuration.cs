@@ -41,11 +41,21 @@
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store); //dependancy injection
-                var user = new ApplicationUser() { UserName = "admin@hol.net", Email = "admin@hol.net", PasswordHash = PasswordHash.HashPassword("Admin1!") };  //passwordhass ->κρυπτογραφημένο κωδικό
+                var user = new ApplicationUser() {LastName = "Zak", FirstName = "Zakkk", City = "Athens", DateOfBirth = new DateTime(1989, 08, 01), UserName = "admin@hol.net", Email = "admin@hol.net", PasswordHash = PasswordHash.HashPassword("Admin1!") };  //passwordhass ->κρυπτογραφημένο κωδικό
                 manager.Create(user);
                 //αναθέτω ρόλο στο χρήστη
                 manager.AddToRole(user.Id, "Admin");
             }
+
+            //if (!context.Users.Any(u => u.UserName == "founder"))
+            //{
+            //    var store = new UserStore<ApplicationUser>(context);
+            //    var manager = new UserManager<ApplicationUser>(store);
+            //    var user = new ApplicationUser { UserName = "founder" };
+
+            //    manager.Create(user, "ChangeItAsap!");
+            //    manager.AddToRole(user.Id, "AppAdmin");
+            //}
 
             //  This method will be called after migrating to the latest version.
 

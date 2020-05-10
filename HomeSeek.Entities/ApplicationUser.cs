@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeSeek.Entities
 {
@@ -21,13 +22,14 @@ namespace HomeSeek.Entities
             return userIdentity;
         }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ApplicationUserId { get; set; }
         [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Required, Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Display(Name = "Date of Birth")]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public string City { get; set; }
 
         //Navigation Properties
