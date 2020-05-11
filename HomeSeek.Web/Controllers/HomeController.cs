@@ -26,5 +26,10 @@ namespace HomeSeek.Web.Controllers
 
             return View();
         }
+        //Live Chat ActionMethod
+        public ActionResult Chat()
+        {
+            return View();
+        }
     }
 }
