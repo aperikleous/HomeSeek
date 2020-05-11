@@ -22,11 +22,10 @@ namespace HomeSeek.Entities
             return userIdentity;
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ApplicationUserId { get; set; }
-        [Required, Display(Name = "First Name")]
+  
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
-        [Required, Display(Name = "Last Name")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Display(Name = "Date of Birth")]
         public DateTime? DateOfBirth { get; set; }

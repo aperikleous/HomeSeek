@@ -48,9 +48,9 @@ namespace HomeSeek.Web
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             // Uncomment the following lines to enable logging in with third party login providers
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            app.UseMicrosoftAccountAuthentication(
+                clientId: "590c160d-c1c9-4d42-9429-0f56ca9ac73a",
+                clientSecret: "KM9u.eYu3.vX4.TU48BndpIlQu9rUjR-bg");
 
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
