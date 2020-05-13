@@ -34,6 +34,22 @@
                 var role = new IdentityRole { Name = "Spectator" };
                 manager.Create(role);
             }
+            //create role Host
+            if (!context.Roles.Any(x => x.Name == "Host"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole { Name = "Host" };
+                manager.Create(role);
+            }
+            //create role Registered user/member
+            if (!context.Roles.Any(x => x.Name == "Member"))
+            {
+                var store = new RoleStore<IdentityRole>(context);
+                var manager = new RoleManager<IdentityRole>(store);
+                var role = new IdentityRole { Name = "Member" };
+                manager.Create(role);
+            }
 
             //Φτιάχνω νέο χρήστη
             var PasswordHash = new PasswordHasher();
@@ -45,6 +61,27 @@
                 manager.Create(user);
                 //αναθέτω ρόλο στο χρήστη
                 manager.AddToRole(user.Id, "Admin");
+            }
+
+            
+            if (!context.Users.Any(x => x.UserName == "member@member.net"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store); 
+                var user = new ApplicationUser() { LastName = "Yvves", FirstName = "Jean", City = "Athens", DateOfBirth = new DateTime(1982, 10, 05), UserName = "member@member.net", Email = "member@member.net", PasswordHash = PasswordHash.HashPassword("Member1!") };
+                manager.Create(user);
+                //αναθέτω ρόλο στο χρήστη
+                manager.AddToRole(user.Id, "Member");
+            }
+
+            if (!context.Users.Any(x => x.UserName == "host@host.com"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store); 
+                var user = new ApplicationUser() { LastName = "Sun", FirstName = "Yi", City = "Larissa", DateOfBirth = new DateTime(1970, 6, 15), UserName = "host@host.com", Email = "host@host.com", PasswordHash = PasswordHash.HashPassword("Member1!") };
+                manager.Create(user);
+                //αναθέτω ρόλο στο χρήστη
+                manager.AddToRole(user.Id, "Host");
             }
 
             //if (!context.Users.Any(u => u.UserName == "founder"))
