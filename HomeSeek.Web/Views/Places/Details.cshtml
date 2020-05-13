@@ -49,7 +49,8 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <h1>@Html.DisplayFor(model => model.ApartmentName) <span class="verified-badge"><i class="fal fa-check"></i></span></h1>
-                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i>  70 Bright St New York, USA</a> <a href="#"> <i class="fal fa-phone"></i>+38099231212</a> <a href="#"><i class="fal fa-envelope"></i> yourmail@domain.com</a></div>
+                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> @Html.DisplayFor(model => model.Address.AddressLine)  @Html.DisplayFor(model => model.Address.City) </a> <a href="#"> <i class="fal fa-phone"></i>+38099231212</a> <a href="#"><i class="fal fa-envelope"></i> yourmail@domain.com</a></div>
+                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-bath"></i>Bathrooms @Html.DisplayFor(model => model.Bathroom)</a><a href="#"><i class="fas fa-bed"></i>Bedrooms @Html.DisplayFor(model => model.Bedroom)</a> </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="fl-wrap list-single-header-column  block_box">
@@ -57,7 +58,7 @@
                                             <div class="review-score">4.6</div>
                                             <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
                                             <br>
-                                            <div class="reviews-count">2 reviews</div>
+                                            <div class="reviews-count"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -85,8 +86,7 @@
                             <h3>Description</h3>
                         </div>
                         <div class="list-single-main-item_content fl-wrap">
-                            <p>Praesent eros turpis, commodo vel justo at, pulvinar mollis eros. Mauris aliquet eu quam id ornare. Morbi ac quam enim. Cras vitae nulla condimentum, semper dolor non, faucibus dolor. Vivamus adipiscing eros quis orci fringilla, sed pretium lectus viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nec velit non odio aliquam suscipit. Sed non neque faucibus, condimentum lectus at, accumsan enim.   </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra.</p>
+                            <p>@Html.DisplayFor(model => model.Description) </p>
                             <a href="#" class="btn color2-bg float-btn">Visit Website<i class="fal fa-chevron-right"></i></a>
                         </div>
                     </div>
@@ -99,12 +99,15 @@
                         <div class="list-single-main-item_content fl-wrap">
                             <div class="listing-features fl-wrap">
                                 <ul class="no-list-style">
-                                    <li><a href="#"><i class="fa fa-rocket"></i> @Html.DisplayFor(model => model.Amenities.Elevator)</a></li>
-                                    <li><a href="#"><i class="fa fa-wifi"></i> Free Wi Fi</a></li>
-                                    <li><a href="#"><i class="fa fa-motorcycle"></i> Free Parking</a></li>
-                                    <li><a href="#"><i class="fa fa-cloud"></i> Air Conditioned</a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i> Online Ordering</a></li>
-                                    <li><a href="#"><i class="fa fa-paw"></i> Pet Friendly</a></li>
+                                    <li><a href="#"><i class="fal fa-parking"></i></i>Elevator @Html.DisplayFor(model => model.Amenities.Elevator)</a></li>
+                                    <li><a href="#"><i class="fa fa-wifi"></i>Wifi @Html.DisplayFor(model => model.Amenities.Wifi)</a></li>
+                                    <li><a href="#"><i class="fa fa-motorcycle"></i>Free Parking @Html.DisplayFor(model => model.Amenities.FreeParking)</a></li>
+                                    <li><a href="#"><i class="fal fa-cloud"></i>Air Conditioned @Html.DisplayFor(model => model.Amenities.AirConditioning)</a></li>
+                                    <li><a href="#"><i class="fal fa-first-aid"></i>First Aid Kit @Html.DisplayFor(model => model.Amenities.FirstAidKit)</a></li>
+                                    <li><a href="#"><i class="fal fa-temperature-hot"></i>Heating @Html.DisplayFor(model => model.Amenities.Heating)</a></li>
+                                    <li><a href="#"><i class="fal fa-hot-tub"></i>Hot Water @Html.DisplayFor(model => model.Amenities.HotWater)</a></li>
+                                    <li><a href="#"><i class="fal fa-door-closed"></i>Private Entrance @Html.DisplayFor(model => model.Amenities.PrivateΕntrance)</a></li>
+                                    <li><a href="#"><i class="fal fa-tv"></i>TV @Html.DisplayFor(model => model.Amenities.Tv)</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -299,7 +302,7 @@
                                     </div>
                                     <div class="reviews-comments-item-text fl-wrap">
                                         <div class="reviews-comments-header fl-wrap">
-                                            <h4><a href="#">Liza Rose</a></h4>
+                                            <h4><a href="#"></a></h4>
                                             <div class="review-score-user">
                                                 <span class="review-score-user_item">4.2</span>
                                                 <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
@@ -314,6 +317,7 @@
                                 </div>
                                 <!--reviews-comments-item end-->
                                 <!-- reviews-comments-item -->
+                                
                                 <div class="reviews-comments-item">
                                     <div class="review-comments-avatar">
                                         <img src="images/avatar/1.jpg" alt="">
