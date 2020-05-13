@@ -55,10 +55,31 @@
                                 <div class="col-md-4">
                                     <div class="fl-wrap list-single-header-column  block_box">
                                         <div class="listing-rating-count-wrap single-list-count">
-                                            <div class="review-score">4.6</div>
+                                            <div class="review-score">
+                                                @{
+
+                                                    double avg =0;
+                                                    foreach (var review in Model.Reviews)
+                                                    {
+                                                        avg = +review.OverallRating;
+                                                    }
+                                                    avg = avg / Model.Reviews.Count();
+                                                    @avg
+                                                }
+                                            </div>
                                             <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
                                             <br>
-                                            <div class="reviews-count"></div>
+                                            <div class="reviews-count">
+                                                @if (@Model.Reviews.Count() > 1)
+                                                {
+                                                    @Model.Reviews.Count()<span>Reviews</span>
+                                                }
+                                                else
+                                                {
+                                                    @Model.Reviews.Count() <span>Review</span>
+                                                }
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -109,20 +130,6 @@
                                     <li><a href="#"><i class="fal fa-door-closed"></i>Private Entrance @Html.DisplayFor(model => model.Amenities.PrivateΕntrance)</a></li>
                                     <li><a href="#"><i class="fal fa-tv"></i>TV @Html.DisplayFor(model => model.Amenities.Tv)</a></li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- list-single-main-item end -->
-                    <!-- list-single-main-item-->
-                    <div class="list-single-main-item fl-wrap block_box" id="sec3">
-                        <div class="list-single-main-item-title">
-                            <h3>Promo Video</h3>
-                        </div>
-                        <div class="list-single-main-item_content fl-wrap">
-                            <div class="iframe-holder fl-wrap">
-                                <div class="resp-video">
-                                    <iframe src="https://player.vimeo.com/video/161566855" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,49 +200,6 @@
                         </div>
                     </div>
                     <!-- list-single-facts end -->
-                    <!-- list-single-main-item-->
-                    <div class="list-single-main-item fl-wrap block_box" id="sec4">
-                        <div class="list-single-main-item-title">
-                            <h3>Available Rooms</h3>
-                        </div>
-                        <div class="list-single-main-item_content fl-wrap">
-                            <!--   rooms-container -->
-                            <div class="rooms-container fl-wrap">
-                                <!--  rooms-item -->
-                                <div class="rooms-item fl-wrap">
-                                    <div class="rooms-media">
-                                        <img src="images/all/1.jpg" alt="">
-                                    </div>
-                                    <div class="rooms-details">
-                                        <div class="rooms-details-header fl-wrap">
-                                            <span class="rooms-price">$81 <strong> / person</strong></span>
-                                            <h3>Standard Family Room</h3>
-                                            <h5>Max Guests: <span>3 persons</span></h5>
-                                        </div>
-                                        <p>Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae </p>
-                                    </div>
-                                </div>
-                                <!--  rooms-item end -->
-                                <!--  rooms-item -->
-                                <div class="rooms-item fl-wrap">
-                                    <div class="rooms-media">
-                                        <img src="images/all/1.jpg" alt="">
-                                    </div>
-                                    <div class="rooms-details">
-                                        <div class="rooms-details-header fl-wrap">
-                                            <span class="rooms-price">$122 <strong> / person</strong></span>
-                                            <h3>Superior Double Room</h3>
-                                            <h5>Max Guests: <span>4 persons</span></h5>
-                                        </div>
-                                        <p>Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.</p>
-                                    </div>
-                                </div>
-                                <!--  rooms-item end -->
-                            </div>
-                            <!--   rooms-container end -->
-                        </div>
-                    </div>
-                    <!-- list-single-main-item end -->
                     <!-- list-single-main-item -->
                     <div class="list-single-main-item fl-wrap block_box" id="sec5">
                         <div class="list-single-main-item-title">
@@ -317,7 +281,7 @@
                                 </div>
                                 <!--reviews-comments-item end-->
                                 <!-- reviews-comments-item -->
-                                
+
                                 <div class="reviews-comments-item">
                                     <div class="review-comments-avatar">
                                         <img src="images/avatar/1.jpg" alt="">

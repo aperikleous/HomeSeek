@@ -9,6 +9,6 @@ namespace HomeSeek.Repository
 {
     public interface IPlaceRepository : IRepository<Place>
     {
-
+        
     }
 }

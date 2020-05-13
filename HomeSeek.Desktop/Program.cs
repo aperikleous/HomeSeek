@@ -18,9 +18,16 @@ namespace HomeSeek.Desktop
                 var places = unitOfWork.Places.GetAll() ;
                 foreach (var item in places)
                 {
+
                     Console.WriteLine(item.ApartmentName);
+                    Console.WriteLine(item.Reviews.Count());
+                    foreach (var review in item.Reviews)
+                    {
+                        Console.WriteLine(review.Comment);
+                    }
                 }
 
+                
                // Example2
                //var courses = unitOfWork.Courses.GetCoursesWithAuthors(1, 4);
 
