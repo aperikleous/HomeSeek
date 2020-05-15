@@ -34,7 +34,7 @@ var config = {
                 pointBorderWidth: 1,
 				pointBorderColor: "#5ECFB1",
                 pointHoverBorderWidth: 1,
-                data: [16, 12, 37, 33, 44, 98, 20]
+                data: [16, 12, 37, 33, 44, 98, 14]
             },
             {
                 label: 'Bookings',
