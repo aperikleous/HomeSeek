@@ -25,14 +25,15 @@ body{
 @-o-viewport {width: device-width;}
 @-ms-viewport {width: device-width;}
 @viewport {width: device-width;}
+
 /*--------------Typography--------------------------------------*/
 blockquote {
-	float:left;
+	float: left;
 	padding: 10px 20px;
 	margin: 0 0 20px;
 	font-size: 17.5px;
 	border-left: 15px solid #eee;
-	position:relative;
+	position: relative;
 }
 blockquote:before {
 	font-family: Font Awesome\ 5 Pro;

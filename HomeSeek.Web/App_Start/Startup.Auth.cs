@@ -71,9 +71,9 @@ namespace HomeSeek.Web
                     })
             });
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "275152686973642",
+               appSecret: "b736e6da5722f9ea0210e02aef35cbc1");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

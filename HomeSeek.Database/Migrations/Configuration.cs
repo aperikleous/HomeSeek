@@ -122,6 +122,7 @@
             Review rev1 = new Review() { Accuracy = 10, Checkin = 9, Cleanliness = 10, Location = 10, Value = 10, SubDate = new DateTime(2020, 6, 6), OverallRating = 9.1, Comment = "ola teleia" };
             Review rev2 = new Review() { Accuracy = 9, Checkin = 10, Cleanliness = 9, Location = 10, Value = 10, SubDate = new DateTime(2020, 7, 23), OverallRating = 9.1, Comment = "apisteuto service" };
             Review rev3 = new Review() { Accuracy = 8, Checkin = 9, Cleanliness = 8, Location = 10, Value = 10, SubDate = new DateTime(2020, 8, 31), OverallRating = 9.5, Comment = "Super" };
+            Review rev4 = new Review() { Accuracy = 9, Checkin = 9, Cleanliness = 9, Location = 9, Value = 9, SubDate = new DateTime(2020, 8, 18), OverallRating = 9, Comment = "SuperSuperSuperSuperSuperSuper" };
 
             //================= Seeding Application User =================
             //ApplicationUser template = new ApplicationUser() { UserName = "", LastName = "", FirstName = "", City = "", DateOfBirth = new DateTime(1989, 08, 01) };
@@ -155,7 +156,7 @@
             p2.Photos = new List<Photo>() { ph2 };
             p3.Photos = new List<Photo>() { ph3 };
 
-            p1.Reviews = new List<Review>() { rev1 };
+            p1.Reviews = new List<Review>() { rev1,rev4 };
             p2.Reviews = new List<Review>() { rev2 };
             p3.Reviews = new List<Review>() { rev3 };
 
@@ -172,7 +173,7 @@
             r3.ApplicationUser = ap3;
 
 
-            context.Reviews.AddOrUpdate(x => x.Accuracy, rev1, rev2, rev3);
+            context.Reviews.AddOrUpdate(x => x.Accuracy, rev1, rev2, rev3, rev4);
             context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3);
             context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3);
             context.Reservations.AddOrUpdate(x => x.DaysOfStaying, r1, r2, r3);

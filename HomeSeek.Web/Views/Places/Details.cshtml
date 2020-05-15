@@ -58,7 +58,7 @@
                                             <div class="review-score">
                                                 @{
 
-                                                    double avg =0;
+                                                    double avg = 0;
                                                     foreach (var review in Model.Reviews)
                                                     {
                                                         avg = +review.OverallRating;
@@ -101,39 +101,6 @@
                         </div>
                     </div>
                     <!-- list-single-header end -->
-                    <!-- list-single-main-item -->
-                    <div class="list-single-main-item fl-wrap block_box">
-                        <div class="list-single-main-item-title">
-                            <h3>Description</h3>
-                        </div>
-                        <div class="list-single-main-item_content fl-wrap">
-                            <p>@Html.DisplayFor(model => model.Description) </p>
-                            <a href="#" class="btn color2-bg float-btn">Visit Website<i class="fal fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- list-single-main-item end -->
-                    <!-- list-single-main-item -->
-                    <div class="list-single-main-item fl-wrap block_box">
-                        <div class="list-single-main-item-title">
-                            <h3>Listing Features</h3>
-                        </div>
-                        <div class="list-single-main-item_content fl-wrap">
-                            <div class="listing-features fl-wrap">
-                                <ul class="no-list-style">
-                                    <li><a href="#"><i class="fal fa-parking"></i></i>Elevator @Html.DisplayFor(model => model.Amenities.Elevator)</a></li>
-                                    <li><a href="#"><i class="fa fa-wifi"></i>Wifi @Html.DisplayFor(model => model.Amenities.Wifi)</a></li>
-                                    <li><a href="#"><i class="fa fa-motorcycle"></i>Free Parking @Html.DisplayFor(model => model.Amenities.FreeParking)</a></li>
-                                    <li><a href="#"><i class="fal fa-cloud"></i>Air Conditioned @Html.DisplayFor(model => model.Amenities.AirConditioning)</a></li>
-                                    <li><a href="#"><i class="fal fa-first-aid"></i>First Aid Kit @Html.DisplayFor(model => model.Amenities.FirstAidKit)</a></li>
-                                    <li><a href="#"><i class="fal fa-temperature-hot"></i>Heating @Html.DisplayFor(model => model.Amenities.Heating)</a></li>
-                                    <li><a href="#"><i class="fal fa-hot-tub"></i>Hot Water @Html.DisplayFor(model => model.Amenities.HotWater)</a></li>
-                                    <li><a href="#"><i class="fal fa-door-closed"></i>Private Entrance @Html.DisplayFor(model => model.Amenities.PrivateΕntrance)</a></li>
-                                    <li><a href="#"><i class="fal fa-tv"></i>TV @Html.DisplayFor(model => model.Amenities.Tv)</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- list-single-main-item end -->
                     <!-- list-single-facts -->
                     <div class="list-single-facts fl-wrap">
                         <div class="row">
@@ -144,10 +111,10 @@
                                         <i class="fal fa-bed"></i>
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
-                                                <div class="num" data-content="0" data-num="45">0</div>
+                                                <div class="num" data-content="0" data-num="@Model.Bedroom">0</div>
                                             </div>
                                         </div>
-                                        <h6>Hotel Rooms</h6>
+                                        <h6>Room Bedrooms</h6>
                                     </div>
                                     <div class="stat-wave">
                                         <svg viewbox="0 0 100 25">
@@ -164,10 +131,10 @@
                                         <i class="fal fa-users"></i>
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
-                                                <div class="num" data-content="0" data-num="2557">0</div>
+                                                <div class="num" data-content="0" data-num="@Model.Bathroom">0</div>
                                             </div>
                                         </div>
-                                        <h6>Happy customers every year</h6>
+                                        <h6>Room Bathrooms</h6>
                                     </div>
                                     <div class="stat-wave">
                                         <svg viewbox="0 0 100 25">
@@ -184,10 +151,10 @@
                                         <i class="fal fa-cocktail"></i>
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
-                                                <div class="num" data-content="0" data-num="5">0</div>
+                                                <div class="num" data-content="0" data-num="@Model.Guests">0</div>
                                             </div>
                                         </div>
-                                        <h6>Restorans Inside</h6>
+                                        <h6>Room Guests</h6>
                                     </div>
                                     <div class="stat-wave">
                                         <svg viewbox="0 0 100 25">
@@ -201,11 +168,48 @@
                     </div>
                     <!-- list-single-facts end -->
                     <!-- list-single-main-item -->
+                    <div class="list-single-main-item fl-wrap block_box">
+                        <div class="list-single-main-item-title">
+                            <h3>Description</h3>
+                        </div>
+                        <div class="list-single-main-item_content fl-wrap">
+                            <p>@Html.DisplayFor(model => model.Description) </p>
+                            <a href="#" class="btn color2-bg float-btn">Visit Website<i class="fal fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- list-single-main-item end -->
+                    <!-- list-single-main-item -->
+                    <div class="list-single-main-item fl-wrap block_box">
+                        <div class="list-single-main-item-title">
+                            <h3>Listing Features</h3>
+                        </div>
+                        <div class="list-single-main-item_content fl-wrap checked-amenities">
+                            <div class="listing-features fl-wrap">
+                                <ul class="no-list-style">
+                                    <li><a href="#"><i class="fal fa-parking"></i></i>Elevator @Html.DisplayFor(model => model.Amenities.Elevator)</a></li>
+                                    <li><a href="#"><i class="fa fa-wifi"></i>Wifi @Html.DisplayFor(model => model.Amenities.Wifi)</a></li>
+                                    <li><a href="#"><i class="fa fa-motorcycle"></i>Free Parking @Html.DisplayFor(model => model.Amenities.FreeParking)</a></li>
+                                    <li><a href="#"><i class="fal fa-cloud"></i>Air Conditioned @Html.DisplayFor(model => model.Amenities.AirConditioning)</a></li>
+                                    <li><a href="#"><i class="fal fa-first-aid"></i>First Aid Kit @Html.DisplayFor(model => model.Amenities.FirstAidKit)</a></li>
+                                    <li><a href="#"><i class="fal fa-temperature-hot"></i>Heating @Html.DisplayFor(model => model.Amenities.Heating)</a></li>
+                                    <li><a href="#"><i class="fal fa-hot-tub"></i>Hot Water @Html.DisplayFor(model => model.Amenities.HotWater)</a></li>
+                                    <li><a href="#"><i class="fal fa-door-closed"></i>Private Entrance @Html.DisplayFor(model => model.Amenities.PrivateΕntrance)</a></li>
+                                    <li><a href="#"><i class="fal fa-tv"></i>TV @Html.DisplayFor(model => model.Amenities.Tv)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- list-single-main-item end -->
+                    <!-- list-single-main-item -->
                     <div class="list-single-main-item fl-wrap block_box" id="sec5">
                         <div class="list-single-main-item-title">
-                            <h3>Item Reviews -  <span> 2 </span></h3>
+
+                            <h3>Item Reviews -  <span> @Model.Reviews.Count(); </span></h3>
                         </div>
                         <!--reviews-score-wrap-->
+
+
+
                         <div class="reviews-score-wrap fl-wrap">
                             <div class="review-score-total">
                                 <span class="review-score-total-item">
@@ -260,51 +264,59 @@
                         <div class="list-single-main-item_content fl-wrap">
                             <div class="reviews-comments-wrap">
                                 <!-- reviews-comments-item -->
-                                <div class="reviews-comments-item">
-                                    <div class="review-comments-avatar">
-                                        <img src="images/avatar/1.jpg" alt="">
-                                    </div>
-                                    <div class="reviews-comments-item-text fl-wrap">
-                                        <div class="reviews-comments-header fl-wrap">
-                                            <h4><a href="#"></a></h4>
-                                            <div class="review-score-user">
-                                                <span class="review-score-user_item">4.2</span>
-                                                <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
+                                @foreach (var item in Model.Reviews)
+                                {
+
+
+
+                                    <div class="reviews-comments-item">
+                                        <div class="review-comments-avatar">
+                                            <img src="images/avatar/1.jpg" alt="">
+                                        </div>
+                                        <div class="reviews-comments-item-text fl-wrap">
+                                            <div class="reviews-comments-header fl-wrap">
+                                                <h4><a href="#"></a></h4>
+                                                <div class="review-score-user">
+                                                    <span class="review-score-user_item">@item.OverallRating</span>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
+                                                </div>
+                                            </div>
+                                            <p>@item.Comment</p>
+                                            <div class="reviews-comments-item-footer fl-wrap">
+                                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>12 April 2018</span></div>
+                                                <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>2</span> </a>
                                             </div>
                                         </div>
-                                        <p>" Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. "</p>
-                                        <div class="reviews-comments-item-footer fl-wrap">
-                                            <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>12 April 2018</span></div>
-                                            <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>2</span> </a>
-                                        </div>
                                     </div>
-                                </div>
+                                }
+
+
                                 <!--reviews-comments-item end-->
                                 <!-- reviews-comments-item -->
-
-                                <div class="reviews-comments-item">
-                                    <div class="review-comments-avatar">
-                                        <img src="images/avatar/1.jpg" alt="">
-                                    </div>
-                                    <div class="reviews-comments-item-text fl-wrap">
-                                        <div class="reviews-comments-header fl-wrap">
-                                            <h4><a href="#">Adam Koncy</a></h4>
-                                            <div class="review-score-user">
-                                                <span class="review-score-user_item">5.0</span>
-                                                <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                            </div>
-                                        </div>
-                                        <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
-                                        <div class="review-images ">
-                                            <a href="images/all/1.jpg" class="image-popup"><img src="images/all/1.jpg" alt=""></a>
-                                            <a href="images/all/1.jpg" class="image-popup"><img src="images/all/1.jpg" alt=""></a>
-                                        </div>
-                                        <div class="reviews-comments-item-footer fl-wrap">
-                                            <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>03 December 2017</span></div>
-                                            <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>4</span> </a>
-                                        </div>
-                                    </div>
+                                @*<div class="reviews-comments-item">
+                        <div class="review-comments-avatar">
+                            <img src="images/avatar/1.jpg" alt="">
+                        </div>
+                        <div class="reviews-comments-item-text fl-wrap">
+                            <div class="reviews-comments-header fl-wrap">
+                                <h4><a href="#">Adam Koncy</a></h4>
+                                <div class="review-score-user">
+                                    <span class="review-score-user_item">5.0</span>
+                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
                                 </div>
+                            </div>
+                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
+                            <div class="review-images ">
+                                <a href="images/all/1.jpg" class="image-popup"><img src="images/all/1.jpg" alt=""></a>
+                                <a href="images/all/1.jpg" class="image-popup"><img src="images/all/1.jpg" alt=""></a>
+                            </div>
+                            <div class="reviews-comments-item-footer fl-wrap">
+                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>03 December 2017</span></div>
+                                <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>4</span> </a>
+                            </div>
+                        </div>
+                    </div>*@
+
                                 <!--reviews-comments-item end-->
                             </div>
                         </div>
