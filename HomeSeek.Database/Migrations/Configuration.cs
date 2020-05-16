@@ -119,10 +119,10 @@
 
             //================= Seeding Reviews =================
             //Review template = new Review() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
-            Review rev1 = new Review() { Accuracy = 10, Checkin = 9, Cleanliness = 10, Location = 10, Value = 10, SubDate = new DateTime(2020, 6, 6), OverallRating = 9.1, Comment = "ola teleia" };
-            Review rev2 = new Review() { Accuracy = 9, Checkin = 10, Cleanliness = 9, Location = 10, Value = 10, SubDate = new DateTime(2020, 7, 23), OverallRating = 9.1, Comment = "apisteuto service" };
-            Review rev3 = new Review() { Accuracy = 8, Checkin = 9, Cleanliness = 8, Location = 10, Value = 10, SubDate = new DateTime(2020, 8, 31), OverallRating = 9.5, Comment = "Super" };
-            Review rev4 = new Review() { Accuracy = 7, Checkin = 9, Cleanliness = 9, Location = 9, Value = 9, SubDate = new DateTime(2020, 8, 18), OverallRating = 9, Comment = "SuperSuperSuperSuperSuperSuper" };
+            Review rev1 = new Review() { Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6), /*OverallRating = 9.1,*/ Comment = "ola teleia" };
+            Review rev2 = new Review() { Accuracy = 4, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 7, 23),/* OverallRating = 9.1,*/ Comment = "apisteuto service" };
+            Review rev3 = new Review() { Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 5, Value = 5, SubDate = new DateTime(2020, 8, 31),/* OverallRating = 9.5,*/ Comment = "Super" };
+            Review rev4 = new Review() { Accuracy = 2, Checkin = 4, Cleanliness = 4, Location = 4, Value = 4, SubDate = new DateTime(2020, 8, 18),/* OverallRating = 9,*/ Comment = "SuperSuperSuperSuperSuperSuper" };
 
             //================= Seeding Application User =================
             //ApplicationUser template = new ApplicationUser() { UserName = "", LastName = "", FirstName = "", City = "", DateOfBirth = new DateTime(1989, 08, 01) };

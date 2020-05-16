@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<HomeSeek.Entities.Reservation>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reservations";
 }
 
-<h2>Index</h2>
+<h2>Reservations</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-bordered">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.CheckInDate)
