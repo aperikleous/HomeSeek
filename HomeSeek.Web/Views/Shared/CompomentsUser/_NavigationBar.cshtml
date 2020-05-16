@@ -1,0 +1,46 @@
+﻿<!-- header -->
+<header class="main-header">
+    <!-- logo-->
+    <a href="/Home/Index" class="logo-holder"><img src="~/images/logo.png" alt=""></a>
+    <!-- logo end-->
+    <!-- header opt -->
+    <a href="dashboard-add-listing.html" class="add-list color-bg">Add Listing <span><i class="fal fa-layer-plus"></i></span></a>
+    <div class="cart-btn   show-header-modal" data-microtip-position="bottom" role="tooltip" aria-label="Your Wishlist"><i class="fal fa-heart"></i><span class="cart-counter green-bg"></span> </div>
+
+    @RenderPage("~/Views/Shared/_LoginPartial.cshtml");
+
+
+
+
+
+
+    <div class="nav-button-wrap color-bg">
+        <div class="nav-button">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <!-- nav-button-wrap end-->
+    <!--  navigation -->
+    <div class="nav-holder main-menu">
+        <nav>
+            <ul class="no-list-style">
+                <li>
+                    <a href="/Home/Index" class="act-link">Home</a>
+                </li>
+                <li>
+                    <a href="/Places/Index">Listings</a>
+                </li>
+                @if (User.IsInRole("Admin"))
+                {
+                    <li>
+                        <a href="/Administrator/Index">Administrator Area</a>
+                    </li>
+                }
+
+
+
+            </ul>
+        </nav>
+    </div>
+    <!-- navigation  end -->
+    </header>

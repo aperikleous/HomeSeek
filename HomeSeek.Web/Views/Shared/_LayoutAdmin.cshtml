@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <!--=============== basic  ===============-->
+    <meta charset="UTF-8">
+    <title>Townhub - Directory Listing Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!--=============== css  ===============-->
+    <link href="~/css/color.css" rel="stylesheet" />
+    <link href="~/css/dashboard-style.css" rel="stylesheet" />
+    <link href="~/css/invoice.css" rel="stylesheet" />
+    <link href="~/css/plugins.css" rel="stylesheet" />
+    <link href="~/css/reset.css" rel="stylesheet" />
+    <link href="~/css/shop.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!--=============== favicons ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+    <!--loader-->
+    <div class="loader-wrap">
+
+    </div>
+
+    @RenderPage("~/Views/Shared/CompomentsUser/_NavigationBar.cshtml");
+
+
+
+
+    <!--loader end-->
+    <!-- main start  -->
+    <div id="main">
+
+        <!-- wrapper-->
+        <div id="wrapper">
+            <!-- content-->
+            <div class="content">
+
+                <!--  section  end-->
+                <!--  section  -->
+
+
+
+                <section class="gray-bg main-dashboard-sec" id="sec1">
+                    <div class="container">
+                        <!--  dashboard-menu-->
+                        <div class="col-md-3">
+                            <div class="mob-nav-content-btn color2-bg init-dsmen fl-wrap"><i class="fal fa-bars"></i> Dashboard menu</div>
+
+                            @RenderPage("~/Views/Shared/CompomentsUser/_DashboardMenu.cshtml");
+
+                        </div>
+                        <!-- dashboard-menu  end-->
+
+                        @RenderBody();
+                    </div>
+                </section>
+                <!--  section  end-->
+                <div class="limit-box fl-wrap"></div>
+            </div>
+            <!--content end-->
+        </div>
+        @RenderPage("~/Views/Shared/CompomentsUser/_Footer.cshtml");
+
+
+
+
+
+    </div>
+    <!-- Main end -->
+    <!--=============== scripts  ===============-->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/plugins.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/charts.js"></script>
+    <script src="~/js/dashboard.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
