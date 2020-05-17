@@ -75,11 +75,11 @@ namespace HomeSeek.Web
                appId: "275152686973642",
                appSecret: "b736e6da5722f9ea0210e02aef35cbc1");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "100533648788-eevu220jji011lhmcv615023ks8nchtp.apps.googleusercontent.com",
+                ClientSecret = "fRGbvcP0BTEx5-nJ3jwXzWKK"
+            });
         }
     }
 }
