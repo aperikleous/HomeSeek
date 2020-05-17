@@ -143,13 +143,27 @@ namespace HomeSeek.Desktop
                   
                 }
                 //------------------------------ Reviews per reservation ---------------------------------------------
+                //CALCULATES OVERALL AVERAGE RATING PER PLACE IF MULTIPLE REVIEWS EXIST PER APPARTMENT
+                Console.WriteLine();
                 Console.WriteLine("==================== OVERALL RATING PER PLACE ========================== ");
-                
-                foreach (var rev in reviews)
-                {
-                    Console.WriteLine("total rating: " + rev.OverallRating );
 
+                foreach (var place in places)
+                {
+                    var overallSumRatingPlace = 0d;
+                    foreach (var review in place.Reviews)
+                    {
+                        overallSumRatingPlace += review.OverallRating;
+                    }
+                    double overallRatingPlace = overallSumRatingPlace / place.Reviews.Count();
+                    Console.Write(place.ApartmentName + ": ");
+                    Console.WriteLine("\ttotal rating: " + overallRatingPlace);
                 }
+                /*foreach (var rev in reviews)
+                {
+                    Console.Write(rev.Place.ApartmentName+": ");
+                    Console.WriteLine("\ttotal rating: " + rev.OverallRating);
+
+                }*/
 
                 // Example2
                 //var courses = unitOfWork.Courses.GetCoursesWithAuthors(1, 4);
