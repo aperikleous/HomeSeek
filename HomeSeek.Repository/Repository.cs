@@ -23,7 +23,7 @@ namespace HomeSeek.Repository
             return Context.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public IList<TEntity> GetAll()
         {
             // Note that here I've repeated Context.Set<TEntity>() in every method and this is causing
             // too much noise. I could get a reference to the DbSet returned from this method in the 

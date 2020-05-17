@@ -11,7 +11,7 @@ namespace HomeSeek.Repository
     {
         TEntity GetById(int? id);
 
-        IEnumerable<TEntity> GetAll();
+        IList<TEntity> GetAll();
 
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 
