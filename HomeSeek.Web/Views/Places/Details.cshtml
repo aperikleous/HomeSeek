@@ -61,7 +61,7 @@
                                                     double avg = 0;
                                                     foreach (var review in Model.Reviews)
                                                     {
-                                                        avg = +review.OverallRating;
+                                                        avg += review.OverallRating;
                                                     }
                                                     avg = avg / Model.Reviews.Count();
                                                     @avg
@@ -72,11 +72,11 @@
                                             <div class="reviews-count">
                                                 @if (@Model.Reviews.Count() > 1)
                                                 {
-                                                    @Model.Reviews.Count()<span>Reviews</span>
+                                                    @Model.Reviews.Count()<span> Reviews</span>
                                                 }
                                                 else
                                                 {
-                                                    @Model.Reviews.Count() <span>Review</span>
+                                                    @Model.Reviews.Count() <span> Review</span>
                                                 }
 
                                             </div>
@@ -128,7 +128,7 @@
                                 <!-- inline-facts  -->
                                 <div class="inline-facts-wrap gradient-bg ">
                                     <div class="inline-facts">
-                                        <i class="fal fa-users"></i>
+                                        <i class="fal fa-bath"></i>
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
                                                 <div class="num" data-content="0" data-num="@Model.Bathroom">0</div>
@@ -148,7 +148,7 @@
                                 <!-- inline-facts  -->
                                 <div class="inline-facts-wrap gradient-bg ">
                                     <div class="inline-facts">
-                                        <i class="fal fa-cocktail"></i>
+                                        <i class="fal fa-users"></i>
                                         <div class="milestone-counter">
                                             <div class="stats animaper">
                                                 <div class="num" data-content="0" data-num="@Model.Guests">0</div>
@@ -494,13 +494,14 @@
                 <!--box-widget-item -->
                 <div class="box-widget-item fl-wrap block_box">
                     <div class="box-widget-item-header">
-                        <h3> Price Range </h3>
+                        <h3> Price </h3>
                     </div>
                     <div class="box-widget">
                         <div class="box-widget-content">
                             <div class="claim-price-wdget fl-wrap">
                                 <div class="claim-price-wdget-content fl-wrap">
-                                    <div class="pricerange fl-wrap"><span>Price : </span> 81$ - 320$ </div>
+                                    <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
+                                    <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
                                     <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
                                 </div>
                             </div>
