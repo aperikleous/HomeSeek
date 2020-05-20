@@ -16,8 +16,12 @@ namespace HomeSeek.Web.Models
         public int TotalReservations { get; set; }
         [Display(Name = "Total Users")]
         public int TotalUsers { get; set; }
-        [Display(Name = "Total Addresses")]
-        public int TotalAddresses { get; set; }
+        [Display(Name = "Total Cities")]
+        public int TotalCities { get; set; }
+        [Display(Name = "Average days of staying of All Listings")]
+        public double AvgTotalDays { get; set; }
+        [Display(Name = "Reservations per Month")]
+        public Dictionary<string,int> ReservPerMonth { get; set; }
 
 
     }
