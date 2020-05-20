@@ -1,0 +1,28 @@
+﻿@model HomeSeek.Web.Models.Statistics
+@{
+    ViewBag.Title = "Show All Statistics";
+}
+
+<h2>ShowAllStatistics</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.TotalPlaces)</th>
+            <th>@Html.DisplayNameFor(model=>model.TotalReservations)</th>
+            <th>@Html.DisplayNameFor(model=>model.TotalAddresses)</th>
+            <th>@Html.DisplayNameFor(model=>model.TotalReviews)</th>
+            <th>@Html.DisplayNameFor(model=>model.TotalUsers)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.TotalPlaces</td>
+            <td>@Model.TotalReservations</td>
+            <td>@Model.TotalAddresses</td>
+            <td>@Model.TotalReviews</td>
+            <td>@Model.TotalUsers</td>
+        </tr>
+    </tbody>
+</table>

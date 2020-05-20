@@ -217,6 +217,7 @@
     <Compile Include="Controllers\PlacesController.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\ReviewsController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,6 +225,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PaypalConfiguration.cs" />
+    <Compile Include="Models\Statistics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -507,6 +509,7 @@
     <Content Include="Views\Administrator\Index.cshtml" />
     <Content Include="Views\Shared\CompomentsUser\_NavigationBar.cshtml" />
     <Content Include="Views\Shared\CompomentsUser\_DashboardMenu.cshtml" />
+    <Content Include="Views\Statistics\ShowAllStatistics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
