@@ -7,199 +7,422 @@
 <h2>Places</h2>
 
 
-<!--section  -->
-<section>
-    <div class="container big-container">
-        <div class="section-title">
-            <h2><span>Most Popular Palces</span></h2>
-            <div class="section-subtitle">Best Listings</div>
-            <span class="section-separator"></span>
-            <p>Proin dapibus nisl ornare diam varius tempus. Aenean a quam luctus, finibus tellus ut, convallis eros sollicitudin turpis.</p>
+
+
+<div class="map-container column-map right-pos-map no-fix-scroll-map hid-mob-map">
+    <div id="map-main"></div>
+    <ul class="mapnavigation no-list-style">
+        <li><a href="#" class="prevmap-nav mapnavbtn"><span><i class="fas fa-caret-left"></i></span></a></li>
+        <li><a href="#" class="nextmap-nav mapnavbtn"><span><i class="fas fa-caret-right"></i></span></a></li>
+    </ul>
+    <div class="scrollContorl mapnavbtn tolt" data-microtip-position="top-left" data-tooltip="Enable Scrolling"><span><i class="fal fa-unlock"></i></span></div>
+    <div class="location-btn geoLocation tolt" data-microtip-position="top-left" data-tooltip="Your location"><span><i class="fal fa-location"></i></span></div>
+    <div class="map-overlay"></div>
+    <div class="map-close"><i class="fas fa-times"></i></div>
+</div>
+<!-- Map end -->
+<!-- hidden-search-column-->
+<div class="hidden-search-column">
+    <div class="hidden-search-column-container fl-wrap full-height tabs-act">
+        <div class="filter-sidebar-header fl-wrap">
+            <ul class="tabs-menu fl-wrap no-list-style">
+                <li class="current"><a href="#filters-search"> <i class="fal fa-sliders-h"></i> Filters </a></li>
+                <li><a href="#category-search"> <i class="fal fa-image"></i>Categories </a></li>
+            </ul>
         </div>
-        <div class="listing-filters gallery-filters fl-wrap">
-            <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">All Categories</a>
-            <a href="#" class="gallery-filter" data-filter=".restaurant">Restaurants </a>
-            <a href="#" class="gallery-filter" data-filter=".hotels">Hotels</a>
-            <a href="#" class="gallery-filter" data-filter=".events">Events</a>
-            <a href="#" class="gallery-filter" data-filter=".fitness">Fitness</a>
+        <div class="scrl-content filter-sidebar  full-height">
+            <!--tabs -->
+            <div class="tabs-container fl-wrap">
+                <!--tab -->
+                <div class="tab">
+                    <div id="filters-search" class="tab-content  first-tab ">
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item">
+                            <span class="iconn-dec"><i class="far fa-bookmark"></i></span>
+                            <input type="text" placeholder="What are you looking for ?" value="" />
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item">
+                            <select data-placeholder="Categories" class="chosen-select no-search-select">
+                                <option>All Categories</option>
+                                <option>Shops</option>
+                                <option>Hotels</option>
+                                <option>Restaurants</option>
+                                <option>Fitness</option>
+                                <option>Events</option>
+                            </select>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item">
+                            <select data-placeholder="City/Location" class="chosen-select no-search-select">
+                                <option>All Cities</option>
+                                <option>New York</option>
+                                <option>Chicago</option>
+                                <option>Los Angeles</option>
+                                <option>Washington</option>
+                                <option>Boston</option>
+                            </select>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item location autocomplete-container">
+                            <span class="iconn-dec"><i class="far fa-map-marker"></i></span>
+                            <input type="text" placeholder="Where to look?" class="autocomplete-input" id="autocompleteid3" value="" />
+                            <a href="#"><i class="fal fa-location"></i></a>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item">
+                            <button class="toggle-filter-btn tsb_act "><i class="fal fa-clock"></i> <span>Open Now</span></button>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item clact date-container">
+                            <span class="iconn-dec"><i class="fal fa-calendar"></i></span>
+                            <input type="text" placeholder="Event Date" name="datepicker-here" value="" />
+                            <span class="clear-singleinput"><i class="fal fa-times"></i></span>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item">
+                            <div class="price-rage-wrap fl-wrap">
+                                <div class="price-rage-wrap-title"><i class="fal fa-hand-holding-usd"></i> Price :</div>
+                                <div class="price-rage-item fl-wrap">
+                                    <input type="text" class="price-range" data-min="0" data-max="4" name="price-range1" data-step="1" value="$$">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item clact">
+                            <div class=" fl-wrap filter-tags">
+                                <ul class="no-list-style">
+                                    <li>
+                                        <input id="check-aa" type="checkbox" name="check">
+                                        <label for="check-aa">Elevator in building</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-b" type="checkbox" name="check">
+                                        <label for="check-b">Friendly workspace</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-c" type="checkbox" name="check" checked>
+                                        <label for="check-c">Instant Book</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-d" type="checkbox" name="check">
+                                        <label for="check-d">Wireless Internet</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-d2" type="checkbox" name="check" checked>
+                                        <label for="check-d2">Free WiFi</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-d3" type="checkbox" name="check" checked>
+                                        <label for="check-d3">Free Parking</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-d4" type="checkbox" name="check">
+                                        <label for="check-d4">Smoking Allowed</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <!-- listsearch-input-item-->
+                        <div class="listsearch-input-item">
+                            <button class="header-search-button color-bg" onclick="window.location.href='listing.html'"><i class="far fa-search"></i><span>Search</span></button>
+                        </div>
+                        <!-- listsearch-input-item end-->
+                        <div class="clear-filter-btn"><i class="far fa-redo"></i> Reset Filters</div>
+                    </div>
+                </div>
+                <!--tab end-->
+                <!--tab -->
+                <div class="tab">
+                    <div id="category-search" class="tab-content">
+                        <div class="fl-wrap hc-item">
+                            <a class="category-carousel-item fl-wrap full-height checket-cat" href="#">
+                                <img src="/images/all/1.jpg" alt="">
+                                <div class="category-carousel-item-icon red-bg"><i class="fal fa-cheeseburger"></i></div>
+                                <div class="category-carousel-item-container">
+                                    <div class="category-carousel-item-title">Restaurants / Cafe</div>
+                                    <div class="category-carousel-item-counter">6 listings</div>
+                                </div>
+                            </a>
+                            <a class="category-carousel-item fl-wrap full-height" href="#">
+                                <img src="/images/all/1.jpg" alt="">
+                                <div class="category-carousel-item-icon yellow-bg"><i class="fal fa-bed"></i></div>
+                                <div class="category-carousel-item-container">
+                                    <div class="category-carousel-item-title">Hotel / Hostel</div>
+                                    <div class="category-carousel-item-counter">14 listings</div>
+                                </div>
+                            </a>
+                            <a class="category-carousel-item fl-wrap full-height" href="#">
+                                <img src="/images/all/1.jpg" alt="">
+                                <div class="category-carousel-item-icon purp-bg"><i class="fal fa-cocktail"></i></div>
+                                <div class="category-carousel-item-container">
+                                    <div class="category-carousel-item-title">Events / Nightlife</div>
+                                    <div class="category-carousel-item-counter">6 listings</div>
+                                </div>
+                            </a>
+                            <a class="category-carousel-item fl-wrap full-height" href="#">
+                                <img src="/images/all/1.jpg" alt="">
+                                <div class="category-carousel-item-icon blue-bg"><i class="fal fa-dumbbell"></i></div>
+                                <div class="category-carousel-item-container">
+                                    <div class="category-carousel-item-title">Fitness / Gym</div>
+                                    <div class="category-carousel-item-counter">18 listings</div>
+                                </div>
+                            </a>
+                            <a class="category-carousel-item fl-wrap full-height" href="#">
+                                <img src="/images/all/1.jpg" alt="">
+                                <div class="category-carousel-item-icon green-bg"><i class="fal fa-cart-arrow-down"></i></div>
+                                <div class="category-carousel-item-container">
+                                    <div class="category-carousel-item-title">Shopping</div>
+                                    <div class="category-carousel-item-counter">19 listings</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--tab end-->
+            </div>
+            <!--tabs end-->
         </div>
-        <div class="grid-item-holder gallery-items fl-wrap">
+    </div>
+    <div class="close_sbfilters"><i class="fal fa-long-arrow-right"></i></div>
+</div>
+<!-- hidden-search-column end-->
+<div class="col-list-wrap anim_clw  ">
+    <!-- list-main-wrap-header-->
+    <div class="list-main-wrap-header fl-wrap anim_clw  ">
+        <div class="container">
+            <!-- list-main-wrap-title-->
+            <div class="list-main-wrap-title">
+                <h2>Results For : <span>New York </span></h2>
+            </div>
+            <!-- list-main-wrap-title end-->
+            <!-- list-main-wrap-opt-->
+            <div class="list-main-wrap-opt">
+                <!-- price-opt-->
+                <div class="price-opt">
+                    <span class="price-opt-title">Sort   by:</span>
+                    <div class="listsearch-input-item">
+                        <select data-placeholder="Popularity" class="chosen-select no-search-select">
+                            <option>Popularity</option>
+                            <option>Average rating</option>
+                            <option>Price: low to high</option>
+                            <option>Price: high to low</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- price-opt end-->
+                <!-- price-opt-->
+                <div class="grid-opt">
+                    <ul class="no-list-style">
+                        <li class="grid-opt_act"><span class="two-col-grid act-grid-opt tolt" data-microtip-position="bottom" data-tooltip="Grid View"><i class="fal fa-th"></i></span></li>
+                        <li class="grid-opt_act"><span class="one-col-grid tolt" data-microtip-position="bottom" data-tooltip="List View"><i class="fal fa-list"></i></span></li>
+                    </ul>
+                </div>
+                <!-- price-opt end-->
+                <div class="show-hidden-sb shsb_btn shsb_btn_act"><i class="fal fa-sliders-h"></i> <span>Show Filters</span></div>
+            </div>
+            <!-- list-main-wrap-opt end-->
+        </div>
+        <a class="custom-scroll-link back-to-filters clbtg" href="#lisfw"><i class="fas fa-caret-up"></i></a>
+    </div>
+    <!-- list-main-wrap-header end-->
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="mob-nav-content-btn mncb_half color2-bg shsb_btn shsb_btn_act fl-wrap"><i class="fal fa-filter"></i>  Filters</div>
+        <div class="mob-nav-content-btn mncb_half color2-bg schm  fl-wrap"><i class="fal fa-map-marker-alt"></i>  View on map</div>
+    </div>
+    <div class="clearfix"></div>
+    <!--section  -->
+    <!-- listing-item-container -->
+    <div class="listing-item-container init-grid-items fl-wrap" id="lisfw">
+        <div class="container">
             @foreach (var place in Model)
             {
-                <!-- gallery-item  -->
-                <div class="gallery-item hotels">
-                    <!-- listing-item  -->
-                    <div class="listing-item">
-                        <article class="geodir-category-listing fl-wrap">
-                            <div class="geodir-category-img">
-                                <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
-                                <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                    <img src="images/all/1.jpg" alt="">
+                <!-- listing-item  -->
+                <div class="listing-item">
+                    <article class="geodir-category-listing fl-wrap">
+                        <div class="geodir-category-img">
+                            <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
+                            <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
+                                <img src="~/images/all/1.jpg" alt=""/>
+                            </a>
+                            <div class="listing-avatar">
+                                <a href="author-single.html"><img src="/images/avatar/1.jpg" alt=""></a>
+                                <span class="avatar-tooltip">Added By  <strong>Kliff Antony</strong></span>
+                            </div>
+                            <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
+                            <div class="geodir-category-opt">
+                                <div class="listing-rating-count-wrap">
+                                    <div class="review-score">5.0</div>
+                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
+                                    <br>
+                                    <div class="reviews-count">4 reviews</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="geodir-category-content fl-wrap">
+                            <div class="geodir-category-content-title fl-wrap">
+                                <div class="geodir-category-content-title-item">
+                                    <h3 class="title-sin_map"><a href="listing-single.html">@place.ApartmentName</a><span class="verified-badge"><i class="fal fa-check"></i></span></h3>
+                                    <div class="geodir-category-location fl-wrap"><a href="#4" class="map-item"><i class="fas fa-map-marker-alt"></i>  @place.Address.AddressLine @place.Address.City</a></div>
+                                </div>
+                            </div>
+                            <div class="geodir-category-text fl-wrap">
+                                <p class="small-text">@place.Description</p>
+                                <div class="facilities-list fl-wrap">
+                                    <div class="facilities-list-title">Facilities : </div>
+                                    <ul class="no-list-style">
+                                        <li class="tolt" data-microtip-position="top" data-tooltip="Free WiFi"><i class="fal fa-wifi"></i></li>
+                                        <li class="tolt" data-microtip-position="top" data-tooltip="Parking"><i class="fal fa-parking"></i></li>
+                                        <li class="tolt" data-microtip-position="top" data-tooltip="Non-smoking Rooms"><i class="fal fa-smoking-ban"></i></li>
+                                        <li class="tolt" data-microtip-position="top" data-tooltip="Pets Friendly"><i class="fal fa-dog-leashed"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="geodir-category-footer fl-wrap">
+                                <a class="listing-item-category-wrap">
+                                    <div class="listing-item-category  yellow-bg"><i class="fal fa-bed"></i></div>
+                                    <span>Hotels</span>
                                 </a>
-                                <div class="listing-avatar">
-                                    <a href="author-single.html"><img src="images/avatar/1.jpg" alt=""></a>
-                                    <span class="avatar-tooltip">Added By  <strong>Kliff Antony</strong></span>
+                                <div class="geodir-opt-list">
+                                    <ul class="no-list-style">
+                                        <li><a href="#" class="show_gcc"><i class="fal fa-envelope"></i><span class="geodir-opt-tooltip">Contact Info</span></a></li>
+                                        <li><a href="#4" class="map-item"><i class="fal fa-map-marker-alt"></i><span class="geodir-opt-tooltip">On the map <strong>4</strong></span></a></li>
+                                        <li>
+                                            <div class="dynamic-gal gdop-list-link" data-dynamicPath="[{'src': '/images/all/1.jpg'},{'src': '/images/all/1.jpg'}, {'src': '/images/all/1.jpg'}]"><i class="fal fa-search-plus"></i><span class="geodir-opt-tooltip">Gallery</span></div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
-                                <div class="geodir-category-opt">
-                                    <div class="listing-rating-count-wrap">
-                                        <div class="review-score">5.0</div>
-                                        <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                        <br>
-                                        <div class="reviews-count">@place.Reviews.Count()</div>
-                                    </div>
+                                <div class="price-level geodir-category_price">
+                                    <span class="price-level-item" data-pricerating="4"></span>
+                                    <span class="price-name-tooltip">Ultra High</span>
                                 </div>
-                            </div>
-                            <div class="geodir-category-content fl-wrap title-sin_item">
-                                <div class="geodir-category-content-title fl-wrap">
-                                    <div class="geodir-category-content-title-item">
-                                        <h3 class="title-sin_map"><a href="listing-single.html">@place.ApartmentName</a><span class="verified-badge"><i class="fal fa-check"></i></span></h3>
-                                        <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i>  @place.Address.AddressLine @place.Address.City</a></div>
-                                    </div>
-                                </div>
-                                <div class="geodir-category-text fl-wrap">
-                                    <p class="small-text">Sed interdum metus at nisi tempor laoreet. Integer gravida orci a justo sodales.</p>
-                                    <div class="facilities-list fl-wrap">
-                                        <div class="facilities-list-title">Facilities : </div>
-                                        <ul class="no-list-style">
-                                            <li class="tolt" data-microtip-position="top" data-tooltip="Free WiFi"><i class="fal fa-wifi"></i></li>
-                                            <li class="tolt" data-microtip-position="top" data-tooltip="Parking"><i class="fal fa-parking"></i></li>
-                                            <li class="tolt" data-microtip-position="top" data-tooltip="Non-smoking Rooms"><i class="fal fa-smoking-ban"></i></li>
-                                            <li class="tolt" data-microtip-position="top" data-tooltip="Pets Friendly"><i class="fal fa-dog-leashed"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="geodir-category-footer fl-wrap">
-                                    <a class="listing-item-category-wrap">
-                                        <div class="listing-item-category  yellow-bg"><i class="fal fa-bed"></i></div>
-                                        <span>Hotels</span>
-                                    </a>
-                                    <div class="geodir-opt-list">
-                                        <ul class="no-list-style">
-                                            <li><a href="#" class="show_gcc"><i class="fal fa-envelope"></i><span class="geodir-opt-tooltip">Contact Info</span></a></li>
-                                            <li><a href="#" class="single-map-item" data-newlatitude="40.72228267" data-newlongitude="-73.99246214"><i class="fal fa-map-marker-alt"></i><span class="geodir-opt-tooltip">On the map <strong>4</strong></span></a></li>
-                                            <li>
-                                                <div class="dynamic-gal gdop-list-link" data-dynamicPath="[{'src': 'images/all/1.jpg'},{'src': 'images/all/1.jpg'}, {'src': 'images/all/1.jpg'}]"><i class="fal fa-search-plus"></i><span class="geodir-opt-tooltip">Gallery</span></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="price-level geodir-category_price">
-                                        <span class="price-level-item" data-pricerating="4"></span>
-                                        <span class="price-name-tooltip">Ultra High</span>
-                                    </div>
-                                    <div class="geodir-category_contacts">
-                                        <div class="close_gcc"><i class="fal fa-times-circle"></i></div>
-                                        <ul class="no-list-style">
-                                            <li><span><i class="fal fa-phone"></i> Call : </span><a href="#">+38099231212</a></li>
-                                            <li><span><i class="fal fa-envelope"></i> Write : </span><a href="#">yourmail@domain.com</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="geodir-category_contacts">
+                                    <div class="close_gcc"><i class="fal fa-times-circle"></i></div>
+                                    <ul class="no-list-style">
+                                        <li><span><i class="fal fa-phone"></i> Call : </span><a href="#">+38099231212</a></li>
+                                        <li><span><i class="fal fa-envelope"></i> Write : </span><a href="#">yourmail@domain.com</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </article>
-                    </div>
-                    <!-- listing-item end -->
+                        </div>
+                    </article>
                 </div>
-                <!-- gallery-item  end-->
+                <!-- listing-item end -->
             }
 
 
+            <div class="pagination">
+                <a href="#" class="prevposts-link"><i class="fas fa-caret-left"></i><span>Prev</span></a>
+                <a href="#">1</a>
+                <a href="#" class="current-page">2</a>
+                <a href="#">3</a>
+                <a href="#">...</a>
+                <a href="#">7</a>
+                <a href="#" class="nextposts-link"><span>Next</span><i class="fas fa-caret-right"></i></a>
+            </div>
         </div>
-        <a href="listing.html" class="btn  dec_btn  color2-bg">Check Out All Listings<i class="fal fa-arrow-alt-right"></i></a>
     </div>
-</section>
-<!--section end-->
+    <!-- listing-item-container end -->
 
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table table-bordered">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Amenities)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ApartmentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Guests)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Bedroom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Bathroom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PricePerDay)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CleanCost)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsBooked)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Created)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Modified)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table table-bordered">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Amenities)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ApartmentName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Guests)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bedroom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bathroom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PricePerDay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CleanCost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsBooked)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Created)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Modified)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PlaceId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.PlaceId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.PlaceId })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Amenities)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApartmentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Guests)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bedroom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bathroom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PricePerDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CleanCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsBooked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amenities)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApartmentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Guests)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bedroom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bathroom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PricePerDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CleanCost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsBooked)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modified)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PlaceId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PlaceId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PlaceId })
+                </td>
+            </tr>
+        }
+
+    </table>
