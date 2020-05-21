@@ -42,6 +42,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DaysOfStaying)
+            <p>@(item.DaysOfStaying * item.Place.PricePerDay)</p>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PaymentDate)

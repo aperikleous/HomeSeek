@@ -3,40 +3,68 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
-
+<!-- listing-carousel-wrap -->
+<div class="listing-carousel-wrap fl-wrap" id="sec1">
+    <div class="listing-carousel fl-wrap full-height lightgallery">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- swiper-slide-->
+                <div class="swiper-slide hov_zoom">
+                    <img src="/images/all/1.jpg" alt="">
+                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                </div>
+                <!-- swiper-slide end-->
+                <!-- swiper-slide-->
+                <div class="swiper-slide  hov_zoom">
+                    <img src="/images/all/1.jpg" alt="">
+                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                </div>
+                <!-- swiper-slide end-->
+                <!-- swiper-slide-->
+                <div class="swiper-slide  hov_zoom">
+                    <img src="/images/all/1.jpg" alt="">
+                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                </div>
+                <!-- swiper-slide end-->
+                <!-- swiper-slide-->
+                <div class="swiper-slide  hov_zoom">
+                    <img src="/images/all/1.jpg" alt="">
+                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                </div>
+                <!-- swiper-slide end-->
+                <!-- swiper-slide-->
+                <div class="swiper-slide  hov_zoom">
+                    <img src="/images/all/1.jpg" alt="">
+                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                </div>
+                <!-- swiper-slide end-->
+            </div>
+        </div>
+    </div>
+    <div class="listing-carousel_pagination">
+        <div class="listing-carousel_pagination-wrap"></div>
+    </div>
+    <div class="listing-carousel-button listing-carousel-button-next"><i class="fas fa-caret-right"></i></div>
+    <div class="listing-carousel-button listing-carousel-button-prev"><i class="fas fa-caret-left"></i></div>
+</div>
+<!-- listing-carousel-wrap end-->
+<!-- scroll-nav-wrapper-->
 <div class="scroll-nav-wrapper fl-wrap">
     <div class="container">
         <nav class="scroll-nav scroll-init">
             <ul class="no-list-style">
                 <li><a class="act-scrlink" href="#sec1"><i class="fal fa-images"></i> Gallery</a></li>
                 <li><a href="#sec2"><i class="fal fa-info"></i>Details</a></li>
-                <li><a href="#sec3"><i class="fal fa-video"></i>Video </a></li>
-                <li><a href="#sec4"><i class="fal fa-bed"></i>Rooms</a></li>
                 <li><a href="#sec5"><i class="fal fa-comments-alt"></i>Reviews</a></li>
             </ul>
         </nav>
-        <div class="scroll-nav-wrapper-opt">
-            <a href="#" class="scroll-nav-wrapper-opt-btn"> <i class="fas fa-heart"></i> Save </a>
-            <a href="#" class="scroll-nav-wrapper-opt-btn showshare"> <i class="fas fa-share"></i> Share </a>
-            <div class="share-holder hid-share">
-                <div class="share-container  isShare"></div>
-            </div>
-            <div class="show-more-snopt"><i class="fal fa-ellipsis-h"></i></div>
-            <div class="show-more-snopt-tooltip">
-                <a href="#"> <i class="fas fa-comment-alt"></i> Write a review</a>
-                <a href="#"> <i class="fas fa-flag-alt"></i> Report </a>
-            </div>
-        </div>
+
     </div>
 </div>
 <!-- scroll-nav-wrapper end-->
 <section class="gray-bg no-top-padding">
     <div class="container">
-        <div class="breadcrumbs inline-breadcrumbs fl-wrap">
-            <a href="#">Home</a><a href="#">Listings</a><a href="#">New York</a><span>Listing Single</span>
-        </div>
+
         <div class="clearfix"></div>
         <div class="row">
             <!-- list-single-main-wrapper-col -->
@@ -50,7 +78,6 @@
                                 <div class="col-md-8">
                                     <h1>@Html.DisplayFor(model => model.ApartmentName) <span class="verified-badge"><i class="fal fa-check"></i></span></h1>
                                     <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> @Html.DisplayFor(model => model.Address.AddressLine)  @Html.DisplayFor(model => model.Address.City) </a> <a href="#"> <i class="fal fa-phone"></i>+38099231212</a> <a href="#"><i class="fal fa-envelope"></i> yourmail@domain.com</a></div>
-                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-bath"></i>Bathrooms @Html.DisplayFor(model => model.Bathroom)</a><a href="#"><i class="fas fa-bed"></i>Bedrooms @Html.DisplayFor(model => model.Bedroom)</a> </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="fl-wrap list-single-header-column  block_box">
@@ -90,14 +117,8 @@
                                 <div class="listing-item-category  blue-bg"><i class="fal fa-bed"></i></div>
                                 <span>Hotels</span>
                             </a>
-                            <div class="list-single-author"> <a href="author-single.html"><span class="author_avatar"> <img alt='' src='images/avatar/1.jpg'>  </span>By  Alisa Noory</a></div>
-                            <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
-                            <div class="list-single-stats">
-                                <ul class="no-list-style">
-                                    <li><span class="viewed-counter"><i class="fas fa-eye"></i> Viewed -  156 </span></li>
-                                    <li><span class="bookmark-counter"><i class="fas fa-heart"></i> Bookmark -  24 </span></li>
-                                </ul>
-                            </div>
+                            <div class="list-single-author"> <a href="author-single.html"><span class="author_avatar"> <img alt='' src='/images/avatar/1.jpg'>  </span>By  Alisa Noory</a></div>
+                           
                         </div>
                     </div>
                     <!-- list-single-header end -->
@@ -213,7 +234,16 @@
                         <div class="reviews-score-wrap fl-wrap">
                             <div class="review-score-total">
                                 <span class="review-score-total-item">
-                                    4.6
+                                    @{
+
+                                        avg = 0;
+                                        foreach (var review in Model.Reviews)
+                                        {
+                                            avg += review.OverallRating;
+                                        }
+                                        avg = avg / Model.Reviews.Count();
+                                        @avg
+                                    }
                                 </span>
                                 <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
                             </div>
@@ -222,38 +252,82 @@
                                 <div class="review-score-detail-list">
                                     <!-- rate item-->
                                     <div class="rate-item">
-                                        <div class="rate-item-title"><span>Quality</span></div>
+                                        <div class="rate-item-title"><span>Accuracy</span></div>
                                         <div class="rate-item-bg" data-percent="100%">
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
-                                        <div class="rate-item-percent">5.0</div>
+                                        <div class="rate-item-percent">
+                                            @{
+
+                                                avg = 0;
+                                                foreach (var review in Model.Reviews)
+                                                {
+                                                    avg += review.Accuracy;
+                                                }
+                                                avg = avg / Model.Reviews.Count();
+                                                @avg
+                                            }
+                                        </div>
+                                    </div>
+                                    <!-- rate item end-->
+                                    <!-- rate item-->
+                                    <div class="rate-item">
+                                        <div class="rate-item-title"><span>Cleanliness</span></div>
+                                        <div class="rate-item-bg" data-percent="100%">
+                                            <div class="rate-item-line gradient-bg"></div>
+                                        </div>
+                                        <div class="rate-item-percent">
+                                            @{
+
+                                                avg = 0;
+                                                foreach (var review in Model.Reviews)
+                                                {
+                                                    avg += review.Cleanliness;
+                                                }
+                                                avg = avg / Model.Reviews.Count();
+                                                @avg
+                                            }
+                                        </div>
                                     </div>
                                     <!-- rate item end-->
                                     <!-- rate item-->
                                     <div class="rate-item">
                                         <div class="rate-item-title"><span>Location</span></div>
-                                        <div class="rate-item-bg" data-percent="100%">
+                                        <div class="rate-item-bg" data-percent="80%"> @*"@(avg*20)%"*@
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
-                                        <div class="rate-item-percent">5.0</div>
+                                        <div class="rate-item-percent">
+                                            @{
+
+                                                avg = 0;
+                                                foreach (var review in Model.Reviews)
+                                                {
+                                                    avg += review.Location;
+                                                }
+                                                avg = avg / Model.Reviews.Count();
+                                                @avg
+                                            }
+                                        </div>
                                     </div>
                                     <!-- rate item end-->
                                     <!-- rate item-->
                                     <div class="rate-item">
-                                        <div class="rate-item-title"><span>Price</span></div>
-                                        <div class="rate-item-bg" data-percent="80%">
-                                            <div class="rate-item-line gradient-bg"></div>
-                                        </div>
-                                        <div class="rate-item-percent">4.0</div>
-                                    </div>
-                                    <!-- rate item end-->
-                                    <!-- rate item-->
-                                    <div class="rate-item">
-                                        <div class="rate-item-title"><span>Service</span></div>
+                                        <div class="rate-item-title"><span>Value</span></div>
                                         <div class="rate-item-bg" data-percent="90%">
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
-                                        <div class="rate-item-percent">4.5</div>
+                                        <div class="rate-item-percent">
+                                            @{
+
+                                                avg = 0;
+                                                foreach (var review in Model.Reviews)
+                                                {
+                                                    avg += review.Value;
+                                                }
+                                                avg = avg / Model.Reviews.Count();
+                                                @avg
+                                            }
+                                        </div>
                                     </div>
                                     <!-- rate item end-->
                                 </div>
@@ -271,7 +345,7 @@
 
                                     <div class="reviews-comments-item">
                                         <div class="review-comments-avatar">
-                                            <img src="images/avatar/1.jpg" alt="">
+                                            <img src="/images/avatar/1.jpg" alt="">
                                         </div>
                                         <div class="reviews-comments-item-text fl-wrap">
                                             <div class="reviews-comments-header fl-wrap">
@@ -294,28 +368,28 @@
                                 <!--reviews-comments-item end-->
                                 <!-- reviews-comments-item -->
                                 @*<div class="reviews-comments-item">
-                        <div class="review-comments-avatar">
-                            <img src="images/avatar/1.jpg" alt="">
-                        </div>
-                        <div class="reviews-comments-item-text fl-wrap">
-                            <div class="reviews-comments-header fl-wrap">
-                                <h4><a href="#">Adam Koncy</a></h4>
-                                <div class="review-score-user">
-                                    <span class="review-score-user_item">5.0</span>
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                </div>
-                            </div>
-                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
-                            <div class="review-images ">
-                                <a href="images/all/1.jpg" class="image-popup"><img src="images/all/1.jpg" alt=""></a>
-                                <a href="images/all/1.jpg" class="image-popup"><img src="images/all/1.jpg" alt=""></a>
-                            </div>
-                            <div class="reviews-comments-item-footer fl-wrap">
-                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>03 December 2017</span></div>
-                                <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>4</span> </a>
-                            </div>
-                        </div>
-                    </div>*@
+                                        <div class="review-comments-avatar">
+                                            <img src="/images/avatar/1.jpg" alt="">
+                                        </div>
+                                        <div class="reviews-comments-item-text fl-wrap">
+                                            <div class="reviews-comments-header fl-wrap">
+                                                <h4><a href="#">Adam Koncy</a></h4>
+                                                <div class="review-score-user">
+                                                    <span class="review-score-user_item">5.0</span>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
+                                                </div>
+                                            </div>
+                                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
+                                            <div class="review-images ">
+                                                <a href="/images/all/1.jpg" class="image-popup"><img src="/images/all/1.jpg" alt=""></a>
+                                                <a href="/images/all/1.jpg" class="image-popup"><img src="/images/all/1.jpg" alt=""></a>
+                                            </div>
+                                            <div class="reviews-comments-item-footer fl-wrap">
+                                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>03 December 2017</span></div>
+                                                <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>4</span> </a>
+                                            </div>
+                                        </div>
+                                    </div>*@
 
                                 <!--reviews-comments-item end-->
                             </div>
@@ -403,26 +477,7 @@
             <!-- list-single-main-wrapper-col end -->
             <!-- list-single-sidebar -->
             <div class="col-md-4">
-                <!--box-widget-item -->
-                <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
-                        <h3>Working Hours</h3>
-                    </div>
-                    <div class="box-widget opening-hours fl-wrap">
-                        <div class="box-widget-content">
-                            <ul class="no-list-style">
-                                <li class="mon"><span class="opening-hours-day">Monday </span><span class="opening-hours-time">9 AM - 5 PM</span></li>
-                                <li class="tue"><span class="opening-hours-day">Tuesday </span><span class="opening-hours-time">9 AM - 5 PM</span></li>
-                                <li class="wed"><span class="opening-hours-day">Wednesday </span><span class="opening-hours-time">9 AM - 5 PM</span></li>
-                                <li class="thu"><span class="opening-hours-day">Thursday </span><span class="opening-hours-time">9 AM - 5 PM</span></li>
-                                <li class="fri"><span class="opening-hours-day">Friday </span><span class="opening-hours-time">9 AM - 5 PM</span></li>
-                                <li class="sat"><span class="opening-hours-day">Saturday </span><span class="opening-hours-time">9 AM - 3 PM</span></li>
-                                <li class="sun"><span class="opening-hours-day">Sunday </span><span class="opening-hours-time">Closed</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!--box-widget-item end -->
+
                 <!--box-widget-item -->
                 <div class="box-widget-item fl-wrap block_box">
                     <div class="box-widget-item-header">
@@ -476,13 +531,14 @@
                                             <input type="button" value="+" class="plus">
                                         </div>
                                     </div>
-                                    <div class="listsearch-input-item clact date-container">
-                                        <select data-placeholder="Room" class="chosen-select no-search-select">
-                                            <option>Standard Family Room</option>
-                                            <option>Superior Double Room</option>
-                                            <option>Deluxe Single Room</option>
-                                        </select>
+
+                                    <div class="listsearch-input-item clact date-container3 daterangepicker_big">
+                                        <label><i class="fal fa-calendar"></i></label>
+                                        <input type="text" placeholder="Date In Out" name="dates" value="" />
+                                        <span class="clear-singleinput"><i class="fal fa-times"></i></span>
                                     </div>
+
+
                                     <textarea cols="40" rows="3" placeholder="Additional Information:"></textarea>
                                 </fieldset>
                                 <button class="btn color2-bg url_btn float-btn" onclick="window.location.href='booking.html'">Book Room Now <i class="fal fa-bookmark"></i></button>
@@ -512,25 +568,13 @@
                 <!--box-widget-item -->
                 <div class="box-widget-item fl-wrap block_box">
                     <div class="box-widget-item-header">
-                        <h3> Instagram  </h3>
-                    </div>
-                    <div class="box-widget">
-                        <div class="box-widget-content">
-                            <div class='jr-insta-thumb' id="insta-content" data-instatoken="3075034521.5d9aa6a.284ff8339f694dbfac8f265bf3e93c8a"></div>
-                        </div>
-                    </div>
-                </div>
-                <!--box-widget-item end -->
-                <!--box-widget-item -->
-                <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
                         <h3>Hosted by : </h3>
                     </div>
                     <div class="box-widget">
                         <div class="box-widget-author fl-wrap">
                             <div class="box-widget-author-title">
                                 <div class="box-widget-author-title-img">
-                                    <img src="images/avatar/1.jpg" alt="">
+                                    <img src="/images/avatar/1.jpg" alt="">
                                 </div>
                                 <div class="box-widget-author-title_content">
                                     <a href="user-single.html">Alisa Noory</a>
@@ -545,86 +589,6 @@
                     </div>
                 </div>
                 <!--box-widget-item end -->
-                <!--box-widget-item -->
-                <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
-                        <h3>Similar listings :</h3>
-                    </div>
-                    <div class="box-widget  fl-wrap">
-                        <div class="box-widget-content">
-                            <!--widget-posts-->
-                            <div class="widget-posts  fl-wrap">
-                                <ul class="no-list-style">
-                                    <li>
-                                        <div class="widget-posts-img">
-                                            <a href="listing-single.html"><img src="images/gallery/thumbnail/1.png" alt=""></a>
-                                        </div>
-                                        <div class="widget-posts-descr">
-                                            <h4><a href="listing-single.html">Iconic Cafe</a></h4>
-                                            <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> 40 Journal Square Plaza, NJ, USA</a></div>
-                                            <div class="widget-posts-descr-link"><a href="listing.html">Restaurants </a>   <a href="listing.html">Cafe</a></div>
-                                            <div class="widget-posts-descr-score">4.1</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="widget-posts-img">
-                                            <a href="listing-single.html"><img src="images/gallery/thumbnail/1.png" alt=""></a>
-                                        </div>
-                                        <div class="widget-posts-descr">
-                                            <h4><a href="listing-single.html">MontePlaza Hotel</a></h4>
-                                            <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> 70 Bright St New York, USA </a></div>
-                                            <div class="widget-posts-descr-link"><a href="listing.html">Hotels </a>  </div>
-                                            <div class="widget-posts-descr-score">5.0</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="widget-posts-img">
-                                            <a href="listing-single.html"><img src="images/gallery/thumbnail/1.png" alt=""></a>
-                                        </div>
-                                        <div class="widget-posts-descr">
-                                            <h4><a href="listing-single.html">Rocko Band in Marquee Club</a></h4>
-                                            <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i>75 Prince St, NY, USA</a></div>
-                                            <div class="widget-posts-descr-link"><a href="listing.html">Events</a> </div>
-                                            <div class="widget-posts-descr-score">4.2</div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="widget-posts-img">
-                                            <a href="listing-single.html"><img src="images/gallery/thumbnail/1.png" alt=""></a>
-                                        </div>
-                                        <div class="widget-posts-descr">
-                                            <h4><a href="listing-single.html">Premium Fitness Gym</a></h4>
-                                            <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> W 85th St, New York, USA</a></div>
-                                            <div class="widget-posts-descr-link"><a href="listing.html">Fitness</a> <a href="listing.html">Gym</a> </div>
-                                            <div class="widget-posts-descr-score">5.0</div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- widget-posts end-->
-                        </div>
-                    </div>
-                </div>
-                <!--box-widget-item end -->
-                <!--box-widget-item -->
-                <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
-                        <h3>Tags</h3>
-                    </div>
-                    <div class="box-widget opening-hours fl-wrap">
-                        <div class="box-widget-content">
-                            <div class="list-single-tags tags-stylwrap">
-                                <a href="#">Hotel</a>
-                                <a href="#">Hostel</a>
-                                <a href="#">Room</a>
-                                <a href="#">Spa</a>
-                                <a href="#">Restourant</a>
-                                <a href="#">Parking</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--box-widget-item end -->
             </div>
             <!-- list-single-sidebar end -->
         </div>
@@ -634,7 +598,7 @@
 
 
 
-<div>
+@*<div>
     <h4>Place</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -731,4 +695,4 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.PlaceId }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p>*@
