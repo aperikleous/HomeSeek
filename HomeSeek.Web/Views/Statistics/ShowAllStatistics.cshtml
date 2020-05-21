@@ -1,4 +1,5 @@
 ﻿@model HomeSeek.Web.Models.Statistics
+
 @{
     ViewBag.Title = "Show All Statistics";
 }
@@ -85,6 +86,67 @@
     <tbody>
         <tr>
             @foreach (var item in Model.PlacesPerCity)
+            {
+                <td>@Html.DisplayFor(x => item.Value)</td>
+            }
+        </tr>
+    </tbody>
+</table>
+@*<h5>Individual Ratings Per City</h5>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                @foreach (var item in Model.avgAccuracy)
+                {
+
+                    <th>@Html.DisplayFor(x => item.Key)</th>
+
+                }
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var item in Model.avgAccuracy)
+                {
+                    <td>@Html.DisplayFor(x => item.Value)</td>
+                }
+            </tr>
+        </tbody>
+    </table>*@
+
+<h5>Reviews Per Place</h5>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            @foreach (var item in Model.ReviewsPerPlace)
+            {
+                <th>@Html.DisplayFor(x => item.Key)</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var item in Model.ReviewsPerPlace)
+            {
+                <td>@Html.DisplayFor(x => item.Value)</td>
+            }
+        </tr>
+    </tbody>
+</table>
+
+<h5>Reservations Per Place</h5>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            @foreach (var item in Model.ReservationsPerPlace)
+            {
+                <th>@Html.DisplayFor(x => item.Key)</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var item in Model.ReservationsPerPlace)
             {
                 <td>@Html.DisplayFor(x => item.Value)</td>
             }

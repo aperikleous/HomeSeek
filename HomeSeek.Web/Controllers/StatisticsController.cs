@@ -99,18 +99,63 @@ namespace HomeSeek.Web.Controllers
 
             //----------------------------- overall rating per place ---------------------------------------
             Dictionary<string, double> ratingPlace = new Dictionary<string, double>();
+            Dictionary<string, double> accuracy = new Dictionary<string, double>();
+            Dictionary<string, double> checkin = new Dictionary<string, double>();
+            Dictionary<string, double> cleanliness = new Dictionary<string, double>();
+            Dictionary<string, double> location = new Dictionary<string, double>();
+            Dictionary<string, double> value = new Dictionary<string, double>();
+            Dictionary<string, int> reviewsPlace = new Dictionary<string, int>();
+            Dictionary<string, int> reservationsPlace = new Dictionary<string, int>();
+            
             foreach (var place in places)
             {
                 var overallSumRatingPlace = 0d;
+                var totalValue = 0d;
+                var totalAccuracy = 0d;
+                var totalCheckin = 0d;
+                var totalCleanliness = 0d;
+                var totalLocation = 0d;
+                var totalReviews = 0;
+                var totalReservations = 0;
                 foreach (var review in place.Reviews)
                 {
+                    totalReviews += 1;
                     overallSumRatingPlace += review.OverallRating;
+                    totalAccuracy= review.Accuracy;
+                    totalCheckin= review.Checkin;
+                    totalCleanliness= review.Cleanliness;
+                    totalLocation = review.Location;
+                    totalValue = review.Value;
+                }
+                foreach (var reservation in place.Reservations)
+                {
+                    totalReservations += 1;
                 }
                 double overallRatingPlace = overallSumRatingPlace / place.Reviews.Count();
-
+                double avgAccuracy = totalAccuracy / place.Reviews.Count();
+                double avgCheckin = totalCheckin / place.Reviews.Count();
+                double avgCleanliness = totalCleanliness / place.Reviews.Count();
+                double avgLocation = totalLocation / place.Reviews.Count();
+                double avgValue = totalValue / place.Reviews.Count();
+                
                 ratingPlace.Add(place.ApartmentName, overallRatingPlace);
+                accuracy.Add(place.ApartmentName, avgAccuracy);
+                checkin.Add(place.ApartmentName, avgCheckin);
+                cleanliness.Add(place.ApartmentName, avgCleanliness);
+                location.Add(place.ApartmentName, avgLocation);
+                value.Add(place.ApartmentName, avgValue);
+                reviewsPlace.Add(place.ApartmentName, totalReviews);
+                reservationsPlace.Add(place.ApartmentName, totalReservations);
             }
             vm.OverallRatingPlace = ratingPlace;
+            vm.avgAccuracy = accuracy;
+            vm.avgCheckin = checkin;
+            vm.avgCleanliness = cleanliness;
+            vm.avgLocation = location;
+            vm.avgValue = value;
+            vm.ReviewsPerPlace = reviewsPlace;
+            vm.ReservationsPerPlace = reservationsPlace;
+
             //----------------------------------- places per city ----------------------
             Dictionary<string, int> placesInCity = new Dictionary<string, int>();
             foreach (var address in addresses)
@@ -123,7 +168,11 @@ namespace HomeSeek.Web.Controllers
                 placesInCity.Add(address.City, placesCount);
             }
             vm.PlacesPerCity = placesInCity;
+            //------------------------------ Reservations per place ---------------------------------------
+           
+
                 return View(vm);
         }
+
     }
 }
