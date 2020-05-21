@@ -48,13 +48,6 @@ namespace HomeSeek.Desktop
                     }
                 }*/
 
-                
-                
-
-
-
-
-
 
                 //------------------------------------- AVERAGE DAYS OF STAYING ------------------------------------------------------------------------------
                 Console.WriteLine("==================== AVERAGE DAYS OF STAYING OVERALL ========================== ");
@@ -74,6 +67,9 @@ namespace HomeSeek.Desktop
                 //total reservations
                 Console.WriteLine("==================== TOTAL RESERVATIONS ========================== ");
                 Console.WriteLine("Total reservations:" + reservations.Count());
+
+
+                //reservations per month
                 Console.WriteLine("Reservations per month");
                 int Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec;
                 Jan = Feb = Mar = Apr = May = Jun = Jul = Aug = Sep = Oct = Nov = Dec = 0;
@@ -129,18 +125,9 @@ namespace HomeSeek.Desktop
                     Console.WriteLine(reservation.PaymentDate.ToString("MMMM")); 
                 }//end foreach
 
-                perMonth.Add("Jan", Jan);
-                perMonth.Add("Feb", Feb);
-                perMonth.Add("Mar", Mar);
-                perMonth.Add("Apr", Apr);
-                perMonth.Add("May", May);
-                perMonth.Add("Jun", Jun);
-                perMonth.Add("Jul", Jul);
-                perMonth.Add("Aug", Aug);
-                perMonth.Add("Sep", Sep);
-                perMonth.Add("Oct", Oct);
-                perMonth.Add("Nov", Nov);
-                perMonth.Add("Dec", Dec);
+                perMonth.Add("Jan", Jan); perMonth.Add("Feb", Feb); perMonth.Add("Mar", Mar); perMonth.Add("Apr", Apr); perMonth.Add("May", May); perMonth.Add("Jun", Jun);
+                perMonth.Add("Jul", Jul); perMonth.Add("Aug", Aug); perMonth.Add("Sep", Sep); perMonth.Add("Oct", Oct); perMonth.Add("Nov", Nov); perMonth.Add("Dec", Dec);
+
                 foreach (var item in perMonth)
                 {
                     Console.WriteLine(item.Key + " " + item.Value);

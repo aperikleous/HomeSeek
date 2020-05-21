@@ -93,20 +93,37 @@ namespace HomeSeek.Web.Controllers
                         break;
                 }//end switch
             }//end foreach
-            perMonth.Add("Jan", Jan);
-            perMonth.Add("Feb", Feb);
-            perMonth.Add("Mar", Mar);
-            perMonth.Add("Apr", Apr);
-            perMonth.Add("May", May);
-            perMonth.Add("Jun", Jun);
-            perMonth.Add("Jul", Jul);
-            perMonth.Add("Aug", Aug);
-            perMonth.Add("Sep", Sep);
-            perMonth.Add("Oct", Oct);
-            perMonth.Add("Nov", Nov);
-            perMonth.Add("Dec", Dec);
+            perMonth.Add("Jan", Jan); perMonth.Add("Feb", Feb); perMonth.Add("Mar", Mar); perMonth.Add("Apr", Apr); perMonth.Add("May", May); perMonth.Add("Jun", Jun);
+            perMonth.Add("Jul", Jul); perMonth.Add("Aug", Aug); perMonth.Add("Sep", Sep); perMonth.Add("Oct", Oct); perMonth.Add("Nov", Nov); perMonth.Add("Dec", Dec);
             vm.ReservPerMonth = perMonth;
-            return View(vm);
+
+            //----------------------------- overall rating per place ---------------------------------------
+            Dictionary<string, double> ratingPlace = new Dictionary<string, double>();
+            foreach (var place in places)
+            {
+                var overallSumRatingPlace = 0d;
+                foreach (var review in place.Reviews)
+                {
+                    overallSumRatingPlace += review.OverallRating;
+                }
+                double overallRatingPlace = overallSumRatingPlace / place.Reviews.Count();
+
+                ratingPlace.Add(place.ApartmentName, overallRatingPlace);
+            }
+            vm.OverallRatingPlace = ratingPlace;
+            //----------------------------------- places per city ----------------------
+            Dictionary<string, int> placesInCity = new Dictionary<string, int>();
+            foreach (var address in addresses)
+            {
+                var placesCount = 0;
+                foreach (var place in address.Places)
+                {
+                    placesCount += 1;
+                }
+                placesInCity.Add(address.City, placesCount);
+            }
+            vm.PlacesPerCity = placesInCity;
+                return View(vm);
         }
     }
 }

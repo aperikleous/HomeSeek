@@ -26,10 +26,10 @@
             <td>@Model.TotalUsers</td>
             <td>@Model.AvgTotalDays</td>
         </tr>
-        
+
     </tbody>
 </table>
-    <h5>Reservations Per Month</h5>
+<h5>Reservations Per Month</h5>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -37,19 +37,57 @@
             {
                 <th>@Html.DisplayFor(x => item.Key)</th>
             }
-
         </tr>
     </thead>
     <tbody>
 
         <tr>
-
             @foreach (var item in Model.ReservPerMonth)
             {
                 <td>@Html.DisplayFor(x => item.Value)</td>
 
             }
+        </tr>
+    </tbody>
+</table>
 
+
+<h5>Overall Rating Per Place</h5>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            @foreach (var item in Model.OverallRatingPlace)
+            {
+                <th>@Html.DisplayFor(x => item.Key)</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var item in Model.OverallRatingPlace)
+            {
+                <td>@Html.DisplayFor(x => item.Value)</td>
+            }
+        </tr>
+    </tbody>
+</table>
+
+<h5>Places Per City</h5>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            @foreach (var item in Model.PlacesPerCity)
+            {
+                <th>@Html.DisplayFor(x => item.Key)</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var item in Model.PlacesPerCity)
+            {
+                <td>@Html.DisplayFor(x => item.Value)</td>
+            }
         </tr>
     </tbody>
 </table>
