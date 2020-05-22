@@ -6,13 +6,13 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <link href="~/css/color.css" rel="stylesheet" />
     <link href="~/css/dashboard-style.css" rel="stylesheet" />
     <link href="~/css/invoice.css" rel="stylesheet" />
-    <link href="~/css/plugins.css" rel="stylesheet" />
     <link href="~/css/reset.css" rel="stylesheet" />
-    <link href="~/css/shop.css" rel="stylesheet" />
+    <link href="~/css/plugins.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/color.css" rel="stylesheet" />
+    <link href="~/css/shop.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -50,20 +50,20 @@
 
 
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
     <script src="~/js/charts.js"></script>
     <script src="~/js/dashboard.js"></script>
     <script src="~/js/jquery.min.js"></script>  @*το άνοιξα, κάποιος το ειχε οφφ*@
-    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpoOQ4gRShj82EFsLYWPjQLMoXYqAHqtY&libraries=places&callback=initAutocomplete"></script>*@
-    <script src="~/js/map-add.js"></script>
-    <script src="~/js/map-listing.js"></script>
-    <script src="~/js/map-plugins.js"></script>
-    <script src="~/js/map-single.js"></script>
-    <script src="~/js/pjs.js"></script>
     <script src="~/js/plugins.js"></script>
     <script src="~/js/scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpoOQ4gRShj82EFsLYWPjQLMoXYqAHqtY&libraries=places&callback=initAutocomplete"></script>
+    <script src="~/js/map-plugins.js"></script>
+    <script src="~/js/map-listing.js"></script>
+    @*<script src="~/js/map-single.js"></script>*@
+    <script src="~/js/map-add.js"></script>
+    <script src="~/js/pjs.js"></script>
     <script src="~/js/shop.js"></script>
 </body>
 </html>
