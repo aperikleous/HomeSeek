@@ -340,9 +340,6 @@
                                 <!-- reviews-comments-item -->
                                 @foreach (var item in Model.Reviews)
                                 {
-
-
-
                                     <div class="reviews-comments-item">
                                         <div class="review-comments-avatar">
                                             <img src="/images/avatar/1.jpg" alt="">
@@ -477,7 +474,42 @@
             <!-- list-single-main-wrapper-col end -->
             <!-- list-single-sidebar -->
             <div class="col-md-4">
+                <!--box-widget-item -->
+                <div class="box-widget-item fl-wrap block_box">
+                    <div class="box-widget-item-header">
+                        <h3>Book a Reservation </h3>
+                    </div>
+                    <div class="box-widget">
+                        <div class="box-widget-content">
+                            <form class="add-comment custom-form">
+                                <fieldset>
+                                    <div class="quantity fl-wrap">
+                                        <span><i class="fal fa-user-plus"></i>Persons : </span>
+                                        <div class="quantity-item">
+                                            <input type="button" value="-" class="minus">
+                                            <input type="text" name="quantity" title="Qty" class="qty color-bg" data-min="1" data-max="3" data-step="1" value="1">
+                                            <input type="button" value="+" class="plus">
+                                        </div>
+                                    </div>
 
+                                    <div class="listsearch-input-item clact date-container3 daterangepicker_big">
+                                        <label><i class="fal fa-calendar"></i></label>
+                                        <input type="text" placeholder="Date In Out" name="dates" value="" />
+                                        <span class="clear-singleinput"><i class="fal fa-times"></i></span>
+                                    </div>
+                                    <div class="claim-price-wdget-content fl-wrap">
+                                        <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
+                                        <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
+                                        <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
+                                    </div>
+
+                                </fieldset>
+                                <button class="btn color2-bg url_btn float-btn" onclick="window.location.href='booking.html'">Book Room Now <i class="fal fa-bookmark"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--box-widget-item end -->
                 <!--box-widget-item -->
                 <div class="box-widget-item fl-wrap block_box">
                     <div class="box-widget-item-header">
@@ -504,62 +536,6 @@
                                     <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                                 <div class="bottom-bcw-box_link"><a href="#" class="show-single-contactform tolt" data-microtip-position="top" data-tooltip="Write Message"><i class="fal fa-envelope"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--box-widget-item end -->
-                <!--box-widget-item -->
-                <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
-                        <h3>Book a Reservation </h3>
-                    </div>
-                    <div class="box-widget">
-                        <div class="box-widget-content">
-                            <form class="add-comment custom-form">
-                                <fieldset>
-                                    <label><i class="fal fa-user"></i></label>
-                                    <input type="text" placeholder="Your Name *" value="" />
-                                    <div class="clearfix"></div>
-                                    <label><i class="fal fa-envelope"></i>  </label>
-                                    <input type="text" placeholder="Email Address*" value="" />
-                                    <div class="quantity fl-wrap">
-                                        <span><i class="fal fa-user-plus"></i>Persons : </span>
-                                        <div class="quantity-item">
-                                            <input type="button" value="-" class="minus">
-                                            <input type="text" name="quantity" title="Qty" class="qty color-bg" data-min="1" data-max="3" data-step="1" value="1">
-                                            <input type="button" value="+" class="plus">
-                                        </div>
-                                    </div>
-
-                                    <div class="listsearch-input-item clact date-container3 daterangepicker_big">
-                                        <label><i class="fal fa-calendar"></i></label>
-                                        <input type="text" placeholder="Date In Out" name="dates" value="" />
-                                        <span class="clear-singleinput"><i class="fal fa-times"></i></span>
-                                    </div>
-
-
-                                    <textarea cols="40" rows="3" placeholder="Additional Information:"></textarea>
-                                </fieldset>
-                                <button class="btn color2-bg url_btn float-btn" onclick="window.location.href='booking.html'">Book Room Now <i class="fal fa-bookmark"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!--box-widget-item end -->
-                <!--box-widget-item -->
-                <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
-                        <h3> Price </h3>
-                    </div>
-                    <div class="box-widget">
-                        <div class="box-widget-content">
-                            <div class="claim-price-wdget fl-wrap">
-                                <div class="claim-price-wdget-content fl-wrap">
-                                    <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
-                                    <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
-                                    <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
-                                </div>
                             </div>
                         </div>
                     </div>
