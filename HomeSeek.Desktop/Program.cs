@@ -48,13 +48,6 @@ namespace HomeSeek.Desktop
                     }
                 }*/
 
-                
-                
-
-
-
-
-
 
                 //------------------------------------- AVERAGE DAYS OF STAYING ------------------------------------------------------------------------------
                 Console.WriteLine("==================== AVERAGE DAYS OF STAYING OVERALL ========================== ");
@@ -74,24 +67,34 @@ namespace HomeSeek.Desktop
                 //total reservations
                 Console.WriteLine("==================== TOTAL RESERVATIONS ========================== ");
                 Console.WriteLine("Total reservations:" + reservations.Count());
+
+
+                //reservations per month
                 Console.WriteLine("Reservations per month");
                 int Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec;
                 Jan = Feb = Mar = Apr = May = Jun = Jul = Aug = Sep = Oct = Nov = Dec = 0;
+                int[] months = new int[12];
+                Dictionary<string, int> perMonth = new Dictionary<string, int>();
+                
                 foreach (var reservation in reservations)
                 {
                     switch (reservation.PaymentDate.Month)
                     {
                         case 1:
                             Jan += 1;  
+                          
                             break;
                         case 2:
                             Feb += 1;
+                           
                             break;
                         case 3:
                             Mar += 1;
+                          
                             break;
                         case 4:
                             Apr += 1;
+                           
                             break;
                         case 5:
                             May += 1;
@@ -118,12 +121,26 @@ namespace HomeSeek.Desktop
                             Dec += 1;
                             break;
                     }//end switch
+                  
                     Console.WriteLine(reservation.PaymentDate.ToString("MMMM")); 
                 }//end foreach
+
+                perMonth.Add("Jan", Jan); perMonth.Add("Feb", Feb); perMonth.Add("Mar", Mar); perMonth.Add("Apr", Apr); perMonth.Add("May", May); perMonth.Add("Jun", Jun);
+                perMonth.Add("Jul", Jul); perMonth.Add("Aug", Aug); perMonth.Add("Sep", Sep); perMonth.Add("Oct", Oct); perMonth.Add("Nov", Nov); perMonth.Add("Dec", Dec);
+
+                foreach (var item in perMonth)
+                {
+                    Console.WriteLine(item.Key + " " + item.Value);
+
+                }
+                /*foreach (var item in months)
+                {
+                    Console.WriteLine(months[item]);
+                }
                 Console.WriteLine("Reservations per month: ");
                 Console.WriteLine($"\t January: {Jan}\n\t February: {Feb}\n\t March: {Mar}\n\t April: {Apr}\n\t May: {May}\n\t June: {Jun}\n\t July: {Jul}\n\t August: {Aug}" +
                     $"\n\t September: {Sep}\n\t November: {Nov}\n\t December: {Dec}"); 
-
+*/
                 /*
                 foreach (var item in places)
                 {
@@ -174,6 +191,10 @@ namespace HomeSeek.Desktop
                 // unitOfWork.Courses.RemoveRange(author.Courses);
                 // unitOfWork.Authors.Remove(author);
                 //unitOfWork.Complete();
+
+                
+                
+
             }
 
         }

@@ -110,6 +110,7 @@
             Place p1 = new Place() { ApartmentName = "Apartment in Psichiko", PricePerDay = 50M, Description = "O,ti kalytero se spiti uparxei, mpravo sta paidia.", Guests = 2, Bedroom = 3, Bathroom = 1, CleanCost = 10M, IsBooked = false, Created = new DateTime(2020, 05, 02), Modified = new DateTime(2020, 05, 05) };
             Place p2 = new Place() { ApartmentName = "Nea Makri Exohiko", PricePerDay = 60M, Description = "Foveri thea, einai monadiko meros gia na meinete.", Guests = 3, Bedroom = 2, Bathroom = 2, CleanCost = 15M, IsBooked = false, Created = new DateTime(2020, 05, 01), Modified = new DateTime(2020, 05, 10) };
             Place p3 = new Place() { ApartmentName = "Villa in Mykonos", PricePerDay = 250M, Description = "Fthines potares, to kalutero meros gia na sprwkseis!", Guests = 6, Bedroom = 5, Bathroom = 3, CleanCost = 40M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 04, 30) };
+            Place p4 = new Place() { ApartmentName = "Villa in Mykonos1", PricePerDay = 251M, Description = "Fthino faghto, to kalutero meros gia masa!", Guests = 3, Bedroom = 5, Bathroom = 3, CleanCost = 40M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 04, 30) };
 
             //================= Seeding Reservations =================
             //Reservation template = new Reservation() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
@@ -151,6 +152,7 @@
             p1.Address = ad1;
             p2.Address = ad2;
             p3.Address = ad3;
+            p4.Address = ad3;
 
             p1.Photos = new List<Photo>() { ph1 };
             p2.Photos = new List<Photo>() { ph2 };
@@ -175,7 +177,7 @@
 
             context.Reviews.AddOrUpdate(x => x.Accuracy, rev1, rev2, rev3, rev4);
             context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3);
-            context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3);
+            context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3, p4);
             context.Reservations.AddOrUpdate(x => x.DaysOfStaying, r1, r2, r3);
             context.Users.AddOrUpdate(x => x.LastName, ap1, ap2, ap3);
             context.Photos.AddOrUpdate(x => x.PhotoUrl, ph1, ph2, ph3);
