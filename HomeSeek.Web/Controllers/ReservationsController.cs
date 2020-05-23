@@ -54,11 +54,6 @@ namespace HomeSeek.Web.Controllers
            var place =db.Places.SingleOrDefault(x => x.PlaceId == placeId);
             // var days = (date2 - date1).Days;
            var days = (checkout - checkin).Days;
-
-            //if get clean cost from html input as string
-            //decimal totalPrice = place.PricePerDay*days+ Convert.ToDecimal(cleancost);
-
-            //if get clean cost from place 
             decimal totalPrice = place.PricePerDay*days+ place.CleanCost;
             DateTime receiptDate = DateTime.Now;
             
