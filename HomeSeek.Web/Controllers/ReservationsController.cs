@@ -43,6 +43,36 @@ namespace HomeSeek.Web.Controllers
             return View();
         }
 
+        public ActionResult Add(int placeId, DateTime checkin, DateTime checkout)
+        {
+            //DateTime date1 = new DateTime();
+            //DateTime date2 = new DateTime();
+            //date1 = Convert.ToDateTime(checkin);
+            //date2 = Convert.ToDateTime(checkout);
+           var place =db.Places.SingleOrDefault(x => x.PlaceId == placeId);
+            // var days = (date2 - date1).Days;
+           var days = (checkout - checkin).Days;
+
+            //if get clean cost from html input as string
+            //decimal totalPrice = place.PricePerDay*days+ Convert.ToDecimal(cleancost);
+
+            //if get clean cost from place 
+            decimal totalPrice = place.PricePerDay*days+ place.CleanCost;
+            DateTime receiptDate = DateTime.Now;
+            
+            ViewBag.CleanCost = place.CleanCost;
+            ViewBag.PricePerDay = place.PricePerDay;
+            
+            ViewBag.TotalPrice = totalPrice;
+            ViewBag.Checkin = checkin.ToString("dd/MM/yyyy");
+            ViewBag.Checkout = checkout.ToString("dd/MM/yyyy");
+            ViewBag.DaysOfStay = days;
+            ViewBag.ReservationDate = receiptDate;
+
+            return View(place);
+            //return RedirectToAction("Pay", "PaymentWithPaypal", "Home");
+        }
+
         // POST: Reservations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
