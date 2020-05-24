@@ -1,0 +1,41 @@
+﻿@model HomeSeek.Entities.Place
+
+@{
+    ViewBag.Title = "Your Reservation";
+}
+
+<h2>Your Reservation</h2>
+<h5>@Html.DisplayFor(model => model.ApartmentName)</h5>
+
+<table class="table-bordered align-content-center col-12">
+    <thead>
+        <tr>
+            <th>Pricing</th>
+            <th>Check-in Date</th>
+            <th>Check-out Date</th>
+            <th>Days of Stay</th>
+        </tr>
+        
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><span class="float-left font-weight-bold font-italic">Cleaning cost:</span><span>@ViewBag.CleanCost €</span></td>
+            <td>@ViewBag.Checkin</td>
+            <td>@ViewBag.Checkout</td>
+            <td>@ViewBag.DaysOfStay</td>
+        </tr>
+        <tr class="position-relative">
+        </tr>
+        <tr class="position-relative">
+            <td><span class="font-weight-bold float-left font-italic">Cost per night:</span><span>@ViewBag.PricePerDay € </span></td>
+        </tr>
+        <tr>
+            <td class="font-weight-bolder"><span class="float-left mr-4">Total Cost:</span><span>@ViewBag.TotalPrice €</span></td>
+        </tr>
+
+    </tbody>
+</table>
+            @Html.ActionLink("Proceed to Paypal", "PaymentWithPaypal", "Reservations", null, new { @class = "btn btn-primary" })
+
+

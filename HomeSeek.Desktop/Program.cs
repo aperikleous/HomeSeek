@@ -192,9 +192,12 @@ namespace HomeSeek.Desktop
                 // unitOfWork.Authors.Remove(author);
                 //unitOfWork.Complete();
 
-                
-                
+                DateTime now = DateTime.Now.Date;
+                DateTime checkin = new DateTime(2020, 5, 4);
+                DateTime checkout = new DateTime(2020, 2, 4);
 
+                var days = now - checkin;
+                Console.WriteLine(checkin.ToString("dd/MM/yyyy"));
             }
 
         }
