@@ -211,6 +211,7 @@
     <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\AmenitiesController.cs" />
     <Compile Include="Controllers\ApplicationUsersController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PhotosController.cs" />
@@ -425,6 +426,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Views\Shared\404.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -512,6 +514,10 @@
     <Content Include="Views\Shared\CompomentsUser\_DashboardMenu.cshtml" />
     <Content Include="Views\Statistics\ShowAllStatistics.cshtml" />
     <Content Include="Views\Reservations\Add.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Reservations\PaymentWithPaypal.cshtml" />
+    <Content Include="Views\Reservations\FailureView.cshtml" />
+    <Content Include="Views\Reservations\SuccessView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
