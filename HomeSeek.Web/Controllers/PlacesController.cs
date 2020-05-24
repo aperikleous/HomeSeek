@@ -25,6 +25,7 @@ namespace HomeSeek.Web.Controllers
         }
 
         // GET: Places/Details/5
+        [HandleError]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -40,6 +41,7 @@ namespace HomeSeek.Web.Controllers
         }
 
         // GET: Places/Create
+        [HandleError]
         public ActionResult Create()
         {
             ViewBag.AmenitiesId = new SelectList(db.Amenities.GetAll(), "AmenitiesId", "AmenitiesId");
@@ -85,6 +87,7 @@ namespace HomeSeek.Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HandleError]
         public ActionResult Edit([Bind(Include = "PlaceId,ApartmentName,Description,Guests,Bedroom,Bathroom,PricePerDay,CleanCost,IsBooked,Created,Modified")] Place place)
         {
             if (ModelState.IsValid)

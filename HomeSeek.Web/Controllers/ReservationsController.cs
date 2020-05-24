@@ -67,7 +67,7 @@ namespace HomeSeek.Web.Controllers
             ViewBag.ReservationDate = receiptDate;
 
             return View(place);
-            //return RedirectToAction("Pay", "PaymentWithPaypal", "Home");
+            //return RedirectToAction("Pay", "PaymentWithPaypal", "Reservations");
         }
 
         // POST: Reservations/Create
@@ -143,8 +143,9 @@ namespace HomeSeek.Web.Controllers
             db.Complete();
             return RedirectToAction("Index");
         }
-        public ActionResult PaymentWithPaypal(string Cancel = null)
+        public ActionResult PaymentWithPaypal( string Cancel = null )
         {
+            
             //getting the apiContext  
             APIContext apiContext = PaypalConfiguration.GetAPIContext();
             try
@@ -158,7 +159,7 @@ namespace HomeSeek.Web.Controllers
                     //it is returned by the create function call of the payment class  
                     // Creating a payment  
                     // baseURL is the url on which paypal sendsback the data.  
-                    string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Home/PaymentWithPayPal?";
+                    string baseURI = Request.Url.Scheme + "://" + Request.Url.Authority + "/Reservations/PaymentWithPayPal?";
                     //here we are generating guid for storing the paymentID received in session  
                     //which will be used in the payment execution  
                     var guid = Convert.ToString((new Random()).Next(100000));
@@ -195,6 +196,7 @@ namespace HomeSeek.Web.Controllers
             }
             catch (Exception ex)
             {
+                ViewBag.Exception = ex;
                 return View("FailureView");
             }
             //on successful payment, show success page to user.  
@@ -223,9 +225,10 @@ namespace HomeSeek.Web.Controllers
             //Adding Item Details like name, currency, price etc  
             itemList.items.Add(new Item()
             {
-                name = "Item Name comes here",
+                name = "Item name comes here",
                 currency = "USD",
-                price = "1",
+                price = "10",
+                //price = totalPrice,
                 quantity = "1",
                 sku = "sku"
             });
@@ -244,13 +247,13 @@ namespace HomeSeek.Web.Controllers
             {
                 tax = "1",
                 shipping = "1",
-                subtotal = "1"
+                subtotal = "10"
             };
             //Final amount with details  
             var amount = new Amount()
             {
                 currency = "USD",
-                total = "3", // Total must be equal to sum of tax, shipping and subtotal.  
+                total = "12", // Total must be equal to sum of tax, shipping and subtotal.  
                 details = details
             };
             var transactionList = new List<Transaction>();
