@@ -3,38 +3,85 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+<!--register form -->
+
+<div class="reg-overlay"></div>
+<div class="main-register-holder tabs-act">
+    <div class="main-register fl-wrap">
+        <div class="main-register_title">Welcome to <span><strong>Home</strong>Seek<strong>.</strong></span></div>
+        <ul class="tabs-menu fl-wrap no-list-style">
+            <li class="current"><a href="#tab-1"><i class="fal fa-user-plus"></i> Register</a></li>
+        </ul>
+        <!--tabs -->
+        <div class="tabs-container">
+            <div class="tab">
+                <!--tab -->
+                <div id="tab-1" class="tab-content first-tab">
+                    <div class="custom-form">
+                        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <h4 class="">Create a new account.</h4>
+                            <hr />
+                            @Html.ValidationSummary("", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email, new { @class = "" })
+                                <div class="">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password, new { @class = "" })
+                                <div class="">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "" })
+                                <div class="">
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" class="btn float-btn color2-bg" value="Register" />
+                                </div>
+                            </div>
+                        }
+                        @*<form method="post" name="registerform" class="main-register-form" id="main-register-form2">
+                                <label>Full Name <span>*</span> </label>
+                                <input name="name" type="text" onClick="this.select()" value="">
+                                <label>Email Address <span>*</span></label>
+                                <input name="email" type="text" onClick="this.select()" value="">
+                                <label>Password <span>*</span></label>
+                                <input name="password" type="password" onClick="this.select()" value="">
+                                <div class="filter-tags ft-list">
+                                    <input id="check-a2" type="checkbox" name="check">
+                                    <label for="check-a2">I agree to the <a href="#">Privacy Policy</a></label>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="filter-tags ft-list">
+                                    <input id="check-a" type="checkbox" name="check">
+                                    <label for="check-a">I agree to the <a href="#">Terms and Conditions</a></label>
+                                </div>
+                                <div class="clearfix"></div>
+                                <button type="submit" class="btn float-btn color2-bg"> Register  <i class="fas fa-caret-right"></i></button>
+                            </form>*@
+                    </div>
+                </div>
+                <!--tab end -->
+            </div>
+            <!--tabs end -->
+            <div class="wave-bg">
+                <div class='wave -one'></div>
+                <div class='wave -two'></div>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+</div>
+
+<!--register form end -->
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

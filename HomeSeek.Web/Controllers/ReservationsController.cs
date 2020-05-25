@@ -24,6 +24,11 @@ namespace HomeSeek.Web.Controllers
             return View(db.Reservations.GetAll());
         }
 
+        public ActionResult OnApprove()
+        {
+            return View();
+        }
+
         // GET: Reservations/Details/5
         public ActionResult Details(int? id)
         {

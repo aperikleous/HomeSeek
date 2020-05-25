@@ -519,6 +519,7 @@
     <Content Include="Views\Reservations\PaymentWithPaypal.cshtml" />
     <Content Include="Views\Reservations\FailureView.cshtml" />
     <Content Include="Views\Reservations\SuccessView.cshtml" />
+    <Content Include="Views\Reservations\OnApprove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
