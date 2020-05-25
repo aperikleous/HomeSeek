@@ -1679,8 +1679,8 @@ section.gray-section .section-separator {
     overflow:hidden;
 }
 .main-register-holder {
-	max-width:420px;
-	margin:150px auto 50px;
+	max-width:600px;
+	margin:50px auto 50px;
 	position:relative;
 	z-index:5;
 }
@@ -1919,7 +1919,7 @@ section.gray-section .section-separator {
 	position:relative;
 }
 .custom-form  textarea , .custom-form input[type="text"] , .custom-form  input[type=email] , .custom-form  input[type=password] , .custom-form  input[type=button] , .listsearch-input-item input[type="text"]{
-    float: left;
+    
     border: 1px solid #e5e7f2;
     background: #f9f9f9;
     width: 100%;
@@ -1999,7 +1999,7 @@ section.gray-section .section-separator {
 	color:#fff;
 }  
 .custom-form label {
-	float:left;
+	/*float:left;*/
 	position:relative;
 	width:100%;
 	text-align:left;

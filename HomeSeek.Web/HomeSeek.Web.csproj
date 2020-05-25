@@ -211,7 +211,6 @@
     <Compile Include="Controllers\AdministratorController.cs" />
     <Compile Include="Controllers\AmenitiesController.cs" />
     <Compile Include="Controllers\ApplicationUsersController.cs" />
-    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PhotosController.cs" />
@@ -278,7 +277,6 @@
     <Content Include="images\map-bg.png" />
     <Content Include="images\marker-placeholder.png" />
     <Content Include="images\marker2.png" />
-    <Content Include="images\Error.jpg" />
     <Content Include="images\shop\1.jpg" />
     <Content Include="images\shop\2.jpg" />
     <Content Include="images\team\1.jpg" />
@@ -427,7 +425,6 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Views\Shared\404.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -515,10 +512,7 @@
     <Content Include="Views\Shared\CompomentsUser\_DashboardMenu.cshtml" />
     <Content Include="Views\Statistics\ShowAllStatistics.cshtml" />
     <Content Include="Views\Reservations\Add.cshtml" />
-    <Content Include="Views\Error\NotFound.cshtml" />
-    <Content Include="Views\Reservations\PaymentWithPaypal.cshtml" />
-    <Content Include="Views\Reservations\FailureView.cshtml" />
-    <Content Include="Views\Reservations\SuccessView.cshtml" />
+    <Content Include="Views\Reservations\OnApprove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
