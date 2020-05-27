@@ -36,7 +36,9 @@ namespace HomeSeek.Entities
 
 
         //Navigation Properties
-        public virtual ApplicationUser ApplicationUser { get; set; }
+       
+        public int? PlaceId { get; set; }
         public virtual Place Place { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

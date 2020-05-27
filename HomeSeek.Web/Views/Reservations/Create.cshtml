@@ -7,10 +7,10 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Reservation</h4>
         <hr />
@@ -18,7 +18,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CheckInDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CheckInDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CheckInDate, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.Checkin, @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.CheckInDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CheckOutDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CheckOutDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CheckOutDate, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.Checkout, @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.CheckOutDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -34,7 +34,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DaysOfStaying, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DaysOfStayingσες, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.DaysOfStaying, new { @class = "control-label col-md-2", @Value = ViewBag.DaysOfStaying, @readonly = "readonly" })
                 @Html.ValidationMessageFor(model => model.DaysOfStaying, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -42,7 +42,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PaymentDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PaymentDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.PaymentDate, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.ReservationDate, @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.PaymentDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -50,26 +50,61 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TotalAmount, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TotalAmount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.TotalAmount, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.TotalPrice, @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.TotalAmount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.TextBox("PlaceId", "PlaceId", new { type = "hidden" })
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.TotalFees, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TotalFees, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.TotalFees, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.DaysOfStaying, @readonly = "readonly" } })
                 @Html.ValidationMessageFor(model => model.TotalFees, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" id="myCheck" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
+
+<div id="paypal-button-container"></div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=ARY71eJSX_meWn4A-ocvcOTr3BEJ43AVbwW3i6jNj4O0vDGpsTBkGNLKpLQqkDAqx9o0mTTWy0XX2ng9"></script>
+
+<script>
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      // This function sets up the details of the transaction, including the amount and line item details.
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: @ViewBag.TotalPrice
+          }
+        }]
+      });
+    },
+      onApprove: function (data, actions) {
+          document.getElementById("myCheck").click();
+      // This function captures the funds from the transaction.
+      return actions.order.capture().then(function(details) {
+        // This function shows a transaction success message to your buyer.
+          window.location.replace("https://localhost:44328/Reservations/OnApprove");
+      });
+    }
+  }).render('#paypal-button-container');
+  //This function displays Smart Payment Buttons on your web page.
+</script>
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")

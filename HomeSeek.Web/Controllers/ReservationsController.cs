@@ -45,42 +45,56 @@ namespace HomeSeek.Web.Controllers
         }
 
         // GET: Reservations/Create
-        public ActionResult Create()
+        public ActionResult Create(int placeId, DateTime checkin, DateTime checkout)
         {
-            return View();
-        }
-
-        public ActionResult Add(int placeId, DateTime checkin, DateTime checkout)
-        {
-            //DateTime date1 = new DateTime();
-            //DateTime date2 = new DateTime();
-            //date1 = Convert.ToDateTime(checkin);
-            //date2 = Convert.ToDateTime(checkout);
-           var place =db.Places.SingleOrDefault(x => x.PlaceId == placeId);
-            // var days = (date2 - date1).Days;
-           var days = (checkout - checkin).Days;
-            decimal totalPrice = place.PricePerDay*days+ place.CleanCost;
+            var place = db.Places.SingleOrDefault(x => x.PlaceId == placeId);
+            var days = (checkout - checkin).Days;
+            decimal totalPrice = place.PricePerDay * days + place.CleanCost;
             DateTime receiptDate = DateTime.Now;
-            
+
             ViewBag.CleanCost = place.CleanCost;
             ViewBag.PricePerDay = place.PricePerDay;
-            
+
             ViewBag.TotalPrice = totalPrice;
             ViewBag.Checkin = checkin.ToString("dd/MM/yyyy");
             ViewBag.Checkout = checkout.ToString("dd/MM/yyyy");
-            ViewBag.DaysOfStay = days;
-            ViewBag.ReservationDate = receiptDate;
-
-            return View(place);
-            //return RedirectToAction("Pay", "PaymentWithPaypal", "Home");
+            ViewBag.DaysOfStaying = days;
+            ViewBag.ReservationDate = receiptDate.ToString("dd/MM/yyyy");
+            ViewBag.PlaceId = placeId;
+            return View();
         }
+
+        //public ActionResult Add(int placeId, DateTime checkin, DateTime checkout)
+        //{
+        //    //DateTime date1 = new DateTime();
+        //    //DateTime date2 = new DateTime();
+        //    //date1 = Convert.ToDateTime(checkin);
+        //    //date2 = Convert.ToDateTime(checkout);
+        //   var place =db.Places.SingleOrDefault(x => x.PlaceId == placeId);
+        //    // var days = (date2 - date1).Days;
+        //   var days = (checkout - checkin).Days;
+        //    decimal totalPrice = place.PricePerDay*days+ place.CleanCost;
+        //    DateTime receiptDate = DateTime.Now;
+            
+        //    ViewBag.CleanCost = place.CleanCost;
+        //    ViewBag.PricePerDay = place.PricePerDay;
+            
+        //    ViewBag.TotalPrice = totalPrice;
+        //    ViewBag.Checkin = checkin.ToString("dd/MM/yyyy");
+        //    ViewBag.Checkout = checkout.ToString("dd/MM/yyyy");
+        //    ViewBag.DaysOfStaying = days;
+        //    ViewBag.ReservationDate = receiptDate;
+
+        //    return View(place);
+        //    //return RedirectToAction("Pay", "PaymentWithPaypal", "Home");
+        //}
 
         // POST: Reservations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReservationId,CheckInDate,CheckOutDate,DaysOfStaying,PaymentDate,TotalAmount,TotalFees")] Reservation reservation)
+        public ActionResult Create([Bind(Include = "ReservationId,CheckInDate,CheckOutDate,DaysOfStaying,PaymentDate,TotalAmount,TotalFees,PlaceId")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {

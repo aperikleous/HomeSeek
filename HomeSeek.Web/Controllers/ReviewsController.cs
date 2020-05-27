@@ -38,8 +38,9 @@ namespace HomeSeek.Web.Controllers
         }
 
         // GET: Reviews/Create
-        public ActionResult Create()
+        public ActionResult Create(int PlaceId)
         {
+            ViewBag.PlaceId = PlaceId;
             return View();
         }
 
@@ -48,7 +49,7 @@ namespace HomeSeek.Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReviewId,Accuracy,Checkin,Cleanliness,Location,Value,SubDate,OverallRating,Comment")] Review review)
+        public ActionResult Create([Bind(Include = "ReviewId,Accuracy,Checkin,Cleanliness,Location,Value,SubDate,OverallRating,Comment,PlaceId")] Review review)
         {
             if (ModelState.IsValid)
             {

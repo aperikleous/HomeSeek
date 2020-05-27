@@ -10,31 +10,31 @@
             <div class="swiper-wrapper">
                 <!-- swiper-slide-->
                 <div class="swiper-slide hov_zoom">
-                    <img src="/images/all/1.jpg" alt="">
+                    <img src="https://a0.muscache.com/im/pictures/0b4c78d2-37f9-422a-95c6-1aa24823846a.jpg?aki_policy=xx_large" alt="">
+                    <a href="https://a0.muscache.com/im/pictures/0b4c78d2-37f9-422a-95c6-1aa24823846a.jpg?aki_policy=xx_large" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                </div>
+                <!-- swiper-slide end-->
+                <!-- swiper-slide-->
+                <div class="swiper-slide  hov_zoom">
+                    <img src="https://a0.muscache.com/im/pictures/4b73ca56-a275-4ce9-8bca-07922cc00494.jpg?aki_policy=xx_large" alt="">
                     <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
                 </div>
                 <!-- swiper-slide end-->
                 <!-- swiper-slide-->
                 <div class="swiper-slide  hov_zoom">
-                    <img src="/images/all/1.jpg" alt="">
+                    <img src="https://a0.muscache.com/im/pictures/0e43b9f6-683a-414a-a104-797b7bb365ef.jpg?aki_policy=xx_large" alt="">
                     <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
                 </div>
                 <!-- swiper-slide end-->
                 <!-- swiper-slide-->
                 <div class="swiper-slide  hov_zoom">
-                    <img src="/images/all/1.jpg" alt="">
+                    <img src="https://a0.muscache.com/im/pictures/2fba8737-bbed-45f1-9402-737e280ee6b0.jpg?aki_policy=xx_large" alt="">
                     <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
                 </div>
                 <!-- swiper-slide end-->
                 <!-- swiper-slide-->
                 <div class="swiper-slide  hov_zoom">
-                    <img src="/images/all/1.jpg" alt="">
-                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                </div>
-                <!-- swiper-slide end-->
-                <!-- swiper-slide-->
-                <div class="swiper-slide  hov_zoom">
-                    <img src="/images/all/1.jpg" alt="">
+                    <img src="https://a0.muscache.com/im/pictures/048526a6-2552-4009-829f-ed75f78b3b28.jpg?aki_policy=xx_large" alt="">
                     <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
                 </div>
                 <!-- swiper-slide end-->
@@ -77,7 +77,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <h1>@Html.DisplayFor(model => model.ApartmentName) <span class="verified-badge"><i class="fal fa-check"></i></span></h1>
-                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> @Html.DisplayFor(model => model.Address.AddressLine)  @Html.DisplayFor(model => model.Address.City) </a> <a href="#"> <i class="fal fa-phone"></i>+38099231212</a> <a href="#"><i class="fal fa-envelope"></i> yourmail@domain.com</a></div>
+                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> @Html.DisplayFor(model => model.Address.AddressLine)  @Html.DisplayFor(model => model.Address.City) </a> <a href="#"> <i class="fal fa-calendar-alt"></i>@(Model.Created?.ToString("dd/MM/yyyy")) </a></div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="fl-wrap list-single-header-column  block_box">
@@ -117,8 +117,6 @@
                                 <div class="listing-item-category  blue-bg"><i class="fal fa-bed"></i></div>
                                 <span>Hotels</span>
                             </a>
-                            <div class="list-single-author"> <a href="author-single.html"><span class="author_avatar"> <img alt='' src='/images/avatar/1.jpg'>  </span>By  Alisa Noory</a></div>
-                           
                         </div>
                     </div>
                     <!-- list-single-header end -->
@@ -195,7 +193,6 @@
                         </div>
                         <div class="list-single-main-item_content fl-wrap">
                             <p>@Html.DisplayFor(model => model.Description) </p>
-                            <a href="#" class="btn color2-bg float-btn">Visit Website<i class="fal fa-chevron-right"></i></a>
                         </div>
                     </div>
                     <!-- list-single-main-item end -->
@@ -225,11 +222,14 @@
                     <div class="list-single-main-item fl-wrap block_box" id="sec5">
                         <div class="list-single-main-item-title">
 
-                            <h3>Item Reviews -  <span> @Model.Reviews.Count(); </span></h3>
+                            <h3>Item Reviews -  <span> @Model.Reviews.Count() </span><button class="btn ml-5 color2-bg">@Html.ActionLink("Submit Review", "Create", "Reviews", new { PlaceId = Model.PlaceId }, new { @class = "text-white" }) <i class="fal fa-paper-plane"></i></button></h3>
+
+
+
                         </div>
                         <!--reviews-score-wrap-->
 
-                          
+
 
                         <div class="reviews-score-wrap fl-wrap">
                             <div class="review-score-total">
@@ -293,7 +293,8 @@
                                     <!-- rate item-->
                                     <div class="rate-item">
                                         <div class="rate-item-title"><span>Location</span></div>
-                                        <div class="rate-item-bg" data-percent="80%"> @*"@(avg*20)%"*@
+                                        <div class="rate-item-bg" data-percent="80%">
+                                            @*"@(avg*20)%"*@
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
                                         <div class="rate-item-percent">
@@ -444,7 +445,7 @@
                                         </div>
                                     </div>
                                     <div class="list-single-main-item_content fl-wrap">
-                                        
+
                                         <textarea cols="40" rows="3" placeholder="Your Review:"></textarea>
                                         <div class="clearfix"></div>
                                         <div class="clearfix"></div>
@@ -470,31 +471,71 @@
                         <div class="box-widget-content">
                             @* ============================================================================================================== *@
 
-                            @using (Html.BeginForm("Add", "Reservations", FormMethod.Get, new { @class = "form-inline" }))
+                            @using (Html.BeginForm("Create", "Reservations", FormMethod.Get, new { @class = "form-inline" }))
                             {
-                            <fieldset>
-                                <div class="form-group mb-2">
-                                    @Html.Hidden("placeid", null, new { @class = "form-control", placeholder = "checkin" })
-                                </div>
-                                <div class="form-group mb-2 d-inline-block">
-                                    @Html.Label("Check-in", new { @for = "checkin" })
-                                    @Html.TextBox("checkin", null, new { type = "date", @class = "form-control", placeholder = "checkin" })
-                                </div>
-                                <div class="form-group mb-2 d-inline-block">
-                                    @Html.Label("Check-out", new { @for = "checkout" })
-                                    @Html.TextBox("checkout", null, new { type = "date", @class = "form-control", placeholder = "checkout" })
-                                <button class="form-control mt-2 book-btn" type="submit">Book now</button>
-                                </div>
-                                
+                                <fieldset>
+                                    <div class="form-group mb-2">
+                                        @Html.Hidden("PlaceId", null, new { @class = "form-control" })
+                                    </div>
+                                    <div class="form-group mb-2 d-inline-block">
+                                        @Html.Label("Check-in", new { @for = "checkin" })
+                                        @Html.TextBox("checkin", null, new { type = "date", @class = "form-control", placeholder = "checkin" })
+                                    </div>
+                                    <div class="form-group mb-2 d-inline-block">
+                                        @Html.Label("Check-out", new { @for = "checkout" })
+                                        @Html.TextBox("checkout", null, new { type = "date", @class = "form-control", placeholder = "checkout" })
+                                        <button class="form-control mt-2 book-btn" type="submit">Book Room Now</button>
+                                    </div>
 
-                            </fieldset>
+
+                                </fieldset>
                             }
-                           
+
                             @*===============================================================================================================================*@
                             @*@using (Html.BeginForm("Add", "Reservations", FormMethod.Get, new { @class = "add-comment custom-form form-inline" }))
-                            {       <fieldset>
+                                {       <fieldset>
+                                            <div class="quantity fl-wrap">
+                                                @Html.Hidden("placeId", null, new { @class = "form-control" })
+                                                <span><i class="fal fa-user-plus"></i>Persons : </span>
+                                                <div class="quantity-item">
+                                                    <input type="button" value="-" class="minus">
+                                                    <input type="text" name="quantity" title="Qty" class="qty color-bg" data-min="1" data-max="3" data-step="1" value="1">
+                                                    <input type="button" value="+" class="plus">
+                                                </div>
+                                            </div>
+
+                                            <div class="listsearch-input-item clact date-container3 daterangepicker_big">
+                                                <label><i class="fal fa-calendar"></i></label>
+                                                <input type="text" placeholder="Date In Out" name="dates" />
+                                                @Html.TextBox("Checkin", null, new { @class = "form-control", placeholder = "checkin" })
+                                                <span class="clear-singleinput"><i class="fal fa-times"></i></span>
+                                            </div>
+                                            <div class="form-group mb-2">
+                                                @Html.Label("Checkin", new { @for = "searchTitle" })
+                                            </div>
+                                            <div class="form-group mb-2">
+                                                @Html.Label("checkout", new { @for = "searchStream" })
+                                                @Html.TextBox("checkout", null, new { @class = "form-control", placeholder = "checkout" })
+                                            </div>
+
+
+                                            <div class="claim-price-wdget-content fl-wrap">
+                                                <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
+                                                <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
+                                                <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
+                                            </div>
+
+                                           <button class="btn color2-bg url_btn float-btn" type="submit">Book Room Now</button>
+                                        </fieldset>
+                                }*@
+
+
+
+                            @*//===========================================================================================================*@
+
+                            @*<form class="add-comment custom-form">
+                                    <fieldset>
                                         <div class="quantity fl-wrap">
-                                            @Html.Hidden("placeId", null, new { @class = "form-control" })
                                             <span><i class="fal fa-user-plus"></i>Persons : </span>
                                             <div class="quantity-item">
                                                 <input type="button" value="-" class="minus">
@@ -505,58 +546,18 @@
 
                                         <div class="listsearch-input-item clact date-container3 daterangepicker_big">
                                             <label><i class="fal fa-calendar"></i></label>
-                                            <input type="text" placeholder="Date In Out" name="dates" />
-                                            @Html.TextBox("Checkin", null, new { @class = "form-control", placeholder = "checkin" })
+                                            <input type="text" placeholder="Date In Out" name="dates" value="" />
                                             <span class="clear-singleinput"><i class="fal fa-times"></i></span>
                                         </div>
-                                        <div class="form-group mb-2">
-                                            @Html.Label("Checkin", new { @for = "searchTitle" })
-                                        </div>
-                                        <div class="form-group mb-2">
-                                            @Html.Label("checkout", new { @for = "searchStream" })
-                                            @Html.TextBox("checkout", null, new { @class = "form-control", placeholder = "checkout" })
-                                        </div>
-                                        
-                            
                                         <div class="claim-price-wdget-content fl-wrap">
                                             <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
                                             <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
                                             <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
                                         </div>
 
-                                    <button class="btn color2-bg url_btn float-btn" type="submit">Book Room Now</button>
                                     </fieldset>
-                            }*@
-
-
-
-                            @*//===========================================================================================================*@
-
-                            @*<form class="add-comment custom-form">
-            <fieldset>
-                <div class="quantity fl-wrap">
-                    <span><i class="fal fa-user-plus"></i>Persons : </span>
-                    <div class="quantity-item">
-                        <input type="button" value="-" class="minus">
-                        <input type="text" name="quantity" title="Qty" class="qty color-bg" data-min="1" data-max="3" data-step="1" value="1">
-                        <input type="button" value="+" class="plus">
-                    </div>
-                </div>
-
-                <div class="listsearch-input-item clact date-container3 daterangepicker_big">
-                    <label><i class="fal fa-calendar"></i></label>
-                    <input type="text" placeholder="Date In Out" name="dates" value="" />
-                    <span class="clear-singleinput"><i class="fal fa-times"></i></span>
-                </div>
-                <div class="claim-price-wdget-content fl-wrap">
-                    <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
-                    <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
-                    <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
-                </div>
-
-            </fieldset>
-            <button class="btn color2-bg url_btn float-btn" onclick="window.location.href='booking.html'">Book Room Now <i class="fal fa-bookmark"></i></button>
-        </form>*@
+                                    <button class="btn color2-bg url_btn float-btn" onclick="window.location.href='booking.html'">Book Room Now <i class="fal fa-bookmark"></i></button>
+                                </form>*@
                         </div>
                     </div>
                 </div>
@@ -573,10 +574,7 @@
                         <div class="box-widget-content bwc-nopad">
                             <div class="list-author-widget-contacts list-item-widget-contacts bwc-padside">
                                 <ul class="no-list-style">
-                                    <li><span><i class="fal fa-map-marker"></i> Adress :</span> <a href="#">USA 27TH Brooklyn NY</a></li>
-                                    <li><span><i class="fal fa-phone"></i> Phone :</span> <a href="#">+7(123)987654</a></li>
-                                    <li><span><i class="fal fa-envelope"></i> Mail :</span> <a href="#">AlisaNoory@domain.com</a></li>
-                                    <li><span><i class="fal fa-browser"></i> Website :</span> <a href="#">themeforest.net</a></li>
+                                    <li><span><i class="fal fa-map-marker"></i> Address :</span> <a href="#">@Model.Address.AddressLine @Model.Address.City</a></li>
                                 </ul>
                             </div>
                             <div class="list-widget-social bottom-bcw-box  fl-wrap">
@@ -592,30 +590,6 @@
                     </div>
                 </div>
                 <!--box-widget-item end -->
-                <!--box-widget-item -->
-                <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
-                        <h3>Hosted by : </h3>
-                    </div>
-                    <div class="box-widget">
-                        <div class="box-widget-author fl-wrap">
-                            <div class="box-widget-author-title">
-                                <div class="box-widget-author-title-img">
-                                    <img src="/images/avatar/1.jpg" alt="">
-                                </div>
-                                <div class="box-widget-author-title_content">
-                                    <a href="user-single.html">Alisa Noory</a>
-                                    <span>4 Places Hosted</span>
-                                </div>
-                                <div class="box-widget-author-title_opt">
-                                    <a href="user-single.html" class="tolt green-bg" data-microtip-position="top" data-tooltip="View Profile"><i class="fas fa-user"></i></a>
-                                    <a href="#" class="tolt color-bg cwb" data-microtip-position="top" data-tooltip="Chat With Owner"><i class="fas fa-comments-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--box-widget-item end -->
             </div>
             <!-- list-single-sidebar end -->
         </div>
@@ -626,100 +600,100 @@
 
 
 @*<div>
-    <h4>Place</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Amenities.AmenitiesId)
-        </dt>
+        <h4>Place</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Amenities.AmenitiesId)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Amenities.AmenitiesId)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Amenities.AmenitiesId)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ApartmentName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ApartmentName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ApartmentName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ApartmentName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Guests)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Guests)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Guests)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Guests)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Bedroom)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Bedroom)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Bedroom)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Bedroom)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Bathroom)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Bathroom)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Bathroom)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Bathroom)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PricePerDay)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.PricePerDay)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PricePerDay)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.PricePerDay)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CleanCost)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CleanCost)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CleanCost)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CleanCost)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IsBooked)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.IsBooked)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.IsBooked)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.IsBooked)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Created)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Created)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Created)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Created)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Modified)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Modified)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Modified)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Modified)
+            </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PlaceId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PlaceId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
