@@ -9,7 +9,7 @@ namespace HomeSeek.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js",
+                         "~/js/jquery.min.js",
                         "~/Scripts/jquery.signalR-2.4.1.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
