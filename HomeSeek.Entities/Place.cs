@@ -32,10 +32,12 @@ namespace HomeSeek.Entities
 
 
         //Navigation Properties
+        public int? AddressId { get; set; }
+        public virtual Address Address { get; set; }
         public virtual Amenities Amenities { get; set; }
         public virtual ICollection<Reservation> Reservations { get; set; }
         public virtual ICollection<Photo> Photos { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
-        public virtual Address Address { get; set; }
+       
     }
 }

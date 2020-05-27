@@ -55,7 +55,7 @@ namespace HomeSeek.Web.Controllers
             {
                 db.Address.Add(address);
                 db.Complete();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create","Places",new { addressId = address.AddressId });
             }
 
             return View(address);
