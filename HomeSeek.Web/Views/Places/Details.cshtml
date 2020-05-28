@@ -355,7 +355,7 @@
                                             </div>
                                             <p>@item.Comment</p>
                                             <div class="reviews-comments-item-footer fl-wrap">
-                                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>12 April 2018</span></div>
+                                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>@item.SubDate</span></div>
                                                 <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>2</span> </a>
                                             </div>
                                         </div>
@@ -394,69 +394,6 @@
                         </div>
                     </div>
                     <!-- list-single-main-item end -->
-                    <!-- list-single-main-item -->
-                    <div class="list-single-main-item fl-wrap block_box" id="sec6">
-                        <div class="list-single-main-item-title fl-wrap">
-                            <h3>Add Review</h3>
-                        </div>
-                        <!-- Add Review Box -->
-                        <div id="add-review" class="add-review-box">
-                            <!-- Review Comment -->
-                            <form id="add-comment" class="add-comment  custom-form" name="rangeCalc">
-                                <fieldset>
-                                    <div class="review-score-form fl-wrap">
-                                        <div class="review-range-container">
-                                            <!-- review-range-item-->
-                                            <div class="review-range-item">
-                                                <div class="range-slider-title">Cleanliness</div>
-                                                <div class="range-slider-wrap ">
-                                                    <input type="text" class="rate-range" data-min="0" data-max="5" name="rgcl" data-step="1" value="4">
-                                                </div>
-                                            </div>
-                                            <!-- review-range-item end -->
-                                            <!-- review-range-item-->
-                                            <div class="review-range-item">
-                                                <div class="range-slider-title">Comfort</div>
-                                                <div class="range-slider-wrap ">
-                                                    <input type="text" class="rate-range" data-min="0" data-max="5" name="rgcl" data-step="1" value="1">
-                                                </div>
-                                            </div>
-                                            <!-- review-range-item end -->
-                                            <!-- review-range-item-->
-                                            <div class="review-range-item">
-                                                <div class="range-slider-title">Staf</div>
-                                                <div class="range-slider-wrap ">
-                                                    <input type="text" class="rate-range" data-min="0" data-max="5" name="rgcl" data-step="1" value="5">
-                                                </div>
-                                            </div>
-                                            <!-- review-range-item end -->
-                                            <!-- review-range-item-->
-                                            <div class="review-range-item">
-                                                <div class="range-slider-title">Facilities</div>
-                                                <div class="range-slider-wrap">
-                                                    <input type="text" class="rate-range" data-min="0" data-max="5" name="rgcl" data-step="1" value="3">
-                                                </div>
-                                            </div>
-                                            <!-- review-range-item end -->
-                                        </div>
-                                        <div class="review-total">
-                                            <span><input type="text" name="rg_total" data-form="AVG({rgcl})" value="0"></span>
-                                            <strong>Your Score</strong>
-                                        </div>
-                                    </div>
-                                    <div class="list-single-main-item_content fl-wrap">
-
-                                        <textarea cols="40" rows="3" placeholder="Your Review:"></textarea>
-                                        <div class="clearfix"></div>
-                                        <div class="clearfix"></div>
-                                        <button class="btn  color2-bg float-btn">Submit Review <i class="fal fa-paper-plane"></i></button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                        <!-- Add Review Box / End -->
-                    </div>
-                    <!-- list-single-main-item end -->
                 </div>
             </div>
             <!-- list-single-main-wrapper-col end -->
@@ -473,22 +410,25 @@
 
                             @using (Html.BeginForm("Create", "Reservations", FormMethod.Get, new { @class = "form-inline" }))
                             {
-                                <fieldset>
-                                    <div class="form-group mb-2">
-                                        @Html.Hidden("PlaceId", null, new { @class = "form-control" })
-                                    </div>
-                                    <div class="form-group mb-2 d-inline-block">
-                                        @Html.Label("Check-in", new { @for = "checkin" })
-                                        @Html.TextBox("checkin", null, new { type = "date", @class = "form-control", placeholder = "checkin" })
-                                    </div>
-                                    <div class="form-group mb-2 d-inline-block">
-                                        @Html.Label("Check-out", new { @for = "checkout" })
-                                        @Html.TextBox("checkout", null, new { type = "date", @class = "form-control", placeholder = "checkout" })
-                                        <button class="form-control mt-2 book-btn" type="submit">Book Room Now</button>
-                                    </div>
+                            <fieldset>
+                                <div class="form-group mb-2">
+                                    @Html.Hidden("PlaceId", null, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group mb-2 d-inline-block">
+                                    <div class="pricerange fl-wrap "><span>Price Per Day: </span> @Model.PricePerDay €</div>
+                                </div>
 
+                                <div class="form-group mb-2 d-inline-block">
+                                    @Html.Label("Check-in", new { @for = "checkin", @class= "font-weight-bold" })
+                                    @Html.TextBox("checkin", null, new { type = "date", @class = "form-control", placeholder = "checkin" })
+                                </div>
+                                <div class="form-group mb-2 d-inline-block">
+                                    @Html.Label("Check-out", new { @for = "checkout", @class = "font-weight-bold" })
+                                    @Html.TextBox("checkout", null, new { type = "date", @class = "form-control", placeholder = "checkout" })
+                                    <button class="form-control mt-2 book-btn" type="submit">Book Room Now</button>
+                                </div>
 
-                                </fieldset>
+                            </fieldset>
                             }
 
                             @*===============================================================================================================================*@
@@ -581,7 +521,6 @@
                                 <ul class="no-list-style">
                                     <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
                                     <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                 </ul>
                                 <div class="bottom-bcw-box_link"><a href="#" class="show-single-contactform tolt" data-microtip-position="top" data-tooltip="Write Message"><i class="fal fa-envelope"></i></a></div>

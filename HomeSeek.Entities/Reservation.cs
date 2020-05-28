@@ -22,7 +22,7 @@ namespace HomeSeek.Entities
         public DateTime PaymentDate { get; set; }
         [Required, Display(Name = "Total Amount"), DataType(DataType.Currency, ErrorMessage = "Total amount should contain only numbers."), CustomValidation(typeof(ValidationMethods), "GreaterThanZero")]
         public decimal TotalAmount { get; set; }
-        [Required, Display(Name = "Total Fees"), DataType(DataType.Currency, ErrorMessage = "Total fees should contain only numbers."), CustomValidation(typeof(ValidationMethods), "GreaterThanZero")]
+        [ Display(Name = "Total Fees"), DataType(DataType.Currency, ErrorMessage = "Total fees should contain only numbers."), CustomValidation(typeof(ValidationMethods), "GreaterThanZero")]
         public decimal TotalFees { get; set; }
 
 

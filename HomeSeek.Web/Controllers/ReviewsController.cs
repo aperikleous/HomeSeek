@@ -41,6 +41,7 @@ namespace HomeSeek.Web.Controllers
         public ActionResult Create(int PlaceId)
         {
             ViewBag.PlaceId = PlaceId;
+            ViewBag.SubDate = DateTime.Now.ToString("dd/MM/yyyy");
             return View();
         }
 

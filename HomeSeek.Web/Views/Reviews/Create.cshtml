@@ -4,90 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <!-- profile-edit-container-->
-    <div class="profile-edit-container fl-wrap block_box">
-        <div class="custom-form">
-            <div class="row">
-                <div class="col-md-6">
-                    <label>Type / Category</label>
-                    <div class="listsearch-input-item">
-                        <select data-placeholder="Apartments" class="chosen-select no-search-select">
-                            <option disabled>Choose 0-5</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <label>Type / Category</label>
-
-                    <div class="listsearch-input-item">
-                        <select data-placeholder="Apartments" class="chosen-select no-search-select">
-                            <option disabled>Choose 0-5</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <label>Type / Category</label>
-
-                    <div class="listsearch-input-item">
-                        <select data-placeholder="Apartments" class="chosen-select no-search-select">
-                            <option disabled>Choose 0-5</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <label>Type / Category</label>
-
-                    <div class="listsearch-input-item">
-                        <select data-placeholder="Apartments" class="chosen-select no-search-select">
-                            <option disabled>Choose 0-5</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                    <label>Type / Category</label>
-
-                    <div class="listsearch-input-item">
-                        <select data-placeholder="Apartments" class="chosen-select no-search-select">
-                            <option disabled>Choose 0-5</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- profile-edit-container-->
-    <div class="profile-edit-container fl-wrap block_box">
-        <div class="custom-form">
-            <label>Text</label>
-            <textarea cols="40" rows="3" placeholder="Datails"></textarea>
-        </div>
-    </div>
-    <!-- profile-edit-container end-->
-}
-<p>@ViewBag.placeid</p>
+<div class="col-6 center-block">
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -96,82 +13,76 @@
             <h4>Review</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
+            <div class="listsearch-input-item">
                 @Html.LabelFor(model => model.Accuracy, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.Accuracy, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }),new {@class= "chosen-select no-search-select" })
+                <div class="col-md-6">
+                    @Html.DropDownListFor(model => model.Accuracy, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
                     @Html.ValidationMessageFor(model => model.Accuracy, "", new { @class = "text-danger" })
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="listsearch-input-item">
                 @Html.LabelFor(model => model.Checkin, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <div class="col-md-6">
                     @Html.DropDownListFor(model => model.Checkin, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
                     @Html.ValidationMessageFor(model => model.Checkin, "", new { @class = "text-danger" })
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="listsearch-input-item">
                 @Html.LabelFor(model => model.Cleanliness, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <div class="col-md-6">
                     @Html.DropDownListFor(model => model.Cleanliness, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
                     @Html.ValidationMessageFor(model => model.Cleanliness, "", new { @class = "text-danger" })
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="listsearch-input-item">
                 @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <div class="col-md-6">
                     @Html.DropDownListFor(model => model.Location, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
                     @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="listsearch-input-item">
                 @Html.LabelFor(model => model.Value, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
+                <div class="col-md-6">
                     @Html.DropDownListFor(model => model.Value, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
                     @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="listsearch-input-item">
                 @Html.LabelFor(model => model.SubDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model=>model.SubDate)
+                <div class="col-md-6">
+                    @Html.TextBoxFor(model => model.SubDate, new { @class = "text-danger", @Value = ViewBag.SubDate })
                     @Html.ValidationMessageFor(model => model.SubDate, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-10">
-                    @Html.TextBox("PlaceId","PlaceId",new {type = "hidden" })
+                <div class="col-md-6">
+                    @Html.TextBox("PlaceId", "PlaceId", new { type = "hidden" })
                 </div>
             </div>
-            @*<div class="form-group">
-                @Html.LabelFor(model => model.OverallRating, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.OverallRating, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.OverallRating, "", new { @class = "text-danger" })
-                </div>
-            </div>*@
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+            <div class="profile-edit-container fl-wrap block_box">
+                <div class="custom-form">
+                    @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger", @cols = "40", @rows = "3", @placeholder = "Datails" })
+                    </div>
                 </div>
             </div>
 
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
                 </div>
             </div>
-        </div>
     }
-
+</div>
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>
