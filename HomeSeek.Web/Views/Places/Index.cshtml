@@ -272,7 +272,6 @@
                 <div class="pagination center-block col-8">
                     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
                     @Html.PagedListPager(Model, x => @Url.Action("Index", "Places", new { page = x, sortOrder = ViewBag.CurrentSortOrder, searchtitle = ViewBag.CurrentTitle, searchcity = ViewBag.CurrentCity, searchdate = ViewBag.CurrentDate, searchprice = ViewBag.CurrentPrice, pSize = ViewBag.CurrentpSize }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
-                     list-main-wrap-pagination end
                 </div>
                 <div class="col-4 mt-4">
                     <p>@Html.Label("Item/Pages", new { @for = "pSize", @class = "" })</p>

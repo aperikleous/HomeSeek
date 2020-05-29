@@ -1,9 +1,8 @@
-﻿@{
+﻿@model IEnumerable<HomeSeek.Entities.Place>
+@{
     ViewBag.Title = "Home Page";
 
-    <p>
-        @Html.ActionLink("Create new Place", "CreateAddress", "Places", null, new { style = "color:red" })
-    </p>
+    
 }
 <section class="hero-section" data-scrollax-parent="true">
     <div class="bg-tabs-wrap">
@@ -28,14 +27,19 @@
                 </ul>*@
             <!--tabs -->
             <div class="tabs-container fl-wrap  ">
-
+                <script>
+                    function clickyClick() {
+                        var yourvar = document.getElementById('textSearch').value;
+                        window.open('https://localhost:44328/Places?searchcity=' + yourvar, "_blank");
+                    }
+                </script>
                 <div class="tab">
                     <div id="tab-inpt4" class="tab-content first-tab">
                         <div class="main-search-input-wrap fl-wrap">
                             <div class="main-search-input fl-wrap">
                                 <div class="main-search-input-item">
                                     <label><i class="fal fa-cheeseburger"></i></label>
-                                    <input type="text" placeholder="Hotel Name" value="" />
+                                    <input id="textSearch" type="text" placeholder="Search City (gr)" value="" />
                                 </div>
                                 <div class="main-search-input-item">
                                     <label><i class="fal fa-user-friends"></i></label>
@@ -46,7 +50,7 @@
                                     <input type="text" placeholder="Date In Out" name="dates" value="" />
                                     <span class="clear-singleinput"><i class="fal fa-times"></i></span>
                                 </div>
-                                <button class="main-search-button color2-bg" onclick="window.location.href='/Places/Index'">Search <i class="far fa-search"></i></button>
+                                <button class="main-search-button color2-bg" onclick="clickyClick()">Search <i class="far fa-search"></i></button>
                             </div>
                         </div>
                     </div>
@@ -80,48 +84,47 @@
         <div class="listing-slider fl-wrap">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <!--  swiper-slide  -->
-                    <div class="swiper-slide">
-                        <div class="listing-slider-item fl-wrap">
-                            <!-- listing-item  -->
-                            <div class="listing-item listing_carditem">
-                                <article class="geodir-category-listing fl-wrap">
-                                    <div class="geodir-category-img">
-                                        <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
-                                        <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                            <img src="~/images/all/1.jpg" alt="">
-                                        </a>
-                                        <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Open Now</div>
-                                        <div class="geodir-category-opt">
-                                            <div class="geodir-category-opt_title">
-                                                <h4><a href="listing-single.html">The Goggi Restaurant</a></h4>
-                                                <div class="geodir-category-location"><a href="#"><i class="fas fa-map-marker-alt"></i>  34-42 Montgomery St , NY, USA</a></div>
-                                            </div>
-                                            <div class="listing-rating-count-wrap">
-                                                <div class="review-score">4.1</div>
-                                                <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
-                                                <br>
-                                                <div class="reviews-count">26 reviews</div>
-                                            </div>
-                                            <div class="listing_carditem_footer fl-wrap">
-                                                <a class="listing-item-category-wrap" href="#">
-                                                    <div class="listing-item-category red-bg"><i class="fal fa-cheeseburger"></i></div>
-                                                    <span>Restaurants</span>
-                                                </a>
-                                                <div class="price-level geodir-category_price">
-                                                    <span class="price-level-item" data-pricerating="2"></span>
-                                                    <span class="price-name-tooltip">Pricey</span>
+                    @foreach (var item in Model.Take(3))
+            
+                    {
+                        <!--  swiper-slide  -->
+                        <div class="swiper-slide">
+                            <div class="listing-slider-item fl-wrap">
+                                <!-- listing-item  -->
+                                <div class="listing-item listing_carditem">
+                                    <article class="geodir-category-listing fl-wrap">
+                                        <div class="geodir-category-img">
+                                            <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
+                                            <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
+                                                <img src="@item.Photos.Select(x=>x.PhotoUrl).First()" alt="">
+                                            </a>
+                                            <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Book Now</div>
+                                            <div class="geodir-category-opt">
+                                                <div class="geodir-category-opt_title">
+                                                    <h4><a href="listing-single.html"></a></h4>
+                                                    <div class="geodir-category-location"><a href="#"><i class="fas fa-map-marker-alt"></i>@item.Address.AddressName @item.Address.No @item.Address.City</a></div>
                                                 </div>
-                                                <div class="post-author"><a href="#"><img src="~/images/avatar/1.jpg" alt=""><span>By , Alisa Noory</span></a></div>
+                                                <div class="listing-rating-count-wrap">
+                                                    <div class="review-score">@item.Reviews.Select(x=>x.OverallRating).FirstOrDefault()</div>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="@item.Reviews.Select(x=>x.OverallRating).FirstOrDefault()"></div>
+                                                    <br>
+                                                    <div class="reviews-count">@item.Reviews.Count() Reviews</div>
+                                                </div>
+                                                <div class="listing_carditem_footer fl-wrap">
+                                                    <a class="listing-item-category-wrap" href="#">
+                                                        <div class="listing-item-category red-bg"><i class="fal fa-bed"></i></div>
+                                                        <span>Hotel</span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </article>
+                                    </article>
+                                </div>
+                                <!-- listing-item end -->
                             </div>
-                            <!-- listing-item end -->
                         </div>
-                    </div>
-                    <!--  swiper-slide end  -->
+                        <!--  swiper-slide end  -->
+                    }
                 </div>
             </div>
             <div class="listing-carousel-button listing-carousel-button-next2"><i class="fas fa-caret-right"></i></div>

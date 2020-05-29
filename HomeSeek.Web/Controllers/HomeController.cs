@@ -25,7 +25,7 @@ namespace HomeSeek.Web.Controllers
             ViewBag.AllReservations = reservations.Count();
             ViewBag.AllReviews = reviews.Count();
             ViewBag.AllPhotos = photos.Count();
-            return View();
+            return View(places.ToList());
         }
         //Live Chat ActionMethod
         public ActionResult Chat()
