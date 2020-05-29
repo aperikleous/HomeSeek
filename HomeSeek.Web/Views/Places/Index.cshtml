@@ -183,19 +183,16 @@
                     <article class="geodir-category-listing fl-wrap">
                         <div class="geodir-category-img">
                             <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
-                            <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
-                                <img src="~/images/all/1.jpg" alt="" />
+                            <a href="/places/details/@place.PlaceId" class="geodir-category-img-wrap fl-wrap">
+                                <img src="@place.Photos.Select(x => x.PhotoUrl).First()" alt="" />
                             </a>
-                            <div class="listing-avatar">
-                                <a href="author-single.html"><img src="/images/avatar/1.jpg" alt=""></a>
-                                <span class="avatar-tooltip">Added By  <strong>Kliff Antony</strong></span>
-                            </div>
+                            
                             <div class="geodir-category-opt">
                                 <div class="listing-rating-count-wrap">
-                                    <div class="review-score">5.0</div>
-                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
+                                    <div class="review-score">@(Math.Round((place.Reviews.Select(x => x.OverallRating).FirstOrDefault()),1).ToString("0.0"))</div>
+                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((place.Reviews.Select(x => x.OverallRating).FirstOrDefault()),0))"></div>
                                     <br>
-                                    <div class="reviews-count">4 reviews</div>
+                                    <div class="reviews-count">@place.Reviews.Count reviews</div>
                                 </div>
                             </div>
                         </div>
@@ -221,28 +218,21 @@
                             <div class="geodir-category-footer fl-wrap">
                                 <a class="listing-item-category-wrap">
                                     <div class="listing-item-category  yellow-bg"><i class="fal fa-bed"></i></div>
-                                    <span>Hotels</span>
+                                    <span></span>
                                 </a>
                                 <div class="geodir-opt-list">
                                     <ul class="no-list-style">
-                                        <li><a href="#" class="show_gcc"><i class="fal fa-envelope"></i><span class="geodir-opt-tooltip">Contact Info</span></a></li>
                                         <li><a href="#4" class="map-item"><i class="fal fa-map-marker-alt"></i><span class="geodir-opt-tooltip">On the map <strong>4</strong></span></a></li>
                                         <li>
-                                            <div class="dynamic-gal gdop-list-link" data-dynamicPath="[{'src': '/images/all/1.jpg'},{'src': '/images/all/1.jpg'}, {'src': '/images/all/1.jpg'}]"><i class="fal fa-search-plus"></i><span class="geodir-opt-tooltip">Gallery</span></div>
+                                            <div class="dynamic-gal gdop-list-link" data-dynamicPath="[ {'src': '@place.Photos.Select(x => x.PhotoUrl).First()'},{'src': '@place.Photos.Select(x => x.PhotoUrl).Last()'}]"><i class="fal fa-search-plus"></i><span class="geodir-opt-tooltip">Gallery</span></div>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="price-level geodir-category_price">
-                                    <span class="price-level-item" data-pricerating="4"></span>
-                                    <span class="price-name-tooltip">Ultra High</span>
+                                    <span class="price-level-item" data-pricerating="@(Math.Round((place.PricePerDay/20),0))"></span>
+                                    <span class="price-name-tooltip">@(Math.Round((place.PricePerDay/20),0))</span>
                                 </div>
-                                <div class="geodir-category_contacts">
-                                    <div class="close_gcc"><i class="fal fa-times-circle"></i></div>
-                                    <ul class="no-list-style">
-                                        <li><span><i class="fal fa-phone"></i> Call : </span><a href="#">+38099231212</a></li>
-                                        <li><span><i class="fal fa-envelope"></i> Write : </span><a href="#">yourmail@domain.com</a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </article>
@@ -252,97 +242,5 @@
         </div>
     </div>
     <!-- listing-item-container end -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpoOQ4gRShj82EFsLYWPjQLMoXYqAHqtY&libraries=places&callback=initAutocomplete"></script>
 
-
-    @*<p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table table-bordered">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Amenities)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ApartmentName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Guests)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bedroom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Bathroom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PricePerDay)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CleanCost)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsBooked)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Created)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Modified)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Amenities)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ApartmentName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Guests)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Bedroom)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Bathroom)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PricePerDay)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CleanCost)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsBooked)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Created)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Modified)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Address)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.PlaceId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.PlaceId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.PlaceId })
-                </td>
-            </tr>
-        }
-
-    </table>*@

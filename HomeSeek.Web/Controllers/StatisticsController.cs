@@ -29,7 +29,7 @@ namespace HomeSeek.Web.Controllers
             vm.TotalReviews = reviews.Count();
             vm.TotalReservations = reservations.Count();
             vm.TotalUsers = users.Count();
-
+            Session["AllReviews"] = reservations.Count();
             //--------------------------------------------
             foreach (var address in addresses)
             {

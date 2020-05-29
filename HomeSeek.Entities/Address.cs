@@ -14,7 +14,7 @@ namespace HomeSeek.Entities
 
 
         [Required(ErrorMessage = "Address Name is required")]
-        [Display(Name = "Όνομα Διεύθυνσης")]
+        //[Display(Name = "Όνομα Διεύθυνσης")]
         public string AddressName { get; set; }
 
         [Required(ErrorMessage = "Number is required")]

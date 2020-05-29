@@ -8,36 +8,15 @@
     <div class="listing-carousel fl-wrap full-height lightgallery">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- swiper-slide-->
-                <div class="swiper-slide hov_zoom">
-                    <img src="https://a0.muscache.com/im/pictures/0b4c78d2-37f9-422a-95c6-1aa24823846a.jpg?aki_policy=xx_large" alt="">
-                    <a href="https://a0.muscache.com/im/pictures/0b4c78d2-37f9-422a-95c6-1aa24823846a.jpg?aki_policy=xx_large" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                </div>
-                <!-- swiper-slide end-->
-                <!-- swiper-slide-->
-                <div class="swiper-slide  hov_zoom">
-                    <img src="https://a0.muscache.com/im/pictures/4b73ca56-a275-4ce9-8bca-07922cc00494.jpg?aki_policy=xx_large" alt="">
-                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                </div>
-                <!-- swiper-slide end-->
-                <!-- swiper-slide-->
-                <div class="swiper-slide  hov_zoom">
-                    <img src="https://a0.muscache.com/im/pictures/0e43b9f6-683a-414a-a104-797b7bb365ef.jpg?aki_policy=xx_large" alt="">
-                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                </div>
-                <!-- swiper-slide end-->
-                <!-- swiper-slide-->
-                <div class="swiper-slide  hov_zoom">
-                    <img src="https://a0.muscache.com/im/pictures/2fba8737-bbed-45f1-9402-737e280ee6b0.jpg?aki_policy=xx_large" alt="">
-                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                </div>
-                <!-- swiper-slide end-->
-                <!-- swiper-slide-->
-                <div class="swiper-slide  hov_zoom">
-                    <img src="https://a0.muscache.com/im/pictures/048526a6-2552-4009-829f-ed75f78b3b28.jpg?aki_policy=xx_large" alt="">
-                    <a href="/images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                </div>
-                <!-- swiper-slide end-->
+                @foreach (var photo in Model.Photos)
+                {
+                    <!-- swiper-slide-->
+                    <div class="swiper-slide hov_zoom">
+                        <img src="@photo.PhotoUrl" alt="">
+                        <a href="@photo.PhotoUrl" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                    </div>
+                    <!-- swiper-slide end-->
+                }
             </div>
         </div>
     </div>
@@ -83,27 +62,18 @@
                                     <div class="fl-wrap list-single-header-column  block_box">
                                         <div class="listing-rating-count-wrap single-list-count">
                                             <div class="review-score">
-                                                @{
-
-                                                    double avg = 0;
-                                                    foreach (var review in Model.Reviews)
-                                                    {
-                                                        avg += review.OverallRating;
-                                                    }
-                                                    avg = avg / Model.Reviews.Count();
-                                                    @avg
-                                                }
+                                                @ViewBag.AvgOverallRating
                                             </div>
-                                            <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
+                                            <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((ViewBag.AvgOverallRating),0))"></div>
                                             <br>
                                             <div class="reviews-count">
-                                                @if (@Model.Reviews.Count() > 1)
+                                                @if (@ViewBag.TotalReviews > 1)
                                                 {
-                                                    @Model.Reviews.Count()<span> Reviews</span>
+                                                    @ViewBag.TotalReviews<span> Reviews</span>
                                                 }
                                                 else
                                                 {
-                                                    @Model.Reviews.Count() <span> Review</span>
+                                                    @ViewBag.TotalReviews <span> Review</span>
                                                 }
 
                                             </div>
@@ -201,10 +171,10 @@
                         <div class="list-single-main-item-title">
                             <h3>Listing Features</h3>
                         </div>
-                        <div class="list-single-main-item_content fl-wrap checked-amenities">
+                        <div class="list-single-main-item_content  fl-wrap checked-amenities">
                             <div class="listing-features fl-wrap">
                                 <ul class="no-list-style">
-                                    <li><a href="#"><i class="fal fa-parking"></i></i>Elevator @Html.DisplayFor(model => model.Amenities.Elevator)</a></li>
+                                    <li><a href="#"><i class="fal fa-parking"></i>Elevator @Html.DisplayFor(model => model.Amenities.Elevator)</a></li>
                                     <li><a href="#"><i class="fa fa-wifi"></i>Wifi @Html.DisplayFor(model => model.Amenities.Wifi)</a></li>
                                     <li><a href="#"><i class="fa fa-motorcycle"></i>Free Parking @Html.DisplayFor(model => model.Amenities.FreeParking)</a></li>
                                     <li><a href="#"><i class="fal fa-cloud"></i>Air Conditioned @Html.DisplayFor(model => model.Amenities.AirConditioning)</a></li>
@@ -222,7 +192,7 @@
                     <div class="list-single-main-item fl-wrap block_box" id="sec5">
                         <div class="list-single-main-item-title">
 
-                            <h3>Item Reviews -  <span> @Model.Reviews.Count() </span><button class="btn ml-5 color2-bg">@Html.ActionLink("Submit Review", "Create", "Reviews", new { PlaceId = Model.PlaceId }, new { @class = "text-white" }) <i class="fal fa-paper-plane"></i></button></h3>
+                            <h3>Item Reviews -  <span> @ViewBag.TotalReviews </span><button class="btn ml-5 color2-bg">@Html.ActionLink("Submit Review", "Create", "Reviews", new { PlaceId = Model.PlaceId }, new { @class = "text-white" }) <i class="fal fa-paper-plane"></i></button></h3>
 
 
 
@@ -234,18 +204,9 @@
                         <div class="reviews-score-wrap fl-wrap">
                             <div class="review-score-total">
                                 <span class="review-score-total-item">
-                                    @{
-
-                                        avg = 0;
-                                        foreach (var review in Model.Reviews)
-                                        {
-                                            avg += review.OverallRating;
-                                        }
-                                        avg = avg / Model.Reviews.Count();
-                                        @avg
-                                    }
+                                    @ViewBag.AvgOverallRating
                                 </span>
-                                <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
+                                <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((ViewBag.AvgOverallRating),0))"></div>
                             </div>
                             <div class="review-score-detail">
                                 <!-- review-score-detail-list-->
@@ -253,81 +214,45 @@
                                     <!-- rate item-->
                                     <div class="rate-item">
                                         <div class="rate-item-title"><span>Accuracy</span></div>
-                                        <div class="rate-item-bg" data-percent="100%">
+                                        <div class="rate-item-bg" data-percent="@(ViewBag.AvgAccuracy*20)%">
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
                                         <div class="rate-item-percent">
-                                            @{
-
-                                                avg = 0;
-                                                foreach (var review in Model.Reviews)
-                                                {
-                                                    avg += review.Accuracy;
-                                                }
-                                                avg = avg / Model.Reviews.Count();
-                                                @avg
-                                            }
+                                            @ViewBag.AvgAccuracy
                                         </div>
                                     </div>
                                     <!-- rate item end-->
                                     <!-- rate item-->
                                     <div class="rate-item">
                                         <div class="rate-item-title"><span>Cleanliness</span></div>
-                                        <div class="rate-item-bg" data-percent="@(avg*20)%">
+                                        <div class="rate-item-bg" data-percent="@(ViewBag.AvgCleanliness*20)%">
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
                                         <div class="rate-item-percent">
-                                            @{
-
-                                                avg = 0;
-                                                foreach (var review in Model.Reviews)
-                                                {
-                                                    avg += review.Cleanliness;
-                                                }
-                                                avg = avg / Model.Reviews.Count();
-                                                @avg
-                                            }
+                                            @ViewBag.AvgCleanliness
                                         </div>
                                     </div>
                                     <!-- rate item end-->
                                     <!-- rate item-->
                                     <div class="rate-item">
                                         <div class="rate-item-title"><span>Location</span></div>
-                                        <div class="rate-item-bg" data-percent="80%">
+                                        <div class="rate-item-bg" data-percent="@(ViewBag.AvgLocation*20)%">
                                             @*"@(avg*20)%"*@
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
                                         <div class="rate-item-percent">
-                                            @{
-
-                                                avg = 0;
-                                                foreach (var review in Model.Reviews)
-                                                {
-                                                    avg += review.Location;
-                                                }
-                                                avg = avg / Model.Reviews.Count();
-                                                @avg
-                                            }
+                                            @ViewBag.AvgLocation
                                         </div>
                                     </div>
                                     <!-- rate item end-->
                                     <!-- rate item-->
                                     <div class="rate-item">
                                         <div class="rate-item-title"><span>Value</span></div>
-                                        <div class="rate-item-bg" data-percent="90%">
+                                        <div class="rate-item-bg" data-percent="@(ViewBag.AvgValue*20)%">
                                             <div class="rate-item-line gradient-bg"></div>
                                         </div>
                                         <div class="rate-item-percent">
-                                            @{
-
-                                                avg = 0;
-                                                foreach (var review in Model.Reviews)
-                                                {
-                                                    avg += review.Value;
-                                                }
-                                                avg = avg / Model.Reviews.Count();
-                                                @avg
-                                            }
+                                            @ViewBag.AvgValue
                                         </div>
                                     </div>
                                     <!-- rate item end-->
@@ -350,46 +275,27 @@
                                                 <h4><a href="#"></a></h4>
                                                 <div class="review-score-user">
                                                     <span class="review-score-user_item">@item.OverallRating</span>
-                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((item.OverallRating),0))"></div>
                                                 </div>
                                             </div>
                                             <p>@item.Comment</p>
                                             <div class="reviews-comments-item-footer fl-wrap">
                                                 <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>@item.SubDate</span></div>
-                                                <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>2</span> </a>
+                                                <a onclick="myFunction()" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span id="@item.ReviewId">2</span> </a>
                                             </div>
                                         </div>
                                     </div>
                                 }
-
-
-                                <!--reviews-comments-item end-->
-                                <!-- reviews-comments-item -->
-                                @*<div class="reviews-comments-item">
-                                        <div class="review-comments-avatar">
-                                            <img src="/images/avatar/1.jpg" alt="">
-                                        </div>
-                                        <div class="reviews-comments-item-text fl-wrap">
-                                            <div class="reviews-comments-header fl-wrap">
-                                                <h4><a href="#">Adam Koncy</a></h4>
-                                                <div class="review-score-user">
-                                                    <span class="review-score-user_item">5.0</span>
-                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
-                                                </div>
-                                            </div>
-                                            <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere convallis purus non cursus. Cras metus neque, gravida sodales massa ut. "</p>
-                                            <div class="review-images ">
-                                                <a href="/images/all/1.jpg" class="image-popup"><img src="/images/all/1.jpg" alt=""></a>
-                                                <a href="/images/all/1.jpg" class="image-popup"><img src="/images/all/1.jpg" alt=""></a>
-                                            </div>
-                                            <div class="reviews-comments-item-footer fl-wrap">
-                                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>03 December 2017</span></div>
-                                                <a href="#" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span>4</span> </a>
-                                            </div>
-                                        </div>
-                                    </div>*@
-
-                                <!--reviews-comments-item end-->
+                                    @*<script>
+                                function myFunction() {
+                                    document.getElementById("@(item.ReviewId)").innerText = 3;
+                                }
+                                    </script>*@
+                                @*<script>
+                                function myFunction() {
+                                    document.getElementById("@(item.ReviewId)").innerText = 3;
+                                }
+                                </script>*@
                             </div>
                         </div>
                     </div>
@@ -410,25 +316,25 @@
 
                             @using (Html.BeginForm("Create", "Reservations", FormMethod.Get, new { @class = "form-inline" }))
                             {
-                            <fieldset>
-                                <div class="form-group mb-2">
-                                    @Html.Hidden("PlaceId", null, new { @class = "form-control" })
-                                </div>
-                                <div class="form-group mb-2 d-inline-block">
-                                    <div class="pricerange fl-wrap "><span>Price Per Day: </span> @Model.PricePerDay €</div>
-                                </div>
+                                <fieldset>
+                                    <div class="form-group mb-2">
+                                        @Html.Hidden("PlaceId", null, new { @class = "form-control" })
+                                    </div>
+                                    <div class="form-group mb-2 d-inline-block">
+                                        <div class="pricerange fl-wrap "><span>Price Per Day: </span> @Model.PricePerDay €</div>
+                                    </div>
 
-                                <div class="form-group mb-2 d-inline-block">
-                                    @Html.Label("Check-in", new { @for = "checkin", @class= "font-weight-bold" })
-                                    @Html.TextBox("checkin", null, new { type = "date", @class = "form-control", placeholder = "checkin" })
-                                </div>
-                                <div class="form-group mb-2 d-inline-block">
-                                    @Html.Label("Check-out", new { @for = "checkout", @class = "font-weight-bold" })
-                                    @Html.TextBox("checkout", null, new { type = "date", @class = "form-control", placeholder = "checkout" })
-                                    <button class="form-control mt-2 book-btn" type="submit">Book Room Now</button>
-                                </div>
+                                    <div class="form-group mb-2 d-inline-block">
+                                        @Html.Label("Check-in", new { @for = "checkin", @class = "font-weight-bold" })
+                                        @Html.TextBox("checkin", null, new { type = "date", @class = "form-control", placeholder = "checkin" })
+                                    </div>
+                                    <div class="form-group mb-2 d-inline-block">
+                                        @Html.Label("Check-out", new { @for = "checkout", @class = "font-weight-bold" })
+                                        @Html.TextBox("checkout", null, new { type = "date", @class = "form-control", placeholder = "checkout" })
+                                        <button class="form-control mt-2 book-btn" type="submit">Book Room Now</button>
+                                    </div>
 
-                            </fieldset>
+                                </fieldset>
                             }
 
                             @*===============================================================================================================================*@
@@ -509,7 +415,7 @@
                     </div>
                     <div class="box-widget">
                         <div class="map-container">
-                            <div id="singleMap" data-latitude="38.1046381" data-longitude="23.8221748" data-mapTitle="Our Location"></div>
+                            <div id="singleMap" data-latitude="@Model.Address.Latitude" data-longitude="@Model.Address.Longitude" data-mapTitle="Our Location"></div>
                         </div>
                         <div class="box-widget-content bwc-nopad">
                             <div class="list-author-widget-contacts list-item-widget-contacts bwc-padside">
@@ -536,103 +442,4 @@
 </section>
 <div class="limit-box fl-wrap"></div>
 
-
-
-@*<div>
-        <h4>Place</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.Amenities.AmenitiesId)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Amenities.AmenitiesId)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ApartmentName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ApartmentName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Description)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Description)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Guests)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Guests)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Bedroom)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Bedroom)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Bathroom)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Bathroom)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.PricePerDay)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.PricePerDay)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.CleanCost)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.CleanCost)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.IsBooked)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.IsBooked)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Created)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Created)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.Modified)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Modified)
-            </dd>
-
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.PlaceId }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>*@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpoOQ4gRShj82EFsLYWPjQLMoXYqAHqtY&libraries=places&callback=initAutocomplete"></script>

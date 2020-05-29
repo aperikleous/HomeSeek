@@ -23,6 +23,7 @@ namespace HomeSeek.Web.Controllers
         {
             var places = db.Places.GetAll();
             return View(places.ToList());
+            
         }
 
         // GET: Places/Details/5
@@ -34,6 +35,30 @@ namespace HomeSeek.Web.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Place place = db.Places.GetById(id);
+            var overallSumRatingPlace = 0d;
+            var totalValue = 0d;
+            var totalAccuracy = 0d;
+            var totalCheckin = 0d;
+            var totalCleanliness = 0d;
+            var totalLocation = 0d;
+            var totalReviews = place.Reviews.Count();
+
+            foreach (var review in place.Reviews)
+            {
+                overallSumRatingPlace += review.OverallRating;
+                totalAccuracy += review.Accuracy;
+                totalCheckin += review.Checkin;
+                totalCleanliness += review.Cleanliness;
+                totalLocation += review.Location;
+                totalValue += review.Value;
+            }
+            ViewBag.AvgOverallRating = Math.Round((overallSumRatingPlace / totalReviews), 1);
+            ViewBag.AvgAccuracy = Math.Round((totalAccuracy / totalReviews), 1);
+            ViewBag.AvgCheckin = Math.Round((totalCheckin / totalReviews), 1);
+            ViewBag.AvgCleanliness = Math.Round((totalCleanliness / totalReviews), 1);
+            ViewBag.AvgLocation = Math.Round((totalLocation / totalReviews), 1);
+            ViewBag.AvgValue = Math.Round((totalValue / totalReviews), 1);
+            ViewBag.TotalReviews = totalReviews;
             if (place == null)
             {
                 return HttpNotFound();

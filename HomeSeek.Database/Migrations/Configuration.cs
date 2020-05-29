@@ -497,6 +497,8 @@
             #endregion
 
             //================Create Relations ==================
+            
+
             p1.Amenities = a1;
             p2.Amenities = a2;
             p3.Amenities = a3;
@@ -578,8 +580,6 @@
             p38.Address = ad8;
             p39.Address = ad9;
             p40.Address = ad10;
-
-
 
             p1.Photos = new List<Photo>() { ph1, ph2, ph3, ph4, ph5 };
             p2.Photos = new List<Photo>() { ph6, ph7, ph8, ph9, ph10 };
@@ -685,12 +685,10 @@
             r7.ApplicationUser = ap1;
             r8.ApplicationUser = ap2;
 
-
             context.Reviews.AddOrUpdate(x => x.Identifier, rev1, rev1b, rev1c, rev2, rev2b, rev2c, rev3, rev3b, rev3c, rev5, rev5b, rev5c, rev6, rev6b, rev6c, rev7, rev8);
             context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17,
                                                         a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32,
                                                         a33, a34, a35, a36, a37, a38, a39, a40);
-            context.Addresses.AddOrUpdate(x => x.AddressName, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8, ad9, ad10, ad11);
             context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18,
                                                             p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34,
                                                             p35, p36, p37, p38, p39, p40);
@@ -712,6 +710,7 @@
                                                         ph176, ph177, ph178, ph179, ph180, ph181, ph182, ph183, ph184, ph185, ph186, ph187,
                                                         ph188, ph189, ph190, ph191, ph192, ph193, ph194, ph195, ph196, ph197, ph198, ph199,
                                                         ph200);
+
 
             context.SaveChanges();
         }
