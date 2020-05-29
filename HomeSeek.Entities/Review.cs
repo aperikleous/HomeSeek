@@ -12,6 +12,7 @@ namespace HomeSeek.Entities
     {
         double _overallRating;
         public int ReviewId { get; set; }
+        public int Identifier { get; set; }
         [Range(0, 5, ErrorMessage = "Values should be between 0 - 5.")]
         public int Accuracy { get; set; }
         [Range(0, 5, ErrorMessage = "Values should be between 0 - 5.")]
