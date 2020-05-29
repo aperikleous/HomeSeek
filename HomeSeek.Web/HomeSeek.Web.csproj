@@ -518,6 +518,8 @@
     <Content Include="Views\Reservations\OnApprove.cshtml" />
     <Content Include="Views\Places\CreateAddress.cshtml" />
     <Content Include="Views\Places\CreatePhoto.cshtml" />
+    <Content Include="Views\Administrator\View.cshtml" />
+    <Content Include="Views\Administrator\View1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
