@@ -9,5 +9,6 @@ namespace HomeSeek.Repository
 {
     public interface IPhotoRepository: IRepository<Photo>
     {
+        IEnumerable<Photo> GetPhotosCustom();
     }
 }

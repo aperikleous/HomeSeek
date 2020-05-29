@@ -1,5 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+
+    <p>
+        @Html.ActionLink("Create new Place", "CreateAddress", "Places", null, new { style = "color:red" })
+    </p>
 }
 <section class="hero-section" data-scrollax-parent="true">
     <div class="bg-tabs-wrap">

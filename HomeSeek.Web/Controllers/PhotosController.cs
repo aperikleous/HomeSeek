@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -47,13 +48,35 @@ namespace HomeSeek.Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PhotoId,PhotoUrl,PrimaryPhoto")] Photo photo)
+        public ActionResult Create([Bind(Include = "PhotoId,PhotoUrl,PrimaryPhoto")] Photo photo, HttpPostedFileBase ImageFile)
         {
             if (ModelState.IsValid)
             {
-                db.Photos.Add(photo);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+
+                if (Path.GetExtension(ImageFile.FileName).ToLower() == ".jpg"
+                 || Path.GetExtension(ImageFile.FileName).ToLower() == ".png"
+                 || Path.GetExtension(ImageFile.FileName).ToLower() == ".jpeg"
+                 || Path.GetExtension(ImageFile.FileName).ToLower() == ".gif")
+                {
+
+
+                    string path = Path.Combine(Server.MapPath("~/Content/Images"), Path.GetFileName(ImageFile.FileName));
+                    ImageFile.SaveAs(path);
+                    ViewBag.UploadStatus = " Η φωτογραφία ανέβηκε επιτυχώς.Μπορείτε να ανεβάσετε και άλλη. Διαφορετικά προχωρήστε στην καταχώρηση του σπιτιού";
+                    photo.PhotoUrl = "~/Content/Images/" + ImageFile.FileName;
+                    db.Photos.Add(photo);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+
+                }
+                else
+                {
+                    return Content("Only files jpg , png , jpeg and gif are acceptable. Please try again");
+                }
+                
+
+
+
             }
 
             return View(photo);

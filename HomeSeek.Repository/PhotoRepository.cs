@@ -18,6 +18,11 @@ namespace HomeSeek.Repository
         {
             get { return Context as MyDatabase; }
         }
+
+        public IEnumerable<Photo> GetPhotosCustom()
+        {
+            return MyDatabase.Photos.Include("Places");
+        }
     }
     
 }

@@ -133,12 +133,22 @@
 
             //================= Seeding Address =================
             //Address template = new Address() { AddressLine = "", City = "", Counties = CountiesOfGreece.Attica, Countries = Countries.Greece };
-            Address ad1 = new Address() { AddressLine = "Aleksandou 33", City = "Psichiko", Counties = CountiesOfGreece.Attica, Countries = Countries.Greece };
-            Address ad2 = new Address() { AddressLine = "Palaiologou 76", City = "Nea Makri", Counties = CountiesOfGreece.Attica, Countries = Countries.Greece };
-            Address ad3 = new Address() { AddressLine = "Psarou 2", City = "Mykonos", Counties = CountiesOfGreece.Cyclades, Countries = Countries.Greece };
+            Address adr1 = new Address() { AddressName = "Ανδρέα Κάλβου", No = "8", ZipCode = "17455", Latitude = "37.9160632", Longitude = "23.7258564", City = "Αθήνα", Area = "Άλιμος" };
+            Address adr2 = new Address() { AddressName = "Αδάμων", No = "21", ZipCode = "14564", Latitude = "38.0918513", Longitude = "23.8019882", City = "Αθήνα", Area = "Κηφισιά" };
+            Address adr3 = new Address() { AddressName = "Δράμας", No = "5", ZipCode = "18648", Latitude = "37.946975", Longitude = "23.623853", City = "Αθήνα", Area = "Μαρούσι" };
+            Address adr4 = new Address() { AddressName = "Αριστοφάνους", No = "21", ZipCode = "16674", Latitude = "37.8742167", Longitude = "23.759905,17", City = "Αθήνα", Area = "Γλυφάδα" };
+            Address adr5 = new Address() { AddressName = "Γυθείου", No = "12", ZipCode = "16342", Latitude = "37.9234159", Longitude = "23.7631328", City = "Αθήνα", Area = "Ηλιούπολη" };
+            Address adr6 = new Address() { AddressName = "Υμηττού", No = "130", ZipCode = "11634", Latitude = "37.9659734", Longitude = "23.7451387", City = "Αθήνα", Area = "Παγκράτι" };
+            Address adr7 = new Address() { AddressName = "Σταδίου", No = "2", ZipCode = "10564", Latitude = "37.976445", Longitude = "23.7323298", City = "Αθήνα", Area = "Κέντρο Αθήνας" };
+            Address adr8 = new Address() { AddressName = "Πανεπιστημίου", No = "12", ZipCode = "10564", Latitude = "37.9778266", Longitude = "23.7332016", City = "Αθήνα", Area = "Κέντρο Αθήνας" };
+            Address adr9 = new Address() { AddressName = "Τσιμισκή", No = "34", ZipCode = "54623", Latitude = "40.6329694", Longitude = "22.9401955", City = "Θεσσαλονίκη", Area = "Κέντρο Θεσσαλονίκη" };
+            Address adr10 = new Address() { AddressName = "Εθ.Αντιστάσεως", No = "173", ZipCode = "18648", Latitude = "37.9474722", Longitude = "23.6240855", City = "Πειραιάς", Area = "Δραπετσώνα" };
+            Address adr11 = new Address() { AddressName = "Παπαφλεσσα", No = "25", ZipCode = "58768", Latitude = "38.0523321", Longitude = "23.8091868", City = "Πειραιάς", Area = "Δραπετσώνα" };
+            Address adr12 = new Address() { AddressName = "Αριστοτέλους", No = "16", ZipCode = "17455", Latitude = "37.9126442", Longitude = "23.7099781", City = "Αθήνα", Area = "Άλιμος" };
 
             //================= Seeding Photo =================
             //Photo template = new Photo() { PhotoUrl = "#" };
+            //Photo home1out1 = new Photo() { PhotoUrl = "/Content/Images/home1/1-out1.jpg", PhotoName = "Εξωτερική 1" };
             Photo ph1 = new Photo() { PhotoUrl = "#" };
             Photo ph2 = new Photo() { PhotoUrl = "##" };
             Photo ph3 = new Photo() { PhotoUrl = "###" };
@@ -149,9 +159,22 @@
             p2.Amenities = a2;
             p3.Amenities = a3;
 
-            p1.Address = ad1;
-            p2.Address = ad2;
-            p3.Address = ad3;
+
+            p1.Address = adr1;
+            p2.Address = adr2;
+            p3.Address = adr3;
+            //adr1.Places = new List<Place>() { p1 };
+            //adr2.Places = new List<Place>() { p2 };
+            //adr3.Places = new List<Place>() { p3 };
+            //adr4.Products = new List<Product>() { commercial5 };
+            //adr5.Products = new List<Product>() { home6 };
+            //adr6.Products = new List<Product>() { commercial3 };
+            //adr7.Products = new List<Product>() { commercial4 };  //kentro athina
+            //adr8.Products = new List<Product>() { home3 };         //kentro athina
+            //adr9.Products = new List<Product>() { home4 };       //kentro thessalonikh
+            //adr10.Products = new List<Product>() { commercial1 }; //peiraias
+            //adr11.Products = new List<Product>() { commercial2 }; //peiraias
+            //adr12.Products = new List<Product>() { field2 };
             //p4.Address = ad3;
 
             p1.Photos = new List<Photo>() { ph1 };

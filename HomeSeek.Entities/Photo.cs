@@ -12,8 +12,9 @@ namespace HomeSeek.Entities
         public string PhotoUrl { get; set; } //Εδώ μπορεί να είναι και κάποιο file.
         public bool PrimaryPhoto { get; set; }
 
+        public string PhotoName { get; set; }
 
         //Navigation Properties
-        public virtual Place Place { get; set; }
+        public virtual ICollection<Place> Places { get; set; }
     }
 }

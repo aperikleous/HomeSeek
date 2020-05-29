@@ -1,0 +1,62 @@
+﻿@model HomeSeek.Entities.Photo
+
+
+
+
+<h2>Upload Photo</h2>
+
+@using (Html.BeginForm("CreatePhoto", "Places", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Ανεβάστε φωτογραφίες</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.PhotoUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input type="file" name="ImageFile" value="browse" />
+            @Html.ValidationMessageFor(model => model.PhotoUrl, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PrimaryPhoto, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.EditorFor(model => model.PrimaryPhoto)
+                @Html.ValidationMessageFor(model => model.PrimaryPhoto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.PhotoName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.PhotoName, new { htmlAttributes = new { placeholder = "Όνομα φωτογραφίας", autocomplete = "off", @class = "form-control", @Value=""} })
+            @Html.ValidationMessageFor(model => model.PhotoName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Upload Photo" class="btn btn-default" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10 text-success">
+            @ViewBag.UploadStatus
+        </div>
+    </div>
+</div>
+        }
+
+<a>
+
+
+</a>
+
+<div>
+    @Html.ActionLink("Συνεχίστε στην κατασκευή του Σπιτιού", "CreatePlace", "Places")
+</div>

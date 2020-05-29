@@ -77,7 +77,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <h1>@Html.DisplayFor(model => model.ApartmentName) <span class="verified-badge"><i class="fal fa-check"></i></span></h1>
-                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> @Html.DisplayFor(model => model.Address.AddressLine)  @Html.DisplayFor(model => model.Address.City) </a> <a href="#"> <i class="fal fa-calendar-alt"></i>@(Model.Created?.ToString("dd/MM/yyyy")) </a></div>
+                                    <div class="geodir-category-location fl-wrap"><a href="#"><i class="fas fa-map-marker-alt"></i> @Html.DisplayFor(model => model.Address.AddressName)  @Html.DisplayFor(model => model.Address.City) </a> <a href="#"> <i class="fal fa-calendar-alt"></i>@(Model.Created?.ToString("dd/MM/yyyy")) </a></div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="fl-wrap list-single-header-column  block_box">
@@ -514,7 +514,7 @@
                         <div class="box-widget-content bwc-nopad">
                             <div class="list-author-widget-contacts list-item-widget-contacts bwc-padside">
                                 <ul class="no-list-style">
-                                    <li><span><i class="fal fa-map-marker"></i> Address :</span> <a href="#">@Model.Address.AddressLine @Model.Address.City</a></li>
+                                    <li><span><i class="fal fa-map-marker"></i> Address :</span> <a href="#">@Model.Address.AddressName @Model.Address.City</a></li>
                                 </ul>
                             </div>
                             <div class="list-widget-social bottom-bcw-box  fl-wrap">
