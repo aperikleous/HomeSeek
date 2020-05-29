@@ -11,6 +11,8 @@ using System.Web.UI.WebControls;
 using HomeSeek.Database;
 using HomeSeek.Entities;
 using HomeSeek.Repository;
+using PagedList;
+using PagedList.Mvc;
 
 namespace HomeSeek.Web.Controllers
 {
@@ -19,11 +21,70 @@ namespace HomeSeek.Web.Controllers
         UnitOfWork db = new UnitOfWork(new MyDatabase());
 
         //GET: Places
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string searchtitle, string searchcity, DateTime? searchdate,
+                                    int? searchminprice, int? searchmaxprice, int? page, int? pSize)
         {
-            var places = db.Places.GetAll();
-            return View(places.ToList());
-            
+            ViewBag.CurrentTitle = searchtitle;
+            ViewBag.CurrentCity = searchcity;
+            ViewBag.CurrentDate = searchdate;
+            ViewBag.CurrentPrice = searchminprice;
+            ViewBag.CurrentPrice = searchmaxprice;
+            //ViewBag.CurrentSortOrder = sortOrder;
+            ViewBag.CurrentpSize = pSize;
+            ViewBag.TitleSortParam = String.IsNullOrEmpty(sortOrder) ? "TitleDesc" : "";
+            ViewBag.CitySortParam = sortOrder == "CityAsc" ? "CityDesc" : "CityAsc";
+            ViewBag.DateSortParam = sortOrder == "DateAsc" ? "DateDesc" : "DateAsc";
+            ViewBag.PriceSortParam = sortOrder == "PriceAsc" ? "PriceDesc" : "PriceAsc";
+            ViewBag.TView = "badge badge-primary";
+            ViewBag.CView = "badge badge-primary";
+            ViewBag.DView = "badge badge-primary";
+            ViewBag.PView = "badge badge-primary";
+            var places = (IEnumerable<Place>)db.Places.GetAll();
+            //===================================FILTERS=======================//
+            //Filtering by Title
+            if (!string.IsNullOrWhiteSpace(searchtitle))
+            {
+                places = places.Where(x => x.ApartmentName.ToUpper().Contains(searchtitle.ToUpper()));
+            }
+            //Filtering by City
+            if (!string.IsNullOrWhiteSpace(searchcity))
+            {
+                places = places.Where(x => x.Address.City.ToUpper().Contains(searchcity.ToUpper()));
+            }
+            //Filtering by Date
+            if (!(searchdate is null))
+            {
+                //places = places.Where(x => x. >= searchmindob);
+            }
+            //Filtering by Price
+            if (!(searchminprice is null) && !(searchmaxprice is null)) //40
+            {
+                places = places.Where(x => x.PricePerDay <= searchmaxprice && x.PricePerDay >= searchminprice);
+            }
+            else if ((searchminprice is null) && !(searchmaxprice is null)) //40
+            {
+                places = places.Where(x => x.PricePerDay <= searchmaxprice);
+            }
+            else if (!(searchminprice is null) && (searchmaxprice is null)) //40
+            {
+                places = places.Where(x => x.PricePerDay >= searchminprice);
+            }
+            //Sorting
+            switch (sortOrder)
+            {
+                case "TitleDesc": places = places.OrderByDescending(x => x.ApartmentName); ViewBag.TView = "badge badge-danger"; break;
+                case "CityAsc": places = places.OrderBy(x => x.Address.City); ViewBag.CView = "badge badge-success"; break;
+                case "CityDesc": places = places.OrderByDescending(x => x.Address.City); ViewBag.CView = "badge badge-danger"; break;
+                // case "DateAsc": places = places.OrderBy(x => x.DateOfBirth); ViewBag.DOBView = "badge badge-success"; break;
+                // case "DateDesc": places = places.OrderByDescending(x => x.DateOfBirth); ViewBag.DOBView = "badge badge-danger"; break;
+                case "PriceAsc": places = places.OrderBy(x => x.PricePerDay); ViewBag.PView = "badge badge-success"; break;
+                case "PriceDesc": places = places.OrderByDescending(x => x.PricePerDay); ViewBag.PView = "badge badge-danger"; break;
+                default: places = places.OrderBy(x => x.ApartmentName); ViewBag.TView = "badge badge-success"; break;
+            }
+            //Pagination
+            int pageSize = pSize ?? 4;
+            int pageNumber = page ?? 1; //nullable coalescing operator
+            return View(places.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Places/Details/5

@@ -14,7 +14,7 @@ namespace HomeSeek.Entities
         [Required, StringLength(150, MinimumLength = 2, ErrorMessage = "Apartment Name must contain min2 characters & max 150")]
         [Display(Name = "Apartment Name")]
         public string ApartmentName { get; set; }
-        [Required, MinLength(15, ErrorMessage = "Description must contain minimum 10 characters")]
+        [Required, MinLength(15, ErrorMessage = "Description must contain minimum 15 characters")]
         public string Description { get; set; }
         [Required, Range(1, 20)]
         public int Guests { get; set; }

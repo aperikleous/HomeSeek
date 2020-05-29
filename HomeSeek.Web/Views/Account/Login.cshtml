@@ -56,28 +56,11 @@
                             <p>
                                 @Html.ActionLink("Register as a new user", "Register", null, new { @class = "btn btn-outline-primary blue-bg_color" })
                             </p>
-                            @* Enable this once you have account confirmation enabled for password reset functionality
-                                <p>
-                                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                                </p>*@
-                        }
-
-
-                        @*<form method="post" name="registerform">
-                                <label>Username or Email Address <span>*</span> </label>
-                                <input name="email" type="text" onClick="this.select()" value="">
-                                <label>Password <span>*</span> </label>
-                                <input name="password" type="password" onClick="this.select()" value="">
-                                <button type="submit" class="btn float-btn color2-bg"> Log In <i class="fas fa-caret-right"></i></button>
-                                <div class="clearfix"></div>
-                                <div class="filter-tags">
-                                    <input id="check-a3" type="checkbox" name="check">
-                                    <label for="check-a3">Remember me</label>
-                                </div>
-                            </form>*@
-                        <div class="lost_password">
-                            <a href="#">Lost Your Password?</a>
-                        </div>
+                            //Enable this once you have account confirmation enabled for password reset functionality
+                    <div class="lost_password">
+                        @Html.ActionLink("Lost Your Password?", "ForgotPassword")
+                    </div>
+                    }
                     </div>
                 </div>
                 <!--tab end -->

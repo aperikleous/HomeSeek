@@ -1,6 +1,7 @@
-﻿@model IEnumerable<HomeSeek.Entities.Place>
-    
-
+﻿@model PagedList.IPagedList<HomeSeek.Entities.Place>
+@using PagedList;
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
 @{
     ViewBag.Title = "Places";
 }
@@ -20,111 +21,127 @@
 <!-- Map end -->
 <!-- hidden-search-column-->
 <div class="hidden-search-column">
-    <div class="hidden-search-column-container fl-wrap full-height tabs-act">
-        <div class="filter-sidebar-header fl-wrap">
-            <ul class="tabs-menu fl-wrap no-list-style">
-                <li class="current"><a href="#filters-search"> <i class="fal fa-sliders-h"></i> Filters </a></li>
-            </ul>
-        </div>
-        <div class="scrl-content filter-sidebar  full-height">
-            <!--tabs -->
-            <div class="tabs-container fl-wrap">
-                <!--tab -->
-                <div class="tab">
-                    <div id="filters-search" class="tab-content  first-tab ">
-                        <!-- listsearch-input-item-->
-                        <div class="listsearch-input-item">
-                            <span class="iconn-dec"><i class="far fa-bookmark"></i></span>
-                            <input type="text" placeholder="What are you looking for ?" value="" />
-                        </div>
-                        <!-- listsearch-input-item end-->
-                        <!-- listsearch-input-item-->
-                        <div class="listsearch-input-item">
-                            <select data-placeholder="City/Location" class="chosen-select no-search-select">
-                                <option>All Cities</option>
-                                <option>New York</option>
-                                <option>Chicago</option>
-                                <option>Los Angeles</option>
-                                <option>Washington</option>
-                                <option>Boston</option>
-                            </select>
-                        </div>
-                        <!-- listsearch-input-item end-->
-                        <!-- listsearch-input-item-->
-                        <div class="listsearch-input-item location autocomplete-container">
-                            <span class="iconn-dec"><i class="far fa-map-marker"></i></span>
-                            <input type="text" placeholder="Where to look?" class="autocomplete-input" id="autocompleteid3" value="" />
-                            <a href="#"><i class="fal fa-location"></i></a>
-                        </div>
-                        <!-- listsearch-input-item end-->
-                        
-                        <!-- listsearch-input-item-->
-                        <div class="listsearch-input-item clact date-container">
-                            <span class="iconn-dec"><i class="fal fa-calendar"></i></span>
-                            <input type="text" placeholder="Event Date" name="datepicker-here" value="" />
-                            <span class="clear-singleinput"><i class="fal fa-times"></i></span>
-                        </div>
-                        <!-- listsearch-input-item end-->
-                        <!-- listsearch-input-item-->
-                        <div class="listsearch-input-item">
-                            <div class="price-rage-wrap fl-wrap">
-                                <div class="price-rage-wrap-title"><i class="fal fa-hand-holding-usd"></i> Price :</div>
-                                <div class="price-rage-item fl-wrap">
-                                    <input type="text" class="price-range" data-min="0" data-max="4" name="price-range1" data-step="1" value="$$">
+    @using (Html.BeginForm("Index", "Places", FormMethod.Get))
+    {
+        <div class="hidden-search-column-container fl-wrap full-height tabs-act">
+            <div class="filter-sidebar-header fl-wrap">
+                <ul class="tabs-menu fl-wrap no-list-style">
+                    <li class="current"><a href="#filters-search"> <i class="fal fa-sliders-h"></i> Filters </a></li>
+                </ul>
+            </div>
+            <div class="scrl-content filter-sidebar  full-height">
+                <!--tabs -->
+                <div class="tabs-container fl-wrap">
+                    <!--tab -->
+                    <div class="tab">
+                        <div id="filters-search" class="tab-content  first-tab ">
+                            <!-- listsearch-input-item-->
+                            <div class="listsearch-input-item">
+                                @Html.TextBox("searchtitle", null, new { value = "", type = "text", placeholder = "What are you looking for?" })
+                                <span class="iconn-dec"><i class="far fa-bookmark"></i></span>
+                            </div>
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            @*<div class="listsearch-input-item">
+                                    <select data-placeholder="City/Location" class="chosen-select no-search-select">
+                                         <option>All Cities</option>
+                                         <option>New York</option>
+                                         <option>Chicago</option>
+                                         <option>Los Angeles</option>
+                                         <option>Washington</option>
+                                         <option>Boston</option>
+                                     </select>
+                                </div>*@
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            <div class="listsearch-input-item location autocomplete-container">
+                                @Html.TextBox("searchcity", null, new { value = "", type = "text", placeholder = "Where to look?", id = "autocompleteid3", @class = "autocomplete-input" })
+                                <span class="iconn-dec"><i class="far fa-map-marker"></i></span>
+                                @* <a href="#"><i class="fal fa-location"></i></a>*@
+                            </div>
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            <div class="listsearch-input-item clact date-container">
+                                <input type="text" placeholder="Event Date" name="datepicker-here" value="" /> 
+                                <span class="iconn-dec"><i class="fal fa-calendar"></i></span>
+                                @*<span class="clear-singleinput"><i class="fal fa-times"></i></span>*@
+                            </div>
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            <div class="listsearch-input-item price autocomplete-container">
+                                @Html.TextBox("searchminprice", null, new { value = "", type = "text", placeholder = "Lowest price", id = "autocompleteid3", @class = "autocomplete-input" })
+                                <span class="iconn-dec"><i class="fal fa-hand-holding-usd"></i></span>
+                                @* <a href="#"><i class="fal fa-location"></i></a>*@
+                            </div>
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            <div class="listsearch-input-item price autocomplete-container">
+                                @Html.TextBox("searchmaxprice", null, new { value = "", type = "text", placeholder = "Highest price", id = "autocompleteid3", @class = "autocomplete-input" })
+                                <span class="iconn-dec"><i class="fal fa-hand-holding-usd"></i></span>
+                                @* <a href="#"><i class="fal fa-location"></i></a>*@
+                            </div>
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            <div class="listsearch-input-item">
+                                <div class="price-rage-wrap fl-wrap">
+                                    <div class="price-rage-wrap-title"><i class="fal fa-hand-holding-usd"></i> Price :</div>
+                                    <div class="price-rage-item fl-wrap">
+                                        <input type="text" class="price-range" data-min="0" data-max="200" name="price-range1" data-step="10" value="$$">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- listsearch-input-item end-->
-                        <!-- listsearch-input-item-->
-                        <div class="listsearch-input-item clact">
-                            <div class=" fl-wrap filter-tags">
-                                <ul class="no-list-style">
-                                    <li>
-                                        <input id="check-aa" type="checkbox" name="check">
-                                        <label for="check-aa">Elevator in building</label>
-                                    </li>
-                                    <li>
-                                        <input id="check-b" type="checkbox" name="check">
-                                        <label for="check-b">Friendly workspace</label>
-                                    </li>
-                                    <li>
-                                        <input id="check-c" type="checkbox" name="check" checked>
-                                        <label for="check-c">Instant Book</label>
-                                    </li>
-                                    <li>
-                                        <input id="check-d" type="checkbox" name="check">
-                                        <label for="check-d">Wireless Internet</label>
-                                    </li>
-                                    <li>
-                                        <input id="check-d2" type="checkbox" name="check" checked>
-                                        <label for="check-d2">Free WiFi</label>
-                                    </li>
-                                    <li>
-                                        <input id="check-d3" type="checkbox" name="check" checked>
-                                        <label for="check-d3">Free Parking</label>
-                                    </li>
-                                    <li>
-                                        <input id="check-d4" type="checkbox" name="check">
-                                        <label for="check-d4">Smoking Allowed</label>
-                                    </li>
-                                </ul>
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            @*<div class="listsearch-input-item clact">
+                                    <div class=" fl-wrap filter-tags">
+                                        <ul class="no-list-style">
+                                            <li>
+                                                <input id="check-aa" type="checkbox" name="check">
+                                                <label for="check-aa">Elevator in building</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-b" type="checkbox" name="check">
+                                                <label for="check-b">Friendly workspace</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-c" type="checkbox" name="check" checked>
+                                                <label for="check-c">Instant Book</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-d" type="checkbox" name="check">
+                                                <label for="check-d">Wireless Internet</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-d2" type="checkbox" name="check" checked>
+                                                <label for="check-d2">Free WiFi</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-d3" type="checkbox" name="check" checked>
+                                                <label for="check-d3">Free Parking</label>
+                                            </li>
+                                            <li>
+                                                <input id="check-d4" type="checkbox" name="check">
+                                                <label for="check-d4">Smoking Allowed</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>*@
+                            <!-- listsearch-input-item end-->
+                            <!-- listsearch-input-item-->
+                            <div class="listsearch-input-item">
+                                <button class="header-search-button color-bg" onclick="window.location.href='listing.html'"><i class="far fa-search"></i><span>Search</span></button>
                             </div>
+                            <!-- listsearch-input-item end-->
+                            <div class="clear-filter-btn"><i class="far fa-redo"></i> Reset Filters</div>
                         </div>
-                        <!-- listsearch-input-item end-->
-                        <!-- listsearch-input-item-->
-                        <div class="listsearch-input-item">
-                            <button class="header-search-button color-bg" onclick="window.location.href='listing.html'"><i class="far fa-search"></i><span>Search</span></button>
-                        </div>
-                        <!-- listsearch-input-item end-->
-                        <div class="clear-filter-btn"><i class="far fa-redo"></i> Reset Filters</div>
                     </div>
+                    <!--tab end-->
                 </div>
-                <!--tab end-->
+                <!--tabs end-->
             </div>
-            <!--tabs end-->
         </div>
-    </div>
-    <div class="close_sbfilters"><i class="fal fa-long-arrow-right"></i></div>
+        <div class="close_sbfilters"><i class="fal fa-long-arrow-right"></i></div>
+    }
 </div>
 <!-- hidden-search-column end-->
 <div class="col-list-wrap anim_clw  ">
@@ -135,7 +152,6 @@
             <div class="list-main-wrap-title">
                 <h2><span>All Places</span></h2>
             </div>
-            <!-- list-main-wrap-title end-->
             <!-- list-main-wrap-opt-->
             <div class="list-main-wrap-opt">
                 <!-- price-opt-->
@@ -165,7 +181,12 @@
         </div>
         <a class="custom-scroll-link back-to-filters clbtg" href="#lisfw"><i class="fas fa-caret-up"></i></a>
     </div>
+
+
+
+
     <!-- list-main-wrap-header end-->
+
     <div class="clearfix"></div>
     <div class="container">
         <div class="mob-nav-content-btn mncb_half color2-bg shsb_btn shsb_btn_act fl-wrap"><i class="fal fa-filter"></i>  Filters</div>
@@ -186,7 +207,7 @@
                             <a href="/places/details/@place.PlaceId" class="geodir-category-img-wrap fl-wrap">
                                 <img src="@place.Photos.Select(x => x.PhotoUrl).First()" alt="" />
                             </a>
-                            
+
                             <div class="geodir-category-opt">
                                 <div class="listing-rating-count-wrap">
                                     <div class="review-score">@(Math.Round((place.Reviews.Select(x => x.OverallRating).FirstOrDefault()),1).ToString("0.0"))</div>
@@ -232,15 +253,34 @@
                                     <span class="price-level-item" data-pricerating="@(Math.Round((place.PricePerDay/20),0))"></span>
                                     <span class="price-name-tooltip">@(Math.Round((place.PricePerDay/20),0))</span>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </article>
                 </div>
                 <!-- listing-item end -->
             }
+            <!--  list-main-wrap-pagination-->
+            @{
+                SelectListItem a1 = new SelectListItem() { Text = "4", Value = "4" };
+                SelectListItem a2 = new SelectListItem() { Text = "8", Value = "8" };
+                SelectListItem a3 = new SelectListItem() { Text = "16", Value = "16" };
+                SelectListItem a4 = new SelectListItem() { Text = "50", Value = "50" };
+                List<SelectListItem> items = new List<SelectListItem>() { a1, a2, a3, a4 };
+            }
+            <div class="row">
+                <div class="pagination center-block col-8">
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                    @Html.PagedListPager(Model, x => @Url.Action("Index", "Places", new { page = x, sortOrder = ViewBag.CurrentSortOrder, searchtitle = ViewBag.CurrentTitle, searchcity = ViewBag.CurrentCity, searchdate = ViewBag.CurrentDate, searchprice = ViewBag.CurrentPrice, pSize = ViewBag.CurrentpSize }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+                     list-main-wrap-pagination end
+                </div>
+                <div class="col-4 mt-4">
+                    <p>@Html.Label("Item/Pages", new { @for = "pSize", @class = "" })</p>
+                    @Html.DropDownList("pSize", items, new { @class = "btn btn-light bg-white text-muted" })
+                </div>
+            </div>
         </div>
     </div>
-    <!-- listing-item-container end -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpoOQ4gRShj82EFsLYWPjQLMoXYqAHqtY&libraries=places&callback=initAutocomplete"></script>
+<!-- listing-item-container end -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpoOQ4gRShj82EFsLYWPjQLMoXYqAHqtY&libraries=places&callback=initAutocomplete"></script>
 
