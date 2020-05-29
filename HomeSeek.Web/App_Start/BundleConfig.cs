@@ -10,6 +10,7 @@ namespace HomeSeek.Web
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                          "~/js/jquery.min.js",
+                         "~/js/dashboard.js",
                         "~/Scripts/jquery.signalR-2.4.1.min.js"));
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
