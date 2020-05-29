@@ -21,7 +21,7 @@ namespace HomeSeek.Web.Models
         [Display(Name = "Average days of staying of All Listings")]
         public double AvgTotalDays { get; set; }
         [Display(Name = "Reservations per Month")]
-        public Dictionary<string,int> ReservPerMonth { get; set; }
+        public List<int> ReservPerMonth { get; set; }
         [Display(Name = "Overall Average rating per place")]
         public Dictionary<string,double> OverallRatingPlace { get; set; }
         [Display(Name = "Places per city")]

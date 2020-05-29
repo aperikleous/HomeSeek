@@ -93,9 +93,9 @@ namespace HomeSeek.Web.Controllers
                         break;
                 }//end switch
             }//end foreach
-            perMonth.Add("Jan", Jan); perMonth.Add("Feb", Feb); perMonth.Add("Mar", Mar); perMonth.Add("Apr", Apr); perMonth.Add("May", May); perMonth.Add("Jun", Jun);
-            perMonth.Add("Jul", Jul); perMonth.Add("Aug", Aug); perMonth.Add("Sep", Sep); perMonth.Add("Oct", Oct); perMonth.Add("Nov", Nov); perMonth.Add("Dec", Dec);
-            vm.ReservPerMonth = perMonth;
+            //perMonth.Add("Jan", Jan); perMonth.Add("Feb", Feb); perMonth.Add("Mar", Mar); perMonth.Add("Apr", Apr); perMonth.Add("May", May); perMonth.Add("Jun", Jun);
+            //perMonth.Add("Jul", Jul); perMonth.Add("Aug", Aug); perMonth.Add("Sep", Sep); perMonth.Add("Oct", Oct); perMonth.Add("Nov", Nov); perMonth.Add("Dec", Dec);
+            //vm.ReservPerMonth = perMonth;
 
             //----------------------------- overall rating per place ---------------------------------------
             Dictionary<string, double> ratingPlace = new Dictionary<string, double>();
