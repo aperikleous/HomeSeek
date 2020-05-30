@@ -280,6 +280,7 @@
     <Content Include="images\clouds.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\gallery\thumbnail\1.png" />
+    <Content Include="images\hello-lightbulb-YC8qqp50BdA-unsplash.jpg" />
     <Content Include="images\loading.gif" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo2.png" />
@@ -290,6 +291,7 @@
     <Content Include="images\shop\1.jpg" />
     <Content Include="images\shop\2.jpg" />
     <Content Include="images\team\1.jpg" />
+    <Content Include="images\toa-heftiba-bcLE7reXFLM-unsplash.jpg" />
     <Content Include="images\wave-top.png" />
     <Content Include="js\charts.js" />
     <Content Include="js\dashboard.js" />

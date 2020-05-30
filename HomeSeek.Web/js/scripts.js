@@ -1206,6 +1206,15 @@ function initparallax() {
     }
     if (trueMobile) $(".bgvid , .background-vimeo , .background-youtube-wrapper ").remove();
 }
+// Reset Filters --------------------
+$(".clear-filter-btn").on("click", function (e) {
+    e.preventDefault();
+    $(".autocomplete-input").val('');
+    $("#datepicker").val('');
+    $("#sizedropdown").val('4');
+    $("#sortdropdown").val('TitleAsc');
+});
+
 // duplicate -----------------
 $.fn.duplicate = function (a, b) {
     var c = [];
