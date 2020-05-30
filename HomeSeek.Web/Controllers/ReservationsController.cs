@@ -14,6 +14,7 @@ using HomeSeek.Web.Models;
 
 namespace HomeSeek.Web.Controllers
 {
+    [Authorize]
     public class ReservationsController : Controller
     {
         UnitOfWork db = new UnitOfWork(new MyDatabase());
