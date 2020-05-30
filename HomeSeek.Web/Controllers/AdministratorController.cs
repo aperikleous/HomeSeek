@@ -50,64 +50,65 @@ namespace HomeSeek.Web.Controllers
 
             // ----------------------------------------------------------------
 
-            int Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec;
-            Jan = Feb = Mar = Apr = May = Jun = Jul = Aug = Sep = Oct = Nov = Dec = 0;
-            Dictionary<string, int> perMonth = new Dictionary<string, int>();
-            foreach (var reservation in reservations)
-            {
-                switch (reservation.PaymentDate.Month)
-                {
-                    case 1:
-                        Jan += 1;
-                        break;
-                    case 2:
-                        Feb += 1;
-                        break;
-                    case 3:
-                        Mar += 1;
-                        break;
-                    case 4:
-                        Apr += 1;
-                        break;
-                    case 5:
-                        May += 1;
-                        break;
-                    case 6:
-                        Jun += 1;
-                        break;
-                    case 7:
-                        Jul += 1;
-                        break;
-                    case 8:
-                        Aug += 1;
-                        break;
-                    case 9:
-                        Sep += 1;
-                        break;
-                    case 10:
-                        Oct += 1;
-                        break;
-                    case 11:
-                        Nov += 1;
-                        break;
-                    case 12:
-                        Dec += 1;
-                        break;
-                }//end switch
-            }//end foreach
-            //perMonth.Add("Jan", Jan); perMonth.Add("Feb", Feb); perMonth.Add("Mar", Mar); perMonth.Add("Apr", Apr); perMonth.Add("May", May); perMonth.Add("Jun", Jun);
-            //perMonth.Add("Jul", Jul); perMonth.Add("Aug", Aug); perMonth.Add("Sep", Sep); perMonth.Add("Oct", Oct); perMonth.Add("Nov", Nov); perMonth.Add("Dec", Dec);
-            //var RPM = vm.ReservPerMonth = perMonth;
+            //int Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec;
+            //Jan = Feb = Mar = Apr = May = Jun = Jul = Aug = Sep = Oct = Nov = Dec = 0;
+            //Dictionary<string, int> perMonth = new Dictionary<string, int>();
+            //foreach (var reservation in reservations)
+            //{
+            //    //switch (reservation.PaymentDate.Month)
+            //    switch (reservation.CheckOutDate.Month)
+            //    {
+            //        case 1:
+            //            Jan += 1;
+            //            break;
+            //        case 2:
+            //            Feb += 1;
+            //            break;
+            //        case 3:
+            //            Mar += 1;
+            //            break;
+            //        case 4:
+            //            Apr += 1;
+            //            break;
+            //        case 5:
+            //            May += 1;
+            //            break;
+            //        case 6:
+            //            Jun += 1;
+            //            break;
+            //        case 7:
+            //            Jul += 1;
+            //            break;
+            //        case 8:
+            //            Aug += 1;
+            //            break;
+            //        case 9:
+            //            Sep += 1;
+            //            break;
+            //        case 10:
+            //            Oct += 1;
+            //            break;
+            //        case 11:
+            //            Nov += 1;
+            //            break;
+            //        case 12:
+            //            Dec += 1;
+            //            break;
+            //    }//end switch
+            //}//end foreach
+            ////perMonth.Add("Jan", Jan); perMonth.Add("Feb", Feb); perMonth.Add("Mar", Mar); perMonth.Add("Apr", Apr); perMonth.Add("May", May); perMonth.Add("Jun", Jun);
+            ////perMonth.Add("Jul", Jul); perMonth.Add("Aug", Aug); perMonth.Add("Sep", Sep); perMonth.Add("Oct", Oct); perMonth.Add("Nov", Nov); perMonth.Add("Dec", Dec);
+            ////var RPM = vm.ReservPerMonth = perMonth;
 
-            // -----------------------------overall rating per place-------------------------------------- -
-            Dictionary<string, double> ratingPlace = new Dictionary<string, double>();
-            Dictionary<string, double> accuracy = new Dictionary<string, double>();
-            Dictionary<string, double> checkin = new Dictionary<string, double>();
-            Dictionary<string, double> cleanliness = new Dictionary<string, double>();
-            Dictionary<string, double> location = new Dictionary<string, double>();
-            Dictionary<string, double> value = new Dictionary<string, double>();
-            Dictionary<string, int> reviewsPlace = new Dictionary<string, int>();
-            Dictionary<string, int> reservationsPlace = new Dictionary<string, int>();
+            //// -----------------------------overall rating per place-------------------------------------- -
+            //Dictionary<string, double> ratingPlace = new Dictionary<string, double>();
+            //Dictionary<string, double> accuracy = new Dictionary<string, double>();
+            //Dictionary<string, double> checkin = new Dictionary<string, double>();
+            //Dictionary<string, double> cleanliness = new Dictionary<string, double>();
+            //Dictionary<string, double> location = new Dictionary<string, double>();
+            //Dictionary<string, double> value = new Dictionary<string, double>();
+            //Dictionary<string, int> reviewsPlace = new Dictionary<string, int>();
+            //Dictionary<string, int> reservationsPlace = new Dictionary<string, int>();
 
             //foreach (var place in places)
             //{

@@ -161,7 +161,7 @@
             Place p14 = new Place() { ApartmentName = "Relaxing small studio near Acropolis ", PricePerDay = 35M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The studio is at the 1 floor and it's 18 square meters. Inside the room is located the double-bed, as well as the kitchen. The shower is located inside the bathroom. It has a nice balcony that can direct you at the building's garden." };
             Place p15 = new Place() { ApartmentName = "3 mins walking from Acropolis ", PricePerDay = 25M, Guests = 3, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "This fully renovated ( February 2019) and full equipped 50 s.q.m modern, cosy and stylish apartment is the perfect choice for 2-4 people, and it is located in one of the most beautiful streets of Koukaki." };
             Place p16 = new Place() { ApartmentName = "Studio in Athens heart", PricePerDay = 34M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Our apartment is a fully renovated 29m2 studio, just 250 meters from Omonoia square and the subway. It is in a very accessible neighborhood of Athens with direct access to traditional shops, bookstores, cafes and restaurants." };
-            Place p17 = new Place() { ApartmentName = "Modern Apartment - Syntagma Square", PricePerDay = 23M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "A lovely space to unwind and relax after a busy day whether it is work or play. Awake refreshed and ready for a day exploring the city via this clean and sunny apartment. Head out and wander through the numerous cafes and restaurants that are just minutes walking distance in every direction!" };
+            Place p17 = new Place() { ApartmentName = "Modern Apartment - Syntvtagma Square", PricePerDay = 23M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "A lovely space to unwind and relax after a busy day whether it is work or play. Awake refreshed and ready for a day exploring the city via this clean and sunny apartment. Head out and wander through the numerous cafes and restaurants that are just minutes walking distance in every direction!" };
             Place p18 = new Place() { ApartmentName = "Sunny cozy apt,Acropolis & Filopappoy balcony view", PricePerDay = 35M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Enjoy a fully renovated and cozy apartment in the center of Athens. The house has vintage atmosphere combined with modern elements. It is located in the heart of the city, which allows you to visit all the high spots on foot. Filoppapou hill is two blocks ahead and Acropolis is 10 minutes on foot!" };
             Place p19 = new Place() { ApartmentName = "Boutique Apt in Lively Area. Walk to Acropolis", PricePerDay = 41M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Light one of the complimentary candles and sense the charming bohemian vibe. Fun details abound, from the classic hats on the walls through to the animal motif cushions. Throw open the doors to make the most of the city views." };
             Place p20 = new Place() { ApartmentName = "ATHENStay Loft", PricePerDay = 30M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Ideally located between the vibrant centre and the exclusive northern suburbs of Athens, this Loft offers magnificent views of Athens and the surrounding mountains. WiFi, bedsheets and towels are available." };
@@ -187,25 +187,50 @@
             Place p40 = new Place() { ApartmentName = "A Lovely Bright Home with Balcony Comfort & style", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is located in the City Center of Athens , on a quiet street ( just a few step away from Sepolia train / metro station ." };
 
             //================= Seeding Reservations =================
-            //Reservation template = new Reservation() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
+            ////Reservation template = new Reservation() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
+            //Reservation r1 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
+            //Reservation r1b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 3, 4), TotalFees = (10 * 50 + 10) / 10 };
+            //Reservation r1c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 4, 4), TotalFees = (5 * 50 + 10) / 10 };
+            //Reservation r2 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 5, 12), TotalFees = (11 * 60 + 15) / 10 };
+            //Reservation r2b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 5, 17), TotalFees = (7 * 60 + 15) / 10 };
+            //Reservation r2c = new Reservation() { CheckInDate = new DateTime(2020, 8, 11), CheckOutDate = new DateTime(2020, 8, 25), DaysOfStaying = 14, TotalAmount = (14 * 60 + 15), PaymentDate = new DateTime(2020, 5, 3), TotalFees = (14 * 60 + 15) / 10 };
+            //Reservation r3 = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalAmount = (9 * 250 + 40), PaymentDate = new DateTime(2020, 5, 25), TotalFees = (9 * 250 + 40) / 10 };
+            //Reservation r3b = new Reservation() { CheckInDate = new DateTime(2020, 6, 7), CheckOutDate = new DateTime(2020, 6, 10), DaysOfStaying = 3, TotalAmount = (3 * 250 + 40), PaymentDate = new DateTime(2020, 5, 12), TotalFees = (3 * 250 + 40) / 10 };
+            //Reservation r3c = new Reservation() { CheckInDate = new DateTime(2020, 7, 17), CheckOutDate = new DateTime(2020, 7, 30), DaysOfStaying = 13, TotalAmount = (13 * 250 + 40), PaymentDate = new DateTime(2020, 5, 14), TotalFees = (13 * 250 + 40) / 10 };
+            //Reservation r5 = new Reservation() { CheckInDate = new DateTime(2020, 6, 19), CheckOutDate = new DateTime(2020, 6, 25), DaysOfStaying = 6, TotalAmount = (6 * 50 + 20), PaymentDate = new DateTime(2020, 5, 10), TotalFees = (6 * 50 + 20) / 10 };
+            //Reservation r5b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 5, 5), TotalFees = (3 * 50 + 20) / 10 };
+            //Reservation r5c = new Reservation() { CheckInDate = new DateTime(2020, 8, 28), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 2, TotalAmount = (7 * 50 + 20), PaymentDate = new DateTime(2020, 7, 10), TotalFees = (7 * 50 + 20) / 10 };
+            //Reservation r6 = new Reservation() { CheckInDate = new DateTime(2020, 7, 13), CheckOutDate = new DateTime(2020, 7, 21), DaysOfStaying = 8, TotalAmount = (8 * 80 + 20), PaymentDate = new DateTime(2020, 6, 9), TotalFees = (8 * 80 + 20) / 10 };
+            //Reservation r6b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 5, 14), TotalFees = (14 * 80 + 20) / 10 };
+            //Reservation r6c = new Reservation() { CheckInDate = new DateTime(2020, 8, 17), CheckOutDate = new DateTime(2020, 8, 24), DaysOfStaying = 7, TotalAmount = (4 * 80 + 20), PaymentDate = new DateTime(2020, 4, 12), TotalFees = (4 * 80 + 20) / 10 };
+            //Reservation r7 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 4, 24), TotalFees = (6 * 60 + 20) / 10 };
+            //Reservation r8 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 5, 27), TotalFees = (8 * 70 + 20) / 10 };
+
             Reservation r1 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
             Reservation r1b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 3, 4), TotalFees = (10 * 50 + 10) / 10 };
             Reservation r1c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 4, 4), TotalFees = (5 * 50 + 10) / 10 };
             Reservation r2 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 5, 12), TotalFees = (11 * 60 + 15) / 10 };
-            Reservation r2b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 5, 17), TotalFees = (7 * 60 + 15) / 10 };
-            Reservation r2c = new Reservation() { CheckInDate = new DateTime(2020, 8, 11), CheckOutDate = new DateTime(2020, 8, 25), DaysOfStaying = 14, TotalAmount = (14 * 60 + 15), PaymentDate = new DateTime(2020, 5, 3), TotalFees = (14 * 60 + 15) / 10 };
-            Reservation r3 = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalAmount = (9 * 250 + 40), PaymentDate = new DateTime(2020, 5, 25), TotalFees = (9 * 250 + 40) / 10 };
-            Reservation r3b = new Reservation() { CheckInDate = new DateTime(2020, 6, 7), CheckOutDate = new DateTime(2020, 6, 10), DaysOfStaying = 3, TotalAmount = (3 * 250 + 40), PaymentDate = new DateTime(2020, 5, 12), TotalFees = (3 * 250 + 40) / 10 };
-            Reservation r3c = new Reservation() { CheckInDate = new DateTime(2020, 7, 17), CheckOutDate = new DateTime(2020, 7, 30), DaysOfStaying = 13, TotalAmount = (13 * 250 + 40), PaymentDate = new DateTime(2020, 5, 14), TotalFees = (13 * 250 + 40) / 10 };
-            Reservation r5 = new Reservation() { CheckInDate = new DateTime(2020, 6, 19), CheckOutDate = new DateTime(2020, 6, 25), DaysOfStaying = 6, TotalAmount = (6 * 50 + 20), PaymentDate = new DateTime(2020, 5, 10), TotalFees = (6 * 50 + 20) / 10 };
-            Reservation r5b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 5, 5), TotalFees = (3 * 50 + 20) / 10 };
+            Reservation r2b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 6, 17), TotalFees = (7 * 60 + 15) / 10 };
+            Reservation r2c = new Reservation() { CheckInDate = new DateTime(2020, 8, 11), CheckOutDate = new DateTime(2020, 8, 25), DaysOfStaying = 14, TotalAmount = (14 * 60 + 15), PaymentDate = new DateTime(2020, 7, 3), TotalFees = (14 * 60 + 15) / 10 };
+            Reservation r3 = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalAmount = (9 * 250 + 40), PaymentDate = new DateTime(2020, 8, 25), TotalFees = (9 * 250 + 40) / 10 };
+            Reservation r3b = new Reservation() { CheckInDate = new DateTime(2020, 6, 7), CheckOutDate = new DateTime(2020, 6, 10), DaysOfStaying = 3, TotalAmount = (3 * 250 + 40), PaymentDate = new DateTime(2020, 8, 12), TotalFees = (3 * 250 + 40) / 10 };
+            Reservation r3c = new Reservation() { CheckInDate = new DateTime(2020, 7, 17), CheckOutDate = new DateTime(2020, 7, 30), DaysOfStaying = 13, TotalAmount = (13 * 250 + 40), PaymentDate = new DateTime(2020, 7, 14), TotalFees = (13 * 250 + 40) / 10 };
+            Reservation r5 = new Reservation() { CheckInDate = new DateTime(2020, 6, 19), CheckOutDate = new DateTime(2020, 6, 25), DaysOfStaying = 6, TotalAmount = (6 * 50 + 20), PaymentDate = new DateTime(2020, 6, 10), TotalFees = (6 * 50 + 20) / 10 };
+            Reservation r5b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 7, 5), TotalFees = (3 * 50 + 20) / 10 };
             Reservation r5c = new Reservation() { CheckInDate = new DateTime(2020, 8, 28), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 2, TotalAmount = (7 * 50 + 20), PaymentDate = new DateTime(2020, 7, 10), TotalFees = (7 * 50 + 20) / 10 };
             Reservation r6 = new Reservation() { CheckInDate = new DateTime(2020, 7, 13), CheckOutDate = new DateTime(2020, 7, 21), DaysOfStaying = 8, TotalAmount = (8 * 80 + 20), PaymentDate = new DateTime(2020, 6, 9), TotalFees = (8 * 80 + 20) / 10 };
-            Reservation r6b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 5, 14), TotalFees = (14 * 80 + 20) / 10 };
-            Reservation r6c = new Reservation() { CheckInDate = new DateTime(2020, 8, 17), CheckOutDate = new DateTime(2020, 8, 24), DaysOfStaying = 7, TotalAmount = (4 * 80 + 20), PaymentDate = new DateTime(2020, 4, 12), TotalFees = (4 * 80 + 20) / 10 };
-            Reservation r7 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 4, 24), TotalFees = (6 * 60 + 20) / 10 };
-            Reservation r8 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 5, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r6b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 12, 14), TotalFees = (14 * 80 + 20) / 10 };
+            Reservation r6c = new Reservation() { CheckInDate = new DateTime(2020, 8, 17), CheckOutDate = new DateTime(2020, 8, 24), DaysOfStaying = 7, TotalAmount = (4 * 80 + 20), PaymentDate = new DateTime(2020, 3, 12), TotalFees = (4 * 80 + 20) / 10 };
+            Reservation r7 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 11, 24), TotalFees = (6 * 60 + 20) / 10 };
+            Reservation r8 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 4, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r9 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 18, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 4, 27), TotalFees = (8 * 70 + 20) / 10 };
 
+            //Reservation r9 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
+            //Reservation r9b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 3, 4), TotalFees = (10 * 50 + 10) / 10 };
+            //Reservation r9c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 4, 4), TotalFees = (5 * 50 + 10) / 10 };
+            //Reservation r10 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 10, 12), TotalFees = (11 * 60 + 15) / 10 };
+            //Reservation r10b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 6, 17), TotalFees = (7 * 60 + 15) / 10 };
+          
             //================= Seeding Reviews =================
             //Review template = new Review() { Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6),  Comment = "ola teleia" };
             Review rev1 = new Review() { Identifier = 1, Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6), Comment = "ola teleia" };
@@ -226,6 +251,41 @@
             Review rev7 = new Review() { Identifier = 16, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 6, 30), Comment = "Perfect" };
             Review rev8 = new Review() { Identifier = 17, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 7, 28), Comment = "Excellent" };
 
+            Review rev9 = new Review() { Identifier = 18, Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 4, 10), Comment = "ola teleia" };
+            Review rev90 = new Review() { Identifier = 19, Accuracy = 5, Checkin = 5, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 3, 17), Comment = "Great hospitality" };
+            Review rev91 = new Review() { Identifier = 20, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 3, Value = 3, SubDate = new DateTime(2020, 3, 9), Comment = "Could be better" };
+            Review rev10 = new Review() { Identifier = 21, Accuracy = 2, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 10, 23), Comment = "Bad communication" };
+            Review rev100 = new Review() { Identifier = 22, Accuracy = 5, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 7, 11), Comment = "Perfect Choice" };
+            Review rev101 = new Review() { Identifier = 23, Accuracy = 4, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 12, 28), Comment = "Awesome" };
+            Review rev11 = new Review() { Identifier = 24, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 12, 31), Comment = "Unbelievable experience" };
+            Review rev110 = new Review() { Identifier = 25, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 2, Value = 5, SubDate = new DateTime(2020, 5, 15), Comment = "Difficult to find" };
+            Review rev111 = new Review() { Identifier = 26, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 5, Value = 5, SubDate = new DateTime(2020, 9, 2), Comment = "Super" };
+            Review rev12 = new Review() { Identifier = 27, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 4, 27), Comment = "Superb" };
+            Review rev120 = new Review() { Identifier = 28, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 4, SubDate = new DateTime(2020, 4, 10), Comment = "Η καλυτερη επιλογη για Κρητη" };
+            Review rev121 = new Review() { Identifier = 29, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 6, 7), Comment = "Πεντακάθαρο" };
+            Review rev13 = new Review() { Identifier = 30, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 5, Value = 1, SubDate = new DateTime(2020, 5, 25), Comment = "Πολυ ακριβό" };
+            Review rev130 = new Review() { Identifier = 31, Accuracy = 2, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 3, 20), Comment = "Μικρο μπανιο" };
+            Review rev131 = new Review() { Identifier = 32, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 11, 22), Comment = "Πολυ καλη φιλοξενια" };
+            Review rev14 = new Review() { Identifier = 33, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 12, 30), Comment = "Perfect" };
+            Review rev15 = new Review() { Identifier = 34, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 7, 28), Comment = "Excellent" };
+
+            Review rev16 = new Review() { Identifier = 35, Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6), Comment = "ola teleia" };
+            Review rev160 = new Review() { Identifier = 36, Accuracy = 5, Checkin = 5, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 7, 17), Comment = "Great hospitality" };
+            Review rev161 = new Review() { Identifier = 37, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 3, Value = 3, SubDate = new DateTime(2020, 8, 9), Comment = "Could be better" };
+            Review rev17 = new Review() { Identifier = 38, Accuracy = 2, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 7, 23), Comment = "Bad communication" };
+            Review rev170 = new Review() { Identifier = 39, Accuracy = 5, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 4, 11), Comment = "Perfect Choice" };
+            Review rev171 = new Review() { Identifier = 40, Accuracy = 4, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 5, 28), Comment = "Awesome" };
+            Review rev18 = new Review() { Identifier = 41, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 7, 31), Comment = "Unbelievable experience" };
+            Review rev180 = new Review() { Identifier = 42, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 2, Value = 5, SubDate = new DateTime(2020, 7, 15), Comment = "Difficult to find" };
+            Review rev181 = new Review() { Identifier = 43, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 5, Value = 5, SubDate = new DateTime(2020, 9, 2), Comment = "Super" };
+            Review rev19 = new Review() { Identifier = 44, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 8, 27), Comment = "Superb" };
+            Review rev190 = new Review() { Identifier = 45, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 4, SubDate = new DateTime(2020, 9, 10), Comment = "Η καλυτερη επιλογη για Κρητη" };
+            Review rev191 = new Review() { Identifier = 46, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 5, 7), Comment = "Πεντακάθαρο" };
+            Review rev20 = new Review() { Identifier = 47, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 5, Value = 1, SubDate = new DateTime(2020, 11, 25), Comment = "Πολυ ακριβό" };
+            Review rev21 = new Review() { Identifier = 48, Accuracy = 2, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 12, 20), Comment = "Μικρο μπανιο" };
+            Review rev22 = new Review() { Identifier = 49, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 11, 20), Comment = "Πολυ καλη φιλοξενια" };
+            Review rev23 = new Review() { Identifier = 50, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 12, 5), Comment = "Perfect" };
+            Review rev24 = new Review() { Identifier = 51, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 5, 28), Comment = "Excellent" };
             //================= Seeding Application User =================
             //ApplicationUser template = new ApplicationUser() { UserName = "", LastName = "", FirstName = "", City = "", DateOfBirth = new DateTime(1989, 08, 01) };
             ApplicationUser ap1 = new ApplicationUser() { UserName = "xenos", LastName = "Vlaxos", FirstName = "Xenos", City = "Athens", DateOfBirth = new DateTime(1989, 08, 01) };
@@ -630,6 +690,41 @@
             p6.Reviews = new List<Review>() { rev6, rev6b, rev6c };
             p7.Reviews = new List<Review>() { rev7 };
             p8.Reviews = new List<Review>() { rev8 };
+           
+            p9.Reviews = new List<Review>() { rev9 };
+            p10.Reviews = new List<Review>() { rev90 };
+            p11.Reviews = new List<Review>() { rev91 };
+            p12.Reviews = new List<Review>() { rev10 };
+            p13.Reviews = new List<Review>() { rev100 };
+            p14.Reviews = new List<Review>() { rev101 };
+            p15.Reviews = new List<Review>() { rev11 };
+            p16.Reviews = new List<Review>() { rev110 };
+            p17.Reviews = new List<Review>() { rev111 };
+            p18.Reviews = new List<Review>() { rev12 };
+            p19.Reviews = new List<Review>() { rev120 };
+            p20.Reviews = new List<Review>() { rev121 };
+            p21.Reviews = new List<Review>() { rev13 };
+            p22.Reviews = new List<Review>() { rev130 };
+            p23.Reviews = new List<Review>() { rev131 };
+            p24.Reviews = new List<Review>() { rev14 };
+            p25.Reviews = new List<Review>() { rev15 };
+            p26.Reviews = new List<Review>() { rev16 };
+            p27.Reviews = new List<Review>() { rev160 };
+            p28.Reviews = new List<Review>() { rev161 };
+            p29.Reviews = new List<Review>() { rev17};
+            p30.Reviews = new List<Review>() { rev170 };
+            p31.Reviews = new List<Review>() { rev171 };
+            p32.Reviews = new List<Review>() { rev18 };
+            p33.Reviews = new List<Review>() { rev180 };
+            p34.Reviews = new List<Review>() { rev181 };
+            p35.Reviews = new List<Review>() { rev19 };
+            p36.Reviews = new List<Review>() { rev190};
+            p37.Reviews = new List<Review>() { rev191 };
+            p38.Reviews = new List<Review>() { rev20 };
+            p39.Reviews = new List<Review>() { rev21,rev22 };
+            p40.Reviews = new List<Review>() { rev23};
+
+
 
             rev1.ApplicationUser = ap1;
             rev1b.ApplicationUser = ap2;
@@ -648,6 +743,43 @@
             rev6c.ApplicationUser = ap3;
             rev7.ApplicationUser = ap1;
             rev8.ApplicationUser = ap2;
+           
+            rev9.ApplicationUser = ap1;
+            rev90.ApplicationUser = ap2;
+            rev91.ApplicationUser = ap3;
+            rev10.ApplicationUser = ap1;
+            rev100.ApplicationUser = ap2;
+            rev100.ApplicationUser = ap3;
+            rev11.ApplicationUser = ap1;
+            rev110.ApplicationUser = ap2;
+            rev111.ApplicationUser = ap3;
+            rev12.ApplicationUser = ap1;
+            rev120.ApplicationUser = ap2;
+            rev121.ApplicationUser = ap3;
+            rev13.ApplicationUser = ap1;
+            rev130.ApplicationUser = ap2;
+            rev131.ApplicationUser = ap3;
+            rev14.ApplicationUser = ap1;
+            rev15.ApplicationUser = ap2;
+            rev16.ApplicationUser = ap1;
+            rev160.ApplicationUser = ap2;
+            rev161.ApplicationUser = ap3;
+            rev17.ApplicationUser = ap1;
+            rev170.ApplicationUser = ap2;
+            rev171.ApplicationUser = ap3;
+            rev18.ApplicationUser = ap1;
+            rev180.ApplicationUser = ap2;
+            rev181.ApplicationUser = ap3;
+            rev19.ApplicationUser = ap1;
+            rev190.ApplicationUser = ap2;
+            rev191.ApplicationUser = ap3;
+            rev20.ApplicationUser = ap1;
+            rev21.ApplicationUser = ap1;
+            rev22.ApplicationUser = ap2;
+            rev23.ApplicationUser = ap2;
+            rev24.ApplicationUser = ap2;
+
+
 
             r1.Place = p1;
             r1b.Place = p1;
@@ -666,6 +798,7 @@
             r6c.Place = p6;
             r7.Place = p7;
             r8.Place = p8;
+           
 
             r1.ApplicationUser = ap1;
             r1b.ApplicationUser = ap2;
@@ -685,37 +818,40 @@
             r7.ApplicationUser = ap1;
             r8.ApplicationUser = ap2;
 
-            context.Reviews.AddOrUpdate(x => x.Identifier, rev1, rev1b, rev1c, rev2, rev2b, rev2c, rev3, rev3b, rev3c, rev5, rev5b, rev5c, rev6, rev6b, rev6c, rev7, rev8);
-            context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17,
-                                                        a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32,
-                                                        a33, a34, a35, a36, a37, a38, a39, a40);
-            context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18,
-                                                            p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34,
-                                                            p35, p36, p37, p38, p39, p40);
-            context.Reservations.AddOrUpdate(x => x.DaysOfStaying, r1, r1b, r1c, r2, r2b, r2c, r3, r3b, r3c, r5, r5b, r5c, r6, r6b, r6c, r7, r8);
-            context.Users.AddOrUpdate(x => x.LastName, ap1, ap2, ap3);
-            context.Photos.AddOrUpdate(x => x.PhotoId, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19, ph20, ph21, ph22, ph23, ph24, ph25,
-                                                        ph26, ph27, ph28, ph29, ph30, ph31, ph32, ph33, ph34, ph35, ph36, ph37, ph38,
-                                                        ph39, ph40, ph41, ph42, ph43, ph44, ph45, ph46, ph47, ph48, ph49, ph50, ph51,
-                                                        ph52, ph53, ph54, ph55, ph56, ph57, ph58, ph59, ph60, ph61, ph62, ph63, ph64,
-                                                        ph65, ph66, ph67, ph68, ph69, ph70, ph71, ph72, ph73, ph74, ph75, ph76, ph77,
-                                                        ph78, ph79, ph80, ph81, ph82, ph83, ph84, ph85, ph86, ph87, ph88, ph89, ph90,
-                                                        ph91, ph92, ph93, ph94, ph95, ph96, ph97, ph98, ph99, ph100, ph101, ph102, ph103,
-                                                        ph104, ph105, ph106, ph107, ph108, ph109, ph110, ph111, ph112, ph113, ph114, ph115,
+            context.Reviews.AddOrUpdate(x => x.Identifier, rev1, rev1b, rev1c, rev2, rev2b, rev2c, rev3, rev3b, rev3c, rev5, rev5b, rev5c, rev6, rev6b, rev6c, rev7, rev8, rev9, rev90, rev91,
+            rev10, rev100, rev101, rev11, rev110, rev111, rev12, rev120, rev121, rev13, rev130, rev131, rev14, rev15, rev16,rev160, rev161, rev17,rev170,rev171,rev18,rev180, rev181, rev19, rev190, rev191, rev20, /*rev20b, rev20c,*/ rev21,
+           rev22,rev23,rev24);
+            context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17,                                       
+                                                        a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32,                                       
+                                                        a33, a34, a35, a36, a37, a38, a39, a40);                                                                           
+            context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18,                             
+                                                            p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34,                               
+                                                            p35, p36, p37, p38, p39, p40);                                                                                 
+            context.Reservations.AddOrUpdate(x => x.DaysOfStaying, r1, r1b, r1c, r2, r2b, r2c, r3, r3b, r3c, r5, r5b, r5c, r6, r6b, r6c, r7, r8);                         
+            context.Users.AddOrUpdate(x => x.LastName, ap1, ap2, ap3);                                                                                                    
+            context.Photos.AddOrUpdate(x => x.PhotoId, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19, ph20, ph21 , ph22, ph23, ph24, ph25,
+                                                        ph26, ph27, ph28, ph29, ph30, ph31, ph32, ph33, ph34, ph35, ph36, ph37, ph38,                                     
+                                                        ph39, ph40, ph41, ph42, ph43, ph44, ph45, ph46, ph47, ph48, ph49, ph50, ph51,                                     
+                                                        ph52, ph53, ph54, ph55, ph56, ph57, ph58, ph59, ph60, ph61, ph62, ph63, ph64,                                      
+                                                        ph65, ph66, ph67, ph68, ph69, ph70, ph71, ph72, ph73, ph74, ph75, ph76, ph77,                                     
+                                                        ph78, ph79, ph80, ph81, ph82, ph83, ph84, ph85, ph86, ph87, ph88, ph89, ph90,                                     
+                                                        ph91, ph92, ph93, ph94, ph95, ph96, ph97, ph98, ph99, ph100, ph101, ph102, ph103,                                  
+                                                        ph104, ph105, ph106, ph107, ph108, ph109, ph110, ph111, ph112, ph113, ph114, ph115,                                
                                                         ph116, ph117, ph118, ph119, ph120, ph121, ph122, ph123, ph124, ph125, ph126, ph127,
-                                                        ph128, ph129, ph130, ph131, ph132, ph133, ph134, ph135, ph136, ph137, ph138, ph139,
-                                                        ph140, ph141, ph142, ph143, ph144, ph145, ph146, ph147, ph148, ph149, ph150, ph151,
-                                                        ph152, ph153, ph154, ph155, ph156, ph157, ph158, ph159, ph160, ph161, ph162, ph163,
-                                                        ph164, ph165, ph166, ph167, ph168, ph169, ph170, ph171, ph172, ph173, ph174, ph175,
-                                                        ph176, ph177, ph178, ph179, ph180, ph181, ph182, ph183, ph184, ph185, ph186, ph187,
-                                                        ph188, ph189, ph190, ph191, ph192, ph193, ph194, ph195, ph196, ph197, ph198, ph199,
-                                                        ph200);
-
-
-            context.SaveChanges();
-        }
-    }
-}
-
-
-
+                                                        ph128, ph129, ph130, ph131, ph132, ph133, ph134, ph135, ph136, ph137, ph138, ph139,                                
+                                                        ph140, ph141, ph142, ph143, ph144, ph145, ph146, ph147, ph148, ph149, ph150, ph151,                               
+                                                        ph152, ph153, ph154, ph155, ph156, ph157, ph158, ph159, ph160, ph161, ph162, ph163,                               
+                                                        ph164, ph165, ph166, ph167, ph168, ph169, ph170, ph171, ph172, ph173, ph174, ph175,                                
+                                                        ph176, ph177, ph178, ph179, ph180, ph181, ph182, ph183, ph184, ph185, ph186, ph187,                               
+                                                        ph188, ph189, ph190, ph191, ph192, ph193, ph194, ph195, ph196, ph197, ph198, ph199,                               
+                                                        ph200);                                                                                                            
+                                                                                                                                                                          
+                                                                                                                                                                          
+            context.SaveChanges();                                                                                                                                         
+        }                                                                                                                                                                 
+    }                                                                                                                                                                     
+}                                                                                                                                                                          
+                                                                                                                                                                          
+                                                                                                                                                                          
+                                                                                                                                                                           
+                                                                                                                                                                           
