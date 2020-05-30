@@ -29,7 +29,7 @@ namespace HomeSeek.Web.Controllers
             ViewBag.CurrentDate = searchdate;
             ViewBag.CurrentPrice = searchminprice;
             ViewBag.CurrentPrice = searchmaxprice;
-            //ViewBag.CurrentSortOrder = sortOrder;
+            ViewBag.CurrentSortOrder = sortOrder;
             ViewBag.CurrentpSize = pSize;
             ViewBag.TitleSortParam = String.IsNullOrEmpty(sortOrder) ? "TitleDesc" : "";
             ViewBag.CitySortParam = sortOrder == "CityAsc" ? "CityDesc" : "CityAsc";

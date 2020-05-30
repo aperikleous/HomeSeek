@@ -2,12 +2,12 @@
 @{
     ViewBag.Title = "Home Page";
 
-    
+
 }
 <section class="hero-section" data-scrollax-parent="true">
     <div class="bg-tabs-wrap">
         <div class="bg-parallax-wrap" data-scrollax="properties: { translateY: '200px' }">
-            <div class="bg bg_tabs" data-bg="/images/bg/hero/home.jpg"></div>
+            <div class="bg bg_tabs" data-bg="/images/toa-heftiba-bcLE7reXFLM-unsplash.jpg"></div>
             <div class="overlay op7"></div>
         </div>
     </div>
@@ -85,7 +85,7 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     @foreach (var item in Model.Take(3))
-            
+
                     {
                         <!--  swiper-slide  -->
                         <div class="swiper-slide">
@@ -105,7 +105,7 @@
                                                     <div class="geodir-category-location"><a href="#"><i class="fas fa-map-marker-alt"></i>@item.Address.AddressName @item.Address.No @item.Address.City</a></div>
                                                 </div>
                                                 <div class="listing-rating-count-wrap">
-                                                    <div class="review-score">@item.Reviews.Select(x=>x.OverallRating).FirstOrDefault()</div>
+                                                    <div class="review-score">@item.Reviews.Select(x => x.OverallRating).FirstOrDefault()</div>
                                                     <div class="listing-rating card-popup-rainingvis" data-starrating2="@item.Reviews.Select(x=>x.OverallRating).FirstOrDefault()"></div>
                                                     <br>
                                                     <div class="reviews-count">@item.Reviews.Count() Reviews</div>
@@ -140,7 +140,7 @@
 <div class="sec-circle fl-wrap"></div>
 
 <section class="parallax-section small-par" data-scrollax-parent="true">
-    <div class="bg par-elem " data-bg="/images/bg/hero/home.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+    <div class="bg par-elem " data-bg="/images/hello-lightbulb-YC8qqp50BdA-unsplash.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
     <div class="overlay  op7"></div>
     <div class="container">
         <div class=" single-facts single-facts_2 fl-wrap">
@@ -203,7 +203,7 @@
             <h2>How it works</h2>
             <div class="section-subtitle">Discover &amp; Connect </div>
             <span class="section-separator"></span>
-            <p>Morbi varius, nulla sit amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus.</p>
+            <p>It's simple. You do the search, we do the hard work! You type in the city, we bring you the most suitable places.</p>
         </div>
         <div class="process-wrap fl-wrap">
             <ul class="no-list-style">
@@ -211,8 +211,8 @@
                     <div class="process-item">
                         <span class="process-count">01 </span>
                         <div class="time-line-icon"><i class="fal fa-map-marker-alt"></i></div>
-                        <h4> Find Interesting Place</h4>
-                        <p>Proin dapibus nisl ornare diam varius tempus. Aenean a quam luctus, finibus tellus ut, convallis eros sollicitudin turpis.</p>
+                        <h4> Browse through the latest and greatest of our ever-expanding catalogue of places!</h4>
+                        <p>Do you want to search by city? We' ve got you covered! Do you want to search by name? We' ve got you covered! Do you want to search by price? Guess what... </p>
                     </div>
                     <span class="pr-dec"></span>
                 </li>
@@ -221,7 +221,7 @@
                         <span class="process-count">02</span>
                         <div class="time-line-icon"><i class="fal fa-mail-bulk"></i></div>
                         <h4> Contact a Few Owners</h4>
-                        <p>Faucibus ante, in porttitor tellus blandit et. Phasellus tincidunt metus lectus sollicitudin feugiat pharetra consectetur.</p>
+                        <p>Have questions about your booking? Want to know more information about a place? Get in touch with the owner directly through our platform and ask them!</p>
                     </div>
                     <span class="pr-dec"></span>
                 </li>
@@ -230,7 +230,7 @@
                         <span class="process-count">03</span>
                         <div class="time-line-icon"><i class="fal fa-layer-plus"></i></div>
                         <h4> Make a Listing</h4>
-                        <p>Maecenas pulvinar, risus in facilisis dignissim, quam nisi hendrerit nulla, id vestibulum metus nullam viverra porta.</p>
+                        <p>Are you a home owner and looking to rent your place? Well, look no more. Add your place to our ever-growing catalogue of available places and we will make sure that everyone sees it.</p>
                     </div>
                 </li>
             </ul>
@@ -239,3 +239,106 @@
     </div>
 </section>
 <!--section end-->
+<!--section -->
+<section id="sec3">
+    <div class="container">
+        <div class="section-title">
+            <h2> Our Team</h2>
+            <div class="section-subtitle">the crew</div>
+            <span class="section-separator"></span>
+            <p>Explore some of the best tips from around the city from our partners and friends.</p>
+        </div>
+        <div class="about-wrap team-box2 fl-wrap">
+            <!-- team-item -->
+            <div class="team-box">
+                <div class="team-photo">
+                    <img src="~/images/avatar/xen.jpg" alt="" class="respimg">
+                </div>
+                <div class="team-info fl-wrap">
+                    <h3><a href="#">Vlachogiannis Xenofontas</a></h3>
+                    <h4>.Net Developer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+                    <div class="team-social">
+                        <ul class="no-list-style">
+                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- team-item  end-->
+            <!-- team-item -->
+            <div class="team-box">
+                <div class="team-photo">
+                    <img src="~/images/avatar/thanos.jpg" alt="" class="respimg">
+                </div>
+                <div class="team-info fl-wrap">
+                    <h3><a href="#">Kontodimas Athanasios</a></h3>
+                    <h4>.Net Developer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+                    <div class="team-social">
+                        <ul class="no-list-style">
+                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- team-item end  -->
+            <!-- team-item -->
+            <div class="team-box">
+                <div class="team-photo">
+                    <img src="~/images/avatar/alex.jpg" alt="" class="respimg">
+                </div>
+                <div class="team-info fl-wrap">
+                    <h3><a href="#">Perikleous Alexandros</a></h3>
+                    <h4>.Net Developer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+                    <div class="team-social">
+                        <ul class="no-list-style">
+                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- team-item end  -->
+            <!-- team-item -->
+            <div class="team-box">
+                <div class="team-photo">
+                    <img src="~/images/avatar/zak.jpg" alt="" class="respimg">
+
+                </div>
+                <div class="team-info fl-wrap">
+                    <h3><a href="#">Drimiskianakis Zacharias</a></h3>
+                    <h4>.Net Developer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+                    <div class="team-social">
+                        <ul class="no-list-style">
+                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- team-item end  -->
+        </div>
+    </div>
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave-bg-anim waveMiddle" style="background-image: url('images/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave-bg-anim waveBottom" style="background-image: url('images/wave-top.png')"></div>
+        </div>
+    </div>
+</section>
+<!--section end-->  
