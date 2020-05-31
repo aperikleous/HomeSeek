@@ -1,7 +1,7 @@
 ﻿@model HomeSeek.Entities.Place
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title ="HomeSeek - "+@Model.ApartmentName;
 }
 <!-- listing-carousel-wrap -->
 <div class="listing-carousel-wrap fl-wrap" id="sec1">
@@ -280,7 +280,7 @@
                                             </div>
                                             <p>@item.Comment</p>
                                             <div class="reviews-comments-item-footer fl-wrap">
-                                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>@item.SubDate</span></div>
+                                                <div class="reviews-comments-item-date"><span><i class="far fa-calendar-check"></i>@item.SubDate.ToString("dd/MM/yyyy")</span></div>
                                                 <a onclick="myFunction()" class="rate-review"><i class="fal fa-thumbs-up"></i>  Helpful Review  <span id="@item.ReviewId">2</span> </a>
                                             </div>
                                         </div>
