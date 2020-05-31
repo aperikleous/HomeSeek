@@ -49,8 +49,13 @@
                 </div>
             </div>
             <!-- footer-widget end-->
+           
             <div class="col-4 text-white btn-chat">
-                <a href="/Home/Chat" class="add-list color-bg">Chat with us <span><i class="far fa-comments"></i></span></a>
+               @* Opens in a new view with c# *@
+                @*<a href="/Home/Chat" class="add-list color-bg">Chat with us <span><i class="far fa-comments"></i></span></a>*@
+                @* Opens in a modal with javascript *@
+                <a href="javascript:var x=window.open('/Home/Chat', target = '_blank', width = '800px', height = '800px')", class="add-list color-bg">Chat with us <span><i class="far fa-comments"></i></span></a>
+                
             </div>
         </div>
     </div>
@@ -59,7 +64,7 @@
 <!-- footer bg-->
 
 <div class="footer-wave">
- 
+
     <svg viewBox="0 8 100 25">
         <path fill="#fff" d="M0 80 V00 Q40 27 55 12 T200 15 V30z"></path>
     </svg>
@@ -72,4 +77,5 @@
         <div class="copyright"> © HomeSeek 2020 .  All rights reserved.</div>
     </div>
 </div>
-    <!--sub-footer end -->
+<!--sub-footer end -->
+
