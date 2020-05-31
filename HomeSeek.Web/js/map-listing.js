@@ -12,7 +12,7 @@
            
              lat = response.Lat;
              long = response.Long;
-           
+          
         }
     });
 

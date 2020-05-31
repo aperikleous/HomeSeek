@@ -193,8 +193,8 @@ namespace HomeSeek.Web.Controllers
             var addresses = db.Address.GetAll();
             //  Dictionary<string,decimal> lat = new Dictionary<string,decimal>();
             // Dictionary<string,decimal> longi = new Dictionary<string,decimal>();
-            decimal[] lat = new decimal[11];
-            decimal[] longi = new decimal[11];
+            decimal[] lat = new decimal[addresses.Count()];
+            decimal[] longi = new decimal[addresses.Count()];
             for (int i = 0; i < addresses.Count(); i++)
             {
                 lat[i] = Convert.ToDecimal(addresses[i].Latitude, CultureInfo.InvariantCulture);
