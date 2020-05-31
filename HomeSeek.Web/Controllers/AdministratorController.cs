@@ -3,6 +3,7 @@ using HomeSeek.Repository;
 using HomeSeek.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -190,6 +191,19 @@ namespace HomeSeek.Web.Controllers
             var reviews = db.Reviews.GetAll();
             var users = db.Users.GetAll();
             var addresses = db.Address.GetAll();
+            //  Dictionary<string,decimal> lat = new Dictionary<string,decimal>();
+            // Dictionary<string,decimal> longi = new Dictionary<string,decimal>();
+            decimal[] lat = new decimal[11];
+            decimal[] longi = new decimal[11];
+            for (int i = 0; i < addresses.Count(); i++)
+            {
+                lat[i] = Convert.ToDecimal(addresses[i].Latitude, CultureInfo.InvariantCulture);
+                longi[i] = Convert.ToDecimal(addresses[i].Longitude, CultureInfo.InvariantCulture);
+            }
+            
+            //vm.Coordinates = coord;
+            vm.Lat = lat;
+            vm.Long = longi;
 
             vm.TotalPlaces = places.Count();
 

@@ -230,13 +230,15 @@
                     <article class="geodir-category-listing fl-wrap">
                         <div class="geodir-category-img">
                             <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
+                            
+                            
                             <a href="/places/details/@place.PlaceId" class="geodir-category-img-wrap fl-wrap">
                                 <img src="@place.Photos.Select(x => x.PhotoUrl).First()" alt="" />
                             </a>
 
                             <div class="geodir-category-opt">
                                 <div class="listing-rating-count-wrap">
-                                    <div class="review-score">@(Math.Round((place.Reviews.Select(x => x.OverallRating).FirstOrDefault()),1).ToString("0.0"))</div>
+                                    <div class="review-score">@(Math.Round((place.Reviews.Select(x => x.OverallRating).FirstOrDefault()), 1).ToString("0.0"))</div>
                                     <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((place.Reviews.Select(x => x.OverallRating).FirstOrDefault()),0))"></div>
                                     <br>
                                     <div class="reviews-count">@place.Reviews.Count reviews</div>

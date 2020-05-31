@@ -40,7 +40,10 @@ namespace HomeSeek.Web.Models
         public List<int> ReviewsPerMonth { get; set; }
         [Display(Name = "Reservations per place")]
         public Dictionary<string, int> ReservationsPerPlace { get; set; }
-
+        public Dictionary<string, decimal> CoordLat { get; set; }
+        public Dictionary<string, decimal> CoordLong { get; set; }
+        public decimal[] Lat { get; set; }
+        public decimal[] Long { get; set; }
 
 
     }
