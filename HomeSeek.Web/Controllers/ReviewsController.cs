@@ -56,7 +56,7 @@ namespace HomeSeek.Web.Controllers
             {
                 db.Reviews.Add(review);
                 db.Complete();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Places");
             }
 
             return View(review);

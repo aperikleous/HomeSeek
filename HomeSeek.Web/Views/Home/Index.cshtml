@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<HomeSeek.Entities.Place>
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "HomeSeek Home Page";
 
 
 }
@@ -105,8 +105,8 @@
                                                     <div class="geodir-category-location"><a href="#"><i class="fas fa-map-marker-alt"></i>@item.Address.AddressName @item.Address.No @item.Address.City</a></div>
                                                 </div>
                                                 <div class="listing-rating-count-wrap">
-                                                    <div class="review-score">@item.Reviews.Select(x => x.OverallRating).FirstOrDefault()</div>
-                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="@item.Reviews.Select(x=>x.OverallRating).FirstOrDefault()"></div>
+                                                    <div class="review-score">@item.Reviews.Select(x => x.OverallRating.ToString("0.0")).FirstOrDefault()</div>
+                                                    <div class="listing-rating card-popup-rainingvis" data-starrating2="@item.Reviews.Select(x=>x.OverallRating.ToString("0")).FirstOrDefault()"></div>
                                                     <br>
                                                     <div class="reviews-count">@item.Reviews.Count() Reviews</div>
                                                 </div>

@@ -13,6 +13,7 @@ namespace HomeSeek.Web.Controllers
     public class AdministratorController : Controller
     {
         UnitOfWork db = new UnitOfWork(new MyDatabase());
+        [Authorize(Roles="Admin")]
         public ActionResult Index()
         {
 
