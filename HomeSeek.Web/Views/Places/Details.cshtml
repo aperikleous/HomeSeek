@@ -64,7 +64,7 @@
                                             <div class="review-score">
                                                 @ViewBag.AvgOverallRating
                                             </div>
-                                            <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((ViewBag.AvgOverallRating),0))"></div>
+                                            <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((ViewBag.AvgOverallRating),0).ToString("0.0"))"></div>
                                             <br>
                                             <div class="reviews-count">
                                                 @if (@ViewBag.TotalReviews > 1)
@@ -286,16 +286,6 @@
                                         </div>
                                     </div>
                                 }
-                                    @*<script>
-                                function myFunction() {
-                                    document.getElementById("@(item.ReviewId)").innerText = 3;
-                                }
-                                    </script>*@
-                                @*<script>
-                                function myFunction() {
-                                    document.getElementById("@(item.ReviewId)").innerText = 3;
-                                }
-                                </script>*@
                             </div>
                         </div>
                     </div>
@@ -335,75 +325,7 @@
                                     </div>
 
                                 </fieldset>
-                            }
-
-                            @*===============================================================================================================================*@
-                            @*@using (Html.BeginForm("Add", "Reservations", FormMethod.Get, new { @class = "add-comment custom-form form-inline" }))
-                                {       <fieldset>
-                                            <div class="quantity fl-wrap">
-                                                @Html.Hidden("placeId", null, new { @class = "form-control" })
-                                                <span><i class="fal fa-user-plus"></i>Persons : </span>
-                                                <div class="quantity-item">
-                                                    <input type="button" value="-" class="minus">
-                                                    <input type="text" name="quantity" title="Qty" class="qty color-bg" data-min="1" data-max="3" data-step="1" value="1">
-                                                    <input type="button" value="+" class="plus">
-                                                </div>
-                                            </div>
-
-                                            <div class="listsearch-input-item clact date-container3 daterangepicker_big">
-                                                <label><i class="fal fa-calendar"></i></label>
-                                                <input type="text" placeholder="Date In Out" name="dates" />
-                                                @Html.TextBox("Checkin", null, new { @class = "form-control", placeholder = "checkin" })
-                                                <span class="clear-singleinput"><i class="fal fa-times"></i></span>
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                @Html.Label("Checkin", new { @for = "searchTitle" })
-                                            </div>
-                                            <div class="form-group mb-2">
-                                                @Html.Label("checkout", new { @for = "searchStream" })
-                                                @Html.TextBox("checkout", null, new { @class = "form-control", placeholder = "checkout" })
-                                            </div>
-
-
-                                            <div class="claim-price-wdget-content fl-wrap">
-                                                <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
-                                                <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
-                                                <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
-                                            </div>
-
-                                           <button class="btn color2-bg url_btn float-btn" type="submit">Book Room Now</button>
-                                        </fieldset>
-                                }*@
-
-
-
-                            @*//===========================================================================================================*@
-
-                            @*<form class="add-comment custom-form">
-                                    <fieldset>
-                                        <div class="quantity fl-wrap">
-                                            <span><i class="fal fa-user-plus"></i>Persons : </span>
-                                            <div class="quantity-item">
-                                                <input type="button" value="-" class="minus">
-                                                <input type="text" name="quantity" title="Qty" class="qty color-bg" data-min="1" data-max="3" data-step="1" value="1">
-                                                <input type="button" value="+" class="plus">
-                                            </div>
-                                        </div>
-
-                                        <div class="listsearch-input-item clact date-container3 daterangepicker_big">
-                                            <label><i class="fal fa-calendar"></i></label>
-                                            <input type="text" placeholder="Date In Out" name="dates" value="" />
-                                            <span class="clear-singleinput"><i class="fal fa-times"></i></span>
-                                        </div>
-                                        <div class="claim-price-wdget-content fl-wrap">
-                                            <div class="pricerange fl-wrap"><span>Price : </span> @Model.PricePerDay €</div>
-                                            <div class="pricerange fl-wrap"><span>Clean Cost : </span> @Model.CleanCost €</div>
-                                            <div class="claim-widget-link fl-wrap"><span>Own or work here?</span><a href="#">Claim Now!</a></div>
-                                        </div>
-
-                                    </fieldset>
-                                    <button class="btn color2-bg url_btn float-btn" onclick="window.location.href='booking.html'">Book Room Now <i class="fal fa-bookmark"></i></button>
-                                </form>*@
+                            }                        
                         </div>
                     </div>
                 </div>

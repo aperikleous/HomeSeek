@@ -84,21 +84,6 @@
                 manager.AddToRole(user.Id, "Host");
             }
 
-            //if (!context.Users.Any(u => u.UserName == "founder"))
-            //{
-            //    var store = new UserStore<ApplicationUser>(context);
-            //    var manager = new UserManager<ApplicationUser>(store);
-            //    var user = new ApplicationUser { UserName = "founder" };
-
-            //    manager.Create(user, "ChangeItAsap!");
-            //    manager.AddToRole(user.Id, "AppAdmin");
-            //}
-
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
-
             //================= Seeding Amenities =================
             //Amenities template = new Amenities() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
             Amenities a1 = new Amenities() { Count = 1, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
@@ -185,26 +170,6 @@
             Place p39 = new Place() { ApartmentName = "Loft in the Center of Thessaloniki", PricePerDay = 58M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "this home's exquisite industrial aesthetic was designed by the building's architect. Exposed brick, woods, and metal are highlighted by the huge glass doors which." };
             Place p40 = new Place() { ApartmentName = "Lovely Bright Home with Balcony Comfort & style", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is located in the City Center of Athens , on a quiet street ( just a few step away from Sepolia train / metro station ." };
 
-            //================= Seeding Reservations =================
-            ////Reservation template = new Reservation() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
-            //Reservation r1 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
-            //Reservation r1b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 3, 4), TotalFees = (10 * 50 + 10) / 10 };
-            //Reservation r1c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 4, 4), TotalFees = (5 * 50 + 10) / 10 };
-            //Reservation r2 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 5, 12), TotalFees = (11 * 60 + 15) / 10 };
-            //Reservation r2b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 5, 17), TotalFees = (7 * 60 + 15) / 10 };
-            //Reservation r2c = new Reservation() { CheckInDate = new DateTime(2020, 8, 11), CheckOutDate = new DateTime(2020, 8, 25), DaysOfStaying = 14, TotalAmount = (14 * 60 + 15), PaymentDate = new DateTime(2020, 5, 3), TotalFees = (14 * 60 + 15) / 10 };
-            //Reservation r3 = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalAmount = (9 * 250 + 40), PaymentDate = new DateTime(2020, 5, 25), TotalFees = (9 * 250 + 40) / 10 };
-            //Reservation r3b = new Reservation() { CheckInDate = new DateTime(2020, 6, 7), CheckOutDate = new DateTime(2020, 6, 10), DaysOfStaying = 3, TotalAmount = (3 * 250 + 40), PaymentDate = new DateTime(2020, 5, 12), TotalFees = (3 * 250 + 40) / 10 };
-            //Reservation r3c = new Reservation() { CheckInDate = new DateTime(2020, 7, 17), CheckOutDate = new DateTime(2020, 7, 30), DaysOfStaying = 13, TotalAmount = (13 * 250 + 40), PaymentDate = new DateTime(2020, 5, 14), TotalFees = (13 * 250 + 40) / 10 };
-            //Reservation r5 = new Reservation() { CheckInDate = new DateTime(2020, 6, 19), CheckOutDate = new DateTime(2020, 6, 25), DaysOfStaying = 6, TotalAmount = (6 * 50 + 20), PaymentDate = new DateTime(2020, 5, 10), TotalFees = (6 * 50 + 20) / 10 };
-            //Reservation r5b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 5, 5), TotalFees = (3 * 50 + 20) / 10 };
-            //Reservation r5c = new Reservation() { CheckInDate = new DateTime(2020, 8, 28), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 2, TotalAmount = (7 * 50 + 20), PaymentDate = new DateTime(2020, 7, 10), TotalFees = (7 * 50 + 20) / 10 };
-            //Reservation r6 = new Reservation() { CheckInDate = new DateTime(2020, 7, 13), CheckOutDate = new DateTime(2020, 7, 21), DaysOfStaying = 8, TotalAmount = (8 * 80 + 20), PaymentDate = new DateTime(2020, 6, 9), TotalFees = (8 * 80 + 20) / 10 };
-            //Reservation r6b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 5, 14), TotalFees = (14 * 80 + 20) / 10 };
-            //Reservation r6c = new Reservation() { CheckInDate = new DateTime(2020, 8, 17), CheckOutDate = new DateTime(2020, 8, 24), DaysOfStaying = 7, TotalAmount = (4 * 80 + 20), PaymentDate = new DateTime(2020, 4, 12), TotalFees = (4 * 80 + 20) / 10 };
-            //Reservation r7 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 4, 24), TotalFees = (6 * 60 + 20) / 10 };
-            //Reservation r8 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 5, 27), TotalFees = (8 * 70 + 20) / 10 };
-
             Reservation r1 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
             Reservation r1b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 3, 4), TotalFees = (10 * 50 + 10) / 10 };
             Reservation r1c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 4, 4), TotalFees = (5 * 50 + 10) / 10 };
@@ -260,12 +225,6 @@
             Reservation r210 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 10, 24), TotalFees = (6 * 60 + 20) / 10 };
             Reservation r210b = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 11, 27), TotalFees = (8 * 70 + 20) / 10 };
             Reservation r210c = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 18, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 12, 27), TotalFees = (8 * 70 + 20) / 10 };
-
-            //Reservation r9 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
-            //Reservation r9b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 3, 4), TotalFees = (10 * 50 + 10) / 10 };
-            //Reservation r9c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 4, 4), TotalFees = (5 * 50 + 10) / 10 };
-            //Reservation r10 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 10, 12), TotalFees = (11 * 60 + 15) / 10 };
-            //Reservation r10b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 6, 17), TotalFees = (7 * 60 + 15) / 10 };
 
             //================= Seeding Reviews =================
             //Review template = new Review() { Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6),  Comment = "ola teleia" };
@@ -327,7 +286,7 @@
             ApplicationUser ap1 = new ApplicationUser() { UserName = "xenos", LastName = "Vlaxos", FirstName = "Xenos", City = "Athens", DateOfBirth = new DateTime(1989, 08, 01) };
             ApplicationUser ap2 = new ApplicationUser() { UserName = "thanos", LastName = "Kontos", FirstName = "Thanos", City = "Thessaloniki", DateOfBirth = new DateTime(1990, 05, 12) };
             ApplicationUser ap3 = new ApplicationUser() { UserName = "alex", LastName = "Perikle", FirstName = "Alex", City = "Crete", DateOfBirth = new DateTime(1994, 04, 22) };
-            //ApplicationUser ap4 = new ApplicationUser() { UserName = "zach", LastName = "dr", FirstName = "Zach", City = "Heraklion", DateOfBirth = new DateTime(1993, 12, 11) };
+            
 
 
             //================= Seeding Address =================
@@ -346,7 +305,6 @@
             Address ad12 = new Address() { AddressName = "Αριστοτέλους", No = "16", ZipCode = "17455", Latitude = "37.9126442", Longitude = "23.7099781", City = "Θεσσαλονίκη", Area = "Θεσσαλονίκη" };
             Address ad13 = new Address() { AddressName = "Στουρναρη ", No = "44", ZipCode = "10432", Latitude = "37.9881006", Longitude = "23.7272993", City = "Αθήνα", Area = "Κεντρικός Τομέας Αθηνών" };
             Address ad14 = new Address() { AddressName = "Κάλβου ", No = "20", ZipCode = "11474", Latitude = "37.9924462", Longitude = "23.7441854", City = "Αθήνα", Area = "Αθήνα" };
-
 
 
             #region SEEDPHOTOS
@@ -667,7 +625,7 @@
             p26.Address = ad6;
             p27.Address = ad7;
             p28.Address = ad8;
-            p29.Address = ad9;
+            p29.Address = ad4;
             p30.Address = ad10;
             p31.Address = ad11;
             p32.Address = ad1;

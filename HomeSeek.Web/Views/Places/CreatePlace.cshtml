@@ -88,17 +88,21 @@
         </div>
 
     </div>
+    <p>
+        Επέλεξε τις φωτογραφίες που ανεβάσατε<br />
+    </p>
 
     <div class="form-group">
-        <p>
-            Επέλεξε τις φωτογραφίες που ανεβάσατε<br />
-            @Html.ListBox("AllPhotosIds", null, new { size = 10 })
-        </p>
+
+        <div class="">
+            @Html.ListBox("AllPhotosIds", null, new { size = 10, @class = "form-control" })
+        </div>
+
     </div>
 
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn color2-bg float-btn" />
+        <div class="">
+            <input type="submit" value="Create" class="btn color2-bg float-btn mb-2" />
         </div>
     </div>
 }

@@ -75,8 +75,6 @@ namespace HomeSeek.Web.Controllers
                 case "TitleDesc": places = places.OrderByDescending(x => x.ApartmentName); ViewBag.TView = "badge badge-danger"; break;
                 case "CityAsc": places = places.OrderBy(x => x.Address.City); ViewBag.CView = "badge badge-success"; break;
                 case "CityDesc": places = places.OrderByDescending(x => x.Address.City); ViewBag.CView = "badge badge-danger"; break;
-                // case "DateAsc": places = places.OrderBy(x => x.DateOfBirth); ViewBag.DOBView = "badge badge-success"; break;
-                // case "DateDesc": places = places.OrderByDescending(x => x.DateOfBirth); ViewBag.DOBView = "badge badge-danger"; break;
                 case "PriceAsc": places = places.OrderBy(x => x.PricePerDay); ViewBag.PView = "badge badge-success"; break;
                 case "PriceDesc": places = places.OrderByDescending(x => x.PricePerDay); ViewBag.PView = "badge badge-danger"; break;
                 default: places = places.OrderBy(x => x.ApartmentName); ViewBag.TView = "badge badge-success"; break;
