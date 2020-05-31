@@ -84,7 +84,7 @@
         <div class="listing-slider fl-wrap">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in Model.Take(3))
+                    @foreach (var item in Model.Take(4))
 
                     {
                         <!--  swiper-slide  -->
@@ -95,7 +95,7 @@
                                     <article class="geodir-category-listing fl-wrap">
                                         <div class="geodir-category-img">
                                             <div class="geodir-js-favorite_btn"><i class="fal fa-heart"></i><span>Save</span></div>
-                                            <a href="listing-single.html" class="geodir-category-img-wrap fl-wrap">
+                                            <a href="/places/details/@item.PlaceId" class="geodir-category-img-wrap fl-wrap">
                                                 <img src="@item.Photos.Select(x=>x.PhotoUrl).First()" alt="">
                                             </a>
                                             <div class="geodir_status_date gsd_open"><i class="fal fa-lock-open"></i>Book Now</div>
@@ -341,4 +341,4 @@
         </div>
     </div>
 </section>
-<!--section end-->  
+<!--section end-->

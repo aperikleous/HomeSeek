@@ -103,88 +103,87 @@
             //Amenities template = new Amenities() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
             Amenities a1 = new Amenities() { Count = 1, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
             Amenities a2 = new Amenities() { Count = 2, Wifi = false, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
-            Amenities a3 = new Amenities() { Count = 3, Wifi = true, Heating = false, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a3 = new Amenities() { Count = 3, Wifi = true, Heating = false, Tv = true, AirConditioning = true, FirstAidKit = false, Elevator = false, FreeParking = true, HotWater = false, PrivateΕntrance = true };
             Amenities a4 = new Amenities() { Count = 4, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
             Amenities a5 = new Amenities() { Count = 5, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = true, HotWater = true, PrivateΕntrance = true };
-            Amenities a6 = new Amenities() { Count = 6, Wifi = false, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a6 = new Amenities() { Count = 6, Wifi = false, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = true, Elevator = false, FreeParking = true, HotWater = true, PrivateΕntrance = true };
             Amenities a7 = new Amenities() { Count = 7, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = true, HotWater = true, PrivateΕntrance = true };
             Amenities a8 = new Amenities() { Count = 8, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = true, HotWater = true, PrivateΕntrance = true };
             Amenities a9 = new Amenities() { Count = 9, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = false, HotWater = true, PrivateΕntrance = true };
             Amenities a10 = new Amenities() { Count = 10, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = true, HotWater = true, PrivateΕntrance = true };
-            Amenities a11 = new Amenities() { Count = 11, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a12 = new Amenities() { Count = 12, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a13 = new Amenities() { Count = 13, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a14 = new Amenities() { Count = 14, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a15 = new Amenities() { Count = 15, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a11 = new Amenities() { Count = 11, Wifi = true, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = false, PrivateΕntrance = true };
+            Amenities a12 = new Amenities() { Count = 12, Wifi = false, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = false, PrivateΕntrance = true };
+            Amenities a13 = new Amenities() { Count = 13, Wifi = true, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = true, Elevator = false, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a14 = new Amenities() { Count = 14, Wifi = true, Heating = false, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a15 = new Amenities() { Count = 15, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = false, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
             Amenities a16 = new Amenities() { Count = 16, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a17 = new Amenities() { Count = 17, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a18 = new Amenities() { Count = 18, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a17 = new Amenities() { Count = 17, Wifi = true, Heating = true, Tv = false, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a18 = new Amenities() { Count = 18, Wifi = true, Heating = true, Tv = false, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = false, PrivateΕntrance = true };
             Amenities a19 = new Amenities() { Count = 19, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a20 = new Amenities() { Count = 20, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a21 = new Amenities() { Count = 21, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a22 = new Amenities() { Count = 22, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a23 = new Amenities() { Count = 23, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a24 = new Amenities() { Count = 24, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a25 = new Amenities() { Count = 25, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a26 = new Amenities() { Count = 26, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a27 = new Amenities() { Count = 27, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a28 = new Amenities() { Count = 28, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a20 = new Amenities() { Count = 20, Wifi = true, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a21 = new Amenities() { Count = 21, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = false, Elevator = false, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a22 = new Amenities() { Count = 22, Wifi = true, Heating = false, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a23 = new Amenities() { Count = 23, Wifi = true, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a24 = new Amenities() { Count = 24, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = false, Elevator = false, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a25 = new Amenities() { Count = 25, Wifi = false, Heating = true, Tv = false, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a26 = new Amenities() { Count = 26, Wifi = true, Heating = false, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a27 = new Amenities() { Count = 27, Wifi = true, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = false, Elevator = true, FreeParking = false, HotWater = false, PrivateΕntrance = true };
+            Amenities a28 = new Amenities() { Count = 28, Wifi = true, Heating = true, Tv = false, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
             Amenities a29 = new Amenities() { Count = 29, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a30 = new Amenities() { Count = 30, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a31 = new Amenities() { Count = 31, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a32 = new Amenities() { Count = 32, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a33 = new Amenities() { Count = 33, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a30 = new Amenities() { Count = 30, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a31 = new Amenities() { Count = 31, Wifi = true, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = true, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
+            Amenities a32 = new Amenities() { Count = 32, Wifi = true, Heating = false, Tv = false, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a33 = new Amenities() { Count = 33, Wifi = false, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = false, Elevator = true, FreeParking = true, HotWater = false, PrivateΕntrance = true };
             Amenities a34 = new Amenities() { Count = 34, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a35 = new Amenities() { Count = 35, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a36 = new Amenities() { Count = 36, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a35 = new Amenities() { Count = 35, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a36 = new Amenities() { Count = 36, Wifi = false, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = false, Elevator = true, FreeParking = true, HotWater = true, PrivateΕntrance = true };
             Amenities a37 = new Amenities() { Count = 37, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a38 = new Amenities() { Count = 38, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a39 = new Amenities() { Count = 39, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
-            Amenities a40 = new Amenities() { Count = 40, Wifi = true, Heating = true, Tv = true, AirConditioning = true, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a38 = new Amenities() { Count = 38, Wifi = true, Heating = true, Tv = false, AirConditioning = true, FirstAidKit = true, Elevator = false, FreeParking = true, HotWater = false, PrivateΕntrance = true };
+            Amenities a39 = new Amenities() { Count = 39, Wifi = true, Heating = true, Tv = false, AirConditioning = true, FirstAidKit = false, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
+            Amenities a40 = new Amenities() { Count = 40, Wifi = true, Heating = true, Tv = true, AirConditioning = false, FirstAidKit = true, Elevator = true, FreeParking = false, HotWater = true, PrivateΕntrance = true };
 
             //================= Seeding Places =================
             //Place template = new Place() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
-            Place p1 = new Place() { ApartmentName = "Apartment in Psichiko", PricePerDay = 50M, Description = "O,ti kalytero se spiti uparxei, mpravo sta paidia.", Guests = 2, Bedroom = 3, Bathroom = 1, CleanCost = 10M, IsBooked = false, Created = new DateTime(2020, 05, 02), Modified = new DateTime(2020, 05, 05) };
-            Place p2 = new Place() { ApartmentName = "Nea Makri Exohiko", PricePerDay = 60M, Description = "Foveri thea, einai monadiko meros gia na meinete.", Guests = 3, Bedroom = 2, Bathroom = 2, CleanCost = 15M, IsBooked = false, Created = new DateTime(2020, 05, 01), Modified = new DateTime(2020, 05, 10) };
-            Place p3 = new Place() { ApartmentName = "Villa in Mykonos", PricePerDay = 250M, Description = "Fthines potares, to kalutero meros gia na sprwkseis!", Guests = 6, Bedroom = 5, Bathroom = 3, CleanCost = 40M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 04, 30) };
-
-            Place p4 = new Place() { ApartmentName = "Sunny attic Acropolis amazing view by the roof", PricePerDay = 19M, Guests = 5, Bedroom = 3, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 05, 28), Modified = new DateTime(2020, 05, 29), Description = "A cozy unique 30sqm ATTIC with a unique balcony and view of all Athenian center.Decorated with love and passion. Situated in METS the most cultural and peaceful neighborhood in Athens. Acropolis metro station is 400 meters far and plenty of public bus are going around the city just 30 meters far of the apartment. In the same street you can find supermarket,coffee-bar,bakery,pharmacy,jazz-club,tavern" };
-            Place p5 = new Place() { ApartmentName = "Gina's cozy apartment", PricePerDay = 28M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 03, 28), Modified = new DateTime(2020, 05, 29), Description = "Newly renovated, one-bedroom apartment with king-size bed and fully equipped bathroom and kitchen. It provides everything you need for your stay and is quiet though centrally located." };
-            Place p6 = new Place() { ApartmentName = "Urban shiny studios2@ 50m Acropolis museum+metro", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 03, 28), Modified = new DateTime(2020, 05, 29), Description = "It is a newly renovated 55sqm apartment, 2nd floor in a 2-storey building, with a balcony overlooking a picturesque street of Plaka with a fully equipped kitche", };
-            Place p7 = new Place() { ApartmentName = "Athens Heart Design Studio", PricePerDay = 60M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 14), Modified = new DateTime(2020, 04, 28), Description = "The Design studio has just been renewed and it’s ready to welcome up to 2 guests. The studio is fully equipped with 1 air condition and WI-FI.It's full equipped kitchen,with cooker,kettle,toaster,fridge,freezer,Coffee,tea," };
-            Place p8 = new Place() { ApartmentName = "Quiet, Minimalist Base with Balcony near Metro", PricePerDay = 70M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 02, 14), Modified = new DateTime(2020, 03, 28), Description = "This upscale 50m2, one-bedroom apartment is located in Petralona. Newly renovated, minimal-chic decor with a touch of velvet make it the perfect getaway in central Athens. A fully equipped kitchen, airconditioning and smart-tv meet the demands of the seasoned traveller." };
-            Place p9 = new Place() { ApartmentName = "Majestic home Penthouse in the heart of Plaka", PricePerDay = 30M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 01, 14), Modified = new DateTime(2020, 02, 28), Description = "Penthouse with 360 view of Athens! It is located in Syntagma square and it offers the most amazing view of Athens. A luxury newly renovated top floor apartment with a king bed and a couch, can host up to 3 people . There is a jacuzzi in the room and sitting place on the huge terrace." };
-            Place p10 = new Place() { ApartmentName = "Gina's modern and stylish studio", PricePerDay = 40M, Guests = 4, Bedroom = 1, Bathroom = 2, CleanCost = 30M, IsBooked = false, Created = new DateTime(2020, 04, 15), Modified = new DateTime(2020, 05, 25), Description = "Recently renovated apartment, with double bed and fully equipped bathroom and kitchen. It provides everything you need for your stay and is quiet even in a central location." };
+            Place p1 = new Place() { ApartmentName = "Apartment in Psichiko", PricePerDay = 50M, Description = "It is in a very accessible neighborhood of Athens with direct access to traditional shops, bookstores, cafes and restaurants.", Guests = 2, Bedroom = 3, Bathroom = 1, CleanCost = 10M, IsBooked = false, Created = new DateTime(2020, 05, 02), Modified = new DateTime(2020, 05, 05) };
+            Place p2 = new Place() { ApartmentName = "Nea Makri Exohiko", PricePerDay = 60M, Description = "Awake refreshed and ready for a day exploring the city via this clean and sunny apartment.", Guests = 3, Bedroom = 2, Bathroom = 2, CleanCost = 15M, IsBooked = false, Created = new DateTime(2020, 05, 01), Modified = new DateTime(2020, 05, 10) };
+            Place p3 = new Place() { ApartmentName = "Villa in Athens", PricePerDay = 20M, Description = " The house has vintage atmosphere combined with modern elements. It is located in the heart of the city, ", Guests = 6, Bedroom = 5, Bathroom = 3, CleanCost = 40M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 04, 30) };
+            Place p4 = new Place() { ApartmentName = "Sunny attic Acropolis amazing view by the roof", PricePerDay = 19M, Guests = 5, Bedroom = 3, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 05, 28), Modified = new DateTime(2020, 05, 29), Description = "A cozy unique 30sqm ATTIC with a unique balcony and view of all Athenian center.Decorated with love and passion. Situated in METS the most cultural." };
+            Place p5 = new Place() { ApartmentName = "Gina's cozy apartment", PricePerDay = 28M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 03, 28), Modified = new DateTime(2020, 05, 29), Description = "Newly renovated, one-bedroom apartment with king-size bed and fully equipped bathroom and kitchen. It provides everything you need for your stay and is quiet though." };
+            Place p6 = new Place() { ApartmentName = "Urban shiny studios2@ 50m Acropolis museum+metro", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 03, 28), Modified = new DateTime(2020, 05, 29), Description = "It is a newly renovated 55sqm apartment, 2nd floor in a 2-storey building, with a balcony overlooking a picturesque street of Plaka.", };
+            Place p7 = new Place() { ApartmentName = "Athens Heart Design Studio", PricePerDay = 60M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 14), Modified = new DateTime(2020, 04, 28), Description = "The Design studio has just been renewed and it’s ready to welcome up to 2 guests. The studio is fully equipped with 1 air condition and WI-FI.It's full equipped kitchen." };
+            Place p8 = new Place() { ApartmentName = "Quiet, Minimalist Base with Balcony near Metro", PricePerDay = 70M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 02, 14), Modified = new DateTime(2020, 03, 28), Description = "This upscale 50m2, one-bedroom apartment is located in Petralona. Newly renovated, minimal-chic decor with a touch of velvet make it the perfect." };
+            Place p9 = new Place() { ApartmentName = "Majestic home Penthouse in the heart of Plaka", PricePerDay = 30M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 01, 14), Modified = new DateTime(2020, 02, 28), Description = "Penthouse with 360 view of Athens! It is located in Syntagma square and it offers the most amazing view of Athens. A luxury newly renovated." };
+            Place p10 = new Place() { ApartmentName = "Loft modern and stylish studio", PricePerDay = 40M, Guests = 4, Bedroom = 1, Bathroom = 2, CleanCost = 30M, IsBooked = false, Created = new DateTime(2020, 04, 15), Modified = new DateTime(2020, 05, 25), Description = "Recently renovated apartment, with double bed and fully equipped bathroom and kitchen. It provides everything you need for your stay and is quiet even in a central." };
             Place p11 = new Place() { ApartmentName = "Luxury Studio 6-min walk from Metro Attiki", PricePerDay = 90M, Guests = 5, Bedroom = 3, Bathroom = 2, CleanCost = 30M, IsBooked = false, Created = new DateTime(2020, 04, 25), Modified = new DateTime(2020, 05, 05), Description = "Happy to offer you my 2019 renovated apartment on 3rd floor in the center of Athens!! Located in a safe and quiet area." };
-            Place p12 = new Place() { ApartmentName = "Athens in old historic neighborhood", PricePerDay = 90M, Guests = 5, Bedroom = 3, Bathroom = 2, CleanCost = 30M, IsBooked = false, Created = new DateTime(2020, 04, 25), Modified = new DateTime(2020, 05, 05), Description = "This beautiful apartment, is located in the suburb of Kolonos, a historical neighbourhood near the Archaeological park of Akadimia Platonos where the ancient philosopher used to teach." };
-            Place p13 = new Place() { ApartmentName = "Downtown apartment 5' from Archeological Museum", PricePerDay = 38M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The space consists of one main living area that includes a conversation area with a TV and sofa that can open into a double bed and an open, fully equipped kitchen, a bedroom with double doors, a bathroom with a shower, and a balcony." };
-            Place p14 = new Place() { ApartmentName = "Relaxing small studio near Acropolis ", PricePerDay = 35M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The studio is at the 1 floor and it's 18 square meters. Inside the room is located the double-bed, as well as the kitchen. The shower is located inside the bathroom. It has a nice balcony that can direct you at the building's garden." };
-            Place p15 = new Place() { ApartmentName = "3 mins walking from Acropolis ", PricePerDay = 25M, Guests = 3, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "This fully renovated ( February 2019) and full equipped 50 s.q.m modern, cosy and stylish apartment is the perfect choice for 2-4 people, and it is located in one of the most beautiful streets of Koukaki." };
-            Place p16 = new Place() { ApartmentName = "Studio in Athens heart", PricePerDay = 34M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Our apartment is a fully renovated 29m2 studio, just 250 meters from Omonoia square and the subway. It is in a very accessible neighborhood of Athens with direct access to traditional shops, bookstores, cafes and restaurants." };
-            Place p17 = new Place() { ApartmentName = "Modern Apartment - Syntagma Square", PricePerDay = 23M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "A lovely space to unwind and relax after a busy day whether it is work or play. Awake refreshed and ready for a day exploring the city via this clean and sunny apartment. Head out and wander through the numerous cafes and restaurants that are just minutes walking distance in every direction!" };
-            Place p18 = new Place() { ApartmentName = "Sunny cozy apt,Acropolis & Filopappoy balcony view", PricePerDay = 35M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Enjoy a fully renovated and cozy apartment in the center of Athens. The house has vintage atmosphere combined with modern elements. It is located in the heart of the city, which allows you to visit all the high spots on foot. Filoppapou hill is two blocks ahead and Acropolis is 10 minutes on foot!" };
-            Place p19 = new Place() { ApartmentName = "Boutique Apt in Lively Area. Walk to Acropolis", PricePerDay = 41M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Light one of the complimentary candles and sense the charming bohemian vibe. Fun details abound, from the classic hats on the walls through to the animal motif cushions. Throw open the doors to make the most of the city views." };
-            Place p20 = new Place() { ApartmentName = "ATHENStay Loft", PricePerDay = 30M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Ideally located between the vibrant centre and the exclusive northern suburbs of Athens, this Loft offers magnificent views of Athens and the surrounding mountains. WiFi, bedsheets and towels are available." };
+            Place p12 = new Place() { ApartmentName = "Athens in old historic neighborhood", PricePerDay = 90M, Guests = 5, Bedroom = 3, Bathroom = 2, CleanCost = 30M, IsBooked = false, Created = new DateTime(2020, 04, 25), Modified = new DateTime(2020, 05, 05), Description = "This beautiful apartment, is located in the suburb of Kolonos, a historical neighbourhood near the Archaeological park of Akadimia Platonos where the ancient." };
+            Place p13 = new Place() { ApartmentName = "Downtown apartment 5' from Archeological Museum", PricePerDay = 38M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The space consists of one main living area that includes a conversation area with a TV and sofa that can open into a double bed and an open." };
+            Place p14 = new Place() { ApartmentName = "Relaxing small studio near Acropolis ", PricePerDay = 35M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The studio is at the 1 floor and it's 18 square meters. Inside the room is located the double-bed, as well as the kitchen.." };
+            Place p15 = new Place() { ApartmentName = "3 mins walking from Acropolis ", PricePerDay = 25M, Guests = 3, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "This fully renovated ( February 2019) and full equipped 50 s.q.m modern, cosy and stylish apartment is the perfect choice for 2-4 people.." };
+            Place p16 = new Place() { ApartmentName = "Studio in Athens heart", PricePerDay = 34M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Our apartment is a fully renovated 29m2 studio, just 250 meters from Omonoia square and the subway. It is in a very accessible neighborhood of Athens with direct access to shops." };
+            Place p17 = new Place() { ApartmentName = "Loft Modern Apartment - Syntagma Square", PricePerDay = 23M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "A lovely space to unwind and relax after a busy day whether it is work or play. Awake refreshed and ready for a day exploring the city via this clean  apartment." };
+            Place p18 = new Place() { ApartmentName = "Sunny cozy apt,Acropolis & Filopappoy balcony view", PricePerDay = 35M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Enjoy a fully renovated and cozy apartment in the center of Athens. The house has vintage atmosphere combined with modern elements." };
+            Place p19 = new Place() { ApartmentName = "Boutique Apt in Lively Area.", PricePerDay = 41M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Light one of the complimentary candles and sense the charming bohemian vibe. Fun details abound, from the classic hats on the walls.." };
+            Place p20 = new Place() { ApartmentName = "Stay Loft", PricePerDay = 30M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Ideally located between the vibrant centre and the exclusive northern suburbs of Athens, this Loft offers magnificent views of Athens and the surrounding mountains. WiFi." };
             Place p21 = new Place() { ApartmentName = "Deluxe Acropoli View Suite in Monastiraki", PricePerDay = 41M, Guests = 3, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Enjoy a little more space and luxury in one of our cozy Deluxe Suites. We offer five-star quality comfort paired with a modern design." };
-            Place p22 = new Place() { ApartmentName = "Retro chic 1-bdrm in lively Koukaki near Acropolis", PricePerDay = 30M, Guests = 1, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Centrally located 1-bedroom apartment just 12 minutes walking from the Acropolis. Spacious 63m2 home in walking distance between Acropolis and Filopapou Hill in the quiet part of the amazing Koukaki area." };
-            Place p23 = new Place() { ApartmentName = "Ermou Acropolis View Spacious Suite by Living-Space", PricePerDay = 51M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "This big suite is located between Monastiraki & Syntagma square just above the Byzantine Church of Kapnikarea, one of the oldest churches in Athens. Enjoy the famous Greek hospitality and high quality services with the spectacular view." };
-            Place p24 = new Place() { ApartmentName = "Sunny studio Acropolis & Lykavitos beautiful view", PricePerDay = 29M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Enjoy this beautiful sunny studio,decorated with passion and love from Kseniia and Thomas (your hosts). Situated in METS the most cultural and peaceful neighborhood in Athens." };
-            Place p25 = new Place() { ApartmentName = "urban luxury studios for5 -Amazing Acropolis View", PricePerDay = 35M, Guests = 5, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "5th floor apartment, penthouse, with great views to Acropolis-Kalimarmaro-Lycabettus, fully renovated, in one of the most beautiful and safest areas of the historic center of Athens." };
-            Place p26 = new Place() { ApartmentName = "Spectacular Pool Apartment in the Heart of Athens", PricePerDay = 110M, Guests = 3, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Our modern design apartment is on a roof terrace, full of light, and perfectly located to explore the unique history and bustling life of Athens. It is 3 minutes walk to Syntagma Square (and the metro), 7 minutes to the old town of Plaka, and 10 minutes to the Acropolis." };
-            Place p27 = new Place() { ApartmentName = "Charming 102m² home flat next to the Acropolis 2bd", PricePerDay = 59M, Guests = 6, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "A beautiful apartment located in Koukaki,a central area in the shadow of the Acropolis. Easy access to the metro system,the Acropolis,the Acropolis museum and all other touristic sites." };
-            Place p28 = new Place() { ApartmentName = "Walk to Syntagma Square from a Characterful Apartment", PricePerDay = 49M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Step onto the sunlit wooden decking and kick back on the stylish rattan furniture, surrounded by green plants. This apartment has a cool, neutral palette with pops of vibrant color and eye-catching artwork." };
-            Place p29 = new Place() { ApartmentName = "Acropolis Dream Apartment", PricePerDay = 47M, Guests = 5, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is spacious,renovated in 2017- everything is completely new. There is a steamshower (hamam) and a sauna in the bathroom for you to relax free of charge. It is sound proof so you will not hear the distractions from the busy Athens." };
-            Place p30 = new Place() { ApartmentName = "Sunny apartment with a view to Acropolis", PricePerDay = 47M, Guests = 4, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Unique grand balcony with a fantastic view of Acropolis and the Parthenon, Filopappou hill on your left and Lykavetos hill on your right, the apartment is in the heart of the city, right up of Neos kosmos metro station" };
-            Place p31 = new Place() { ApartmentName = "Romantic Island-style hideaway in lively Koukaki", PricePerDay = 39M, Guests = 4, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Balcony views & fresh air abound in this spacious 55m2 island style 1-bedroom just 1 block from the Acropolis Museum & 8 min walk to Acropolis! Enjoy urban amenities & freshness in the homey living area & street facing patio." };
+            Place p22 = new Place() { ApartmentName = "Retro chic 1-bdrm in lively Koukaki near Acropolis", PricePerDay = 30M, Guests = 1, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Centrally located 1-bedroom apartment just 12 minutes walking from the Acropolis. Spacious 63m2 home in walking distance between Acropolis.." };
+            Place p23 = new Place() { ApartmentName = "Ermou Acropolis View Spacious Suite by Living-Space", PricePerDay = 51M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "This big suite is located between Monastiraki & Syntagma square just above the Byzantine Church of Kapnikarea, one of the oldest churches in Athens." };
+            Place p24 = new Place() { ApartmentName = "Sunny studio Acropolis & Lykavitos beautiful view", PricePerDay = 29M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Enjoy this beautiful sunny studio,decorated with passion and love from Kseniia and Thomas (your hosts). Situated in METS." };
+            Place p25 = new Place() { ApartmentName = "urban luxury studios for5 -Amazing Acropolis View", PricePerDay = 35M, Guests = 5, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "5th floor apartment, penthouse, with great views to Acropolis-Kalimarmaro-Lycabettus, fully renovated, in one of the most beautiful and safest areas." };
+            Place p26 = new Place() { ApartmentName = "Spectacular Pool Apartment in the Heart of Athens", PricePerDay = 110M, Guests = 3, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Our modern design apartment is on a roof terrace, full of light, and perfectly located to explore the unique history and bustling life of Athens.." };
+            Place p27 = new Place() { ApartmentName = "Charming 102m² home flat next to the Acropolis 2bd", PricePerDay = 59M, Guests = 6, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "A beautiful apartment located in Koukaki,a central area in the shadow of the Acropolis. Easy access to the metro system,the Acropolis,the Acropolis." };
+            Place p28 = new Place() { ApartmentName = "Walk to Syntagma Square from a Characterful Apartment", PricePerDay = 49M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Step onto the sunlit wooden decking and kick back on the stylish rattan furniture, surrounded by green plants. This apartment has a cool." };
+            Place p29 = new Place() { ApartmentName = "Acropolis Dream Apartment", PricePerDay = 47M, Guests = 5, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is spacious,renovated in 2017- everything is completely new. There is a steamshower (hamam) and a sauna in the bathroom for you to relax free of charge." };
+            Place p30 = new Place() { ApartmentName = "Sunny apartment with a view to Acropolis", PricePerDay = 47M, Guests = 4, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Unique grand balcony with a fantastic view of Acropolis and the Parthenon, Filopappou hill on your left and Lykavetos hill on your right." };
+            Place p31 = new Place() { ApartmentName = "Romantic Island-style hideaway in lively Koukaki", PricePerDay = 39M, Guests = 4, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Balcony views & fresh air abound in this spacious 55m2 island style 1-bedroom just 1 block from the Acropolis Museum & 8 min walk to Acropolis!" };
             Place p32 = new Place() { ApartmentName = "City Lux2Modern Apartment next to Kerameikos Metro", PricePerDay = 22M, Guests = 3, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "A modern and comfortable studio of 40m2. We designed an independent studio under our loft 4 minutes walk from the Kerameikos Metro Station." };
-            Place p33 = new Place() { ApartmentName = "X & P apartment koukaki a perfect place to stay", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "It is a warm, friendly and cozy nine-room villa with electric kitchenette, washing machine, iron, ironing board, hair dryer, ionizer, dehumidification system, TV, refrigerator, wifi, air conditioning, air conditioning system It also has a double bed with bed linen as well as body and face towels." };
+            Place p33 = new Place() { ApartmentName = "X & P apartment koukaki a perfect place to stay", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "It is a warm, friendly and cozy nine-room villa with electric kitchenette, washing machine, iron, ironing board, hair dryer, ionizer." };
             Place p34 = new Place() { ApartmentName = "D16 Central Athens cosy apartment by Acropolis", PricePerDay = 40M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Our cosy & loved apartment is in a quiet and historic neighborhood in Athens (Ano Petralona). Come and enjoy our original lifestyle." };
             Place p35 = new Place() { ApartmentName = "Luminous apartment near Acropolis", PricePerDay = 30M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "This is a newly renovated apartment located in Koukaki, a nice region full of choices, in a walking distance from the Acropolis, Plaka and the city center." };
-            Place p36 = new Place() { ApartmentName = "Casavathel2 Athens Center Apartment", PricePerDay = 32M, Guests = 6, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Apartment new and modern style ,bright and clean in a classic neighborhood of Athens with free parking place." };
-            Place p37 = new Place() { ApartmentName = "Island in the sky! Acropolis and city views!", PricePerDay = 44M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Sunny studio, island in the Athenian skies! Amazing Acropolis and city views from this 19m2 rooftop studio. Located near metro stop and the American embassy. Just a few stops from Syntagma square." };
-            Place p38 = new Place() { ApartmentName = "Stylish 2bd Apartment above Attiki Metro Station", PricePerDay = 35M, Guests = 4, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is 50sqm, on 1st floor and has been totally renovated in April 2019!!! The location is ideal due to the distance of the metro station Attiki which is only 30 meters away" };
-            Place p39 = new Place() { ApartmentName = "Awarded Loft in the Center of Athens", PricePerDay = 58M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "this home's exquisite industrial aesthetic was designed by the building's architect. Exposed brick, woods, and metal are highlighted by the huge glass doors which lead out onto a stunning private balcony." };
-            Place p40 = new Place() { ApartmentName = "A Lovely Bright Home with Balcony Comfort & style", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is located in the City Center of Athens , on a quiet street ( just a few step away from Sepolia train / metro station ." };
+            Place p36 = new Place() { ApartmentName = "Casavathel2 Athens Center Apartment", PricePerDay = 32M, Guests = 6, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Apartment new and modern style ,bright and clean in a classic neighborhood of Athens with free parking place in a walking distance from the Acropolis, ." };
+            Place p37 = new Place() { ApartmentName = "Island in the sky!White Tower view!", PricePerDay = 44M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "Sunny studio, island in the Athenian skies! Amazing Acropolis and city views from this 19m2 rooftop studio. Located near metro stop and the American embassy." };
+            Place p38 = new Place() { ApartmentName = "Stylish 2bd Apartment above Attiki Metro Station", PricePerDay = 35M, Guests = 4, Bedroom = 2, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is 50sqm, on 1st floor and has been totally renovated in April 2019!!! The location is ideal due to the distance of the metro station Attiki." };
+            Place p39 = new Place() { ApartmentName = "Loft in the Center of Thessaloniki", PricePerDay = 58M, Guests = 4, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "this home's exquisite industrial aesthetic was designed by the building's architect. Exposed brick, woods, and metal are highlighted by the huge glass doors which." };
+            Place p40 = new Place() { ApartmentName = "Lovely Bright Home with Balcony Comfort & style", PricePerDay = 25M, Guests = 2, Bedroom = 1, Bathroom = 1, CleanCost = 20M, IsBooked = false, Created = new DateTime(2020, 04, 28), Modified = new DateTime(2020, 05, 05), Description = "The apartment is located in the City Center of Athens , on a quiet street ( just a few step away from Sepolia train / metro station ." };
 
             //================= Seeding Reservations =================
             ////Reservation template = new Reservation() { Title = "", Duration = 0, PhotoUrl = "", Price = 0, ProductionYear = new DateTime(1, 1, 1), Rating = 0D, TrailerUrl = "", Watched = false ,Country=Country.United_States_of_America};
@@ -216,21 +215,58 @@
             Reservation r3b = new Reservation() { CheckInDate = new DateTime(2020, 6, 7), CheckOutDate = new DateTime(2020, 6, 10), DaysOfStaying = 3, TotalAmount = (3 * 250 + 40), PaymentDate = new DateTime(2020, 8, 12), TotalFees = (3 * 250 + 40) / 10 };
             Reservation r3c = new Reservation() { CheckInDate = new DateTime(2020, 7, 17), CheckOutDate = new DateTime(2020, 7, 30), DaysOfStaying = 13, TotalAmount = (13 * 250 + 40), PaymentDate = new DateTime(2020, 7, 14), TotalFees = (13 * 250 + 40) / 10 };
             Reservation r5 = new Reservation() { CheckInDate = new DateTime(2020, 6, 19), CheckOutDate = new DateTime(2020, 6, 25), DaysOfStaying = 6, TotalAmount = (6 * 50 + 20), PaymentDate = new DateTime(2020, 6, 10), TotalFees = (6 * 50 + 20) / 10 };
-            Reservation r5b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 7, 5), TotalFees = (3 * 50 + 20) / 10 };
+            Reservation r5b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 6, 5), TotalFees = (3 * 50 + 20) / 10 };
             Reservation r5c = new Reservation() { CheckInDate = new DateTime(2020, 8, 28), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 2, TotalAmount = (7 * 50 + 20), PaymentDate = new DateTime(2020, 7, 10), TotalFees = (7 * 50 + 20) / 10 };
             Reservation r6 = new Reservation() { CheckInDate = new DateTime(2020, 7, 13), CheckOutDate = new DateTime(2020, 7, 21), DaysOfStaying = 8, TotalAmount = (8 * 80 + 20), PaymentDate = new DateTime(2020, 6, 9), TotalFees = (8 * 80 + 20) / 10 };
-            Reservation r6b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 12, 14), TotalFees = (14 * 80 + 20) / 10 };
+            Reservation r6b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 6, 14), TotalFees = (14 * 80 + 20) / 10 };
             Reservation r6c = new Reservation() { CheckInDate = new DateTime(2020, 8, 17), CheckOutDate = new DateTime(2020, 8, 24), DaysOfStaying = 7, TotalAmount = (4 * 80 + 20), PaymentDate = new DateTime(2020, 3, 12), TotalFees = (4 * 80 + 20) / 10 };
             Reservation r7 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 11, 24), TotalFees = (6 * 60 + 20) / 10 };
-            Reservation r8 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 4, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r8 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 2, 27), TotalFees = (8 * 70 + 20) / 10 };
             Reservation r9 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 18, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 4, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r10 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 6, 4), TotalFees = (4 * 50 + 10) / 10 };
+            Reservation r10b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 6, 4), TotalFees = (10 * 50 + 10) / 10 };
+            Reservation r10c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 7, 4), TotalFees = (5 * 50 + 10) / 10 };
+            Reservation r20 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 7, 12), TotalFees = (11 * 60 + 15) / 10 };
+            Reservation r20b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 6, 17), TotalFees = (7 * 60 + 15) / 10 };
+            Reservation r20c = new Reservation() { CheckInDate = new DateTime(2020, 8, 11), CheckOutDate = new DateTime(2020, 8, 25), DaysOfStaying = 14, TotalAmount = (14 * 60 + 15), PaymentDate = new DateTime(2020, 2, 3), TotalFees = (14 * 60 + 15) / 10 };
+            Reservation r30 = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalAmount = (9 * 250 + 40), PaymentDate = new DateTime(2020, 4, 25), TotalFees = (9 * 250 + 40) / 10 };
+            Reservation r30b = new Reservation() { CheckInDate = new DateTime(2020, 6, 7), CheckOutDate = new DateTime(2020, 6, 10), DaysOfStaying = 3, TotalAmount = (3 * 250 + 40), PaymentDate = new DateTime(2020, 4, 12), TotalFees = (3 * 250 + 40) / 10 };
+            Reservation r30c = new Reservation() { CheckInDate = new DateTime(2020, 7, 17), CheckOutDate = new DateTime(2020, 7, 30), DaysOfStaying = 13, TotalAmount = (13 * 250 + 40), PaymentDate = new DateTime(2020, 6, 14), TotalFees = (13 * 250 + 40) / 10 };
+            Reservation r40 = new Reservation() { CheckInDate = new DateTime(2020, 6, 19), CheckOutDate = new DateTime(2020, 6, 25), DaysOfStaying = 6, TotalAmount = (6 * 50 + 20), PaymentDate = new DateTime(2020, 9, 10), TotalFees = (6 * 50 + 20) / 10 };
+            Reservation r40b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 8, 5), TotalFees = (3 * 50 + 20) / 10 };
+            Reservation r40c = new Reservation() { CheckInDate = new DateTime(2020, 8, 28), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 2, TotalAmount = (7 * 50 + 20), PaymentDate = new DateTime(2020, 8, 10), TotalFees = (7 * 50 + 20) / 10 };
+            Reservation r50 = new Reservation() { CheckInDate = new DateTime(2020, 7, 13), CheckOutDate = new DateTime(2020, 7, 21), DaysOfStaying = 8, TotalAmount = (8 * 80 + 20), PaymentDate = new DateTime(2020, 9, 9), TotalFees = (8 * 80 + 20) / 10 };
+            Reservation r50b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 7, 14), TotalFees = (14 * 80 + 20) / 10 };
+            Reservation r50c = new Reservation() { CheckInDate = new DateTime(2020, 8, 17), CheckOutDate = new DateTime(2020, 8, 24), DaysOfStaying = 7, TotalAmount = (4 * 80 + 20), PaymentDate = new DateTime(2020, 9, 12), TotalFees = (4 * 80 + 20) / 10 };
+            Reservation r60 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 10, 24), TotalFees = (6 * 60 + 20) / 10 };
+            Reservation r60b = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 3, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r60c = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 18, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 8, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r70 = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 18, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 5, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r70b = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
+            Reservation r70c = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 6, 4), TotalFees = (10 * 50 + 10) / 10 };
+            Reservation r80 = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (5 * 50 + 10) / 10 };
+            Reservation r80b = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 7, 12), TotalFees = (11 * 60 + 15) / 10 };
+            Reservation r80c = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 6, 17), TotalFees = (7 * 60 + 15) / 10 };
+            Reservation r90 = new Reservation() { CheckInDate = new DateTime(2020, 8, 11), CheckOutDate = new DateTime(2020, 8, 25), DaysOfStaying = 14, TotalAmount = (14 * 60 + 15), PaymentDate = new DateTime(2020, 3, 3), TotalFees = (14 * 60 + 15) / 10 };
+            Reservation r90a = new Reservation() { CheckInDate = new DateTime(2020, 8, 21), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 9, TotalAmount = (9 * 250 + 40), PaymentDate = new DateTime(2020, 5, 25), TotalFees = (9 * 250 + 40) / 10 };
+            Reservation r90b = new Reservation() { CheckInDate = new DateTime(2020, 6, 7), CheckOutDate = new DateTime(2020, 6, 10), DaysOfStaying = 3, TotalAmount = (3 * 250 + 40), PaymentDate = new DateTime(2020, 4, 12), TotalFees = (3 * 250 + 40) / 10 };
+            Reservation r90c = new Reservation() { CheckInDate = new DateTime(2020, 7, 17), CheckOutDate = new DateTime(2020, 7, 30), DaysOfStaying = 13, TotalAmount = (13 * 250 + 40), PaymentDate = new DateTime(2020, 6, 14), TotalFees = (13 * 250 + 40) / 10 };
+            Reservation r100 = new Reservation() { CheckInDate = new DateTime(2020, 6, 19), CheckOutDate = new DateTime(2020, 6, 25), DaysOfStaying = 6, TotalAmount = (6 * 50 + 20), PaymentDate = new DateTime(2020, 6, 10), TotalFees = (6 * 50 + 20) / 10 };
+            Reservation r100b = new Reservation() { CheckInDate = new DateTime(2020, 6, 5), CheckOutDate = new DateTime(2020, 6, 6), DaysOfStaying = 1, TotalAmount = (3 * 50 + 20), PaymentDate = new DateTime(2020, 8, 5), TotalFees = (3 * 50 + 20) / 10 };
+            Reservation r100c = new Reservation() { CheckInDate = new DateTime(2020, 8, 28), CheckOutDate = new DateTime(2020, 8, 30), DaysOfStaying = 2, TotalAmount = (7 * 50 + 20), PaymentDate = new DateTime(2020, 8, 10), TotalFees = (7 * 50 + 20) / 10 };
+            Reservation r110 = new Reservation() { CheckInDate = new DateTime(2020, 7, 13), CheckOutDate = new DateTime(2020, 7, 21), DaysOfStaying = 8, TotalAmount = (8 * 80 + 20), PaymentDate = new DateTime(2020, 9, 9), TotalFees = (8 * 80 + 20) / 10 };
+            Reservation r110b = new Reservation() { CheckInDate = new DateTime(2020, 8, 2), CheckOutDate = new DateTime(2020, 8, 17), DaysOfStaying = 15, TotalAmount = (14 * 80 + 20), PaymentDate = new DateTime(2020, 7, 14), TotalFees = (14 * 80 + 20) / 10 };
+            Reservation r110c = new Reservation() { CheckInDate = new DateTime(2020, 8, 17), CheckOutDate = new DateTime(2020, 8, 24), DaysOfStaying = 7, TotalAmount = (4 * 80 + 20), PaymentDate = new DateTime(2020, 12, 12), TotalFees = (4 * 80 + 20) / 10 };
+            Reservation r210 = new Reservation() { CheckInDate = new DateTime(2020, 6, 3), CheckOutDate = new DateTime(2020, 6, 15), DaysOfStaying = 12, TotalAmount = (6 * 60 + 20), PaymentDate = new DateTime(2020, 10, 24), TotalFees = (6 * 60 + 20) / 10 };
+            Reservation r210b = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 16, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 11, 27), TotalFees = (8 * 70 + 20) / 10 };
+            Reservation r210c = new Reservation() { CheckInDate = new DateTime(2020, 7, 9), CheckOutDate = new DateTime(2020, 7, 25), DaysOfStaying = 18, TotalAmount = (8 * 70 + 20), PaymentDate = new DateTime(2020, 12, 27), TotalFees = (8 * 70 + 20) / 10 };
 
             //Reservation r9 = new Reservation() { CheckInDate = new DateTime(2020, 6, 1), CheckOutDate = new DateTime(2020, 6, 5), DaysOfStaying = 4, TotalAmount = (4 * 50 + 10), PaymentDate = new DateTime(2020, 5, 4), TotalFees = (4 * 50 + 10) / 10 };
             //Reservation r9b = new Reservation() { CheckInDate = new DateTime(2020, 7, 5), CheckOutDate = new DateTime(2020, 7, 15), DaysOfStaying = 10, TotalAmount = (10 * 50 + 10), PaymentDate = new DateTime(2020, 3, 4), TotalFees = (10 * 50 + 10) / 10 };
             //Reservation r9c = new Reservation() { CheckInDate = new DateTime(2020, 8, 1), CheckOutDate = new DateTime(2020, 8, 6), DaysOfStaying = 5, TotalAmount = (5 * 50 + 10), PaymentDate = new DateTime(2020, 4, 4), TotalFees = (5 * 50 + 10) / 10 };
             //Reservation r10 = new Reservation() { CheckInDate = new DateTime(2020, 7, 11), CheckOutDate = new DateTime(2020, 7, 22), DaysOfStaying = 11, TotalAmount = (11 * 60 + 15), PaymentDate = new DateTime(2020, 10, 12), TotalFees = (11 * 60 + 15) / 10 };
             //Reservation r10b = new Reservation() { CheckInDate = new DateTime(2020, 8, 3), CheckOutDate = new DateTime(2020, 8, 20), DaysOfStaying = 17, TotalAmount = (7 * 60 + 15), PaymentDate = new DateTime(2020, 6, 17), TotalFees = (7 * 60 + 15) / 10 };
-          
+
             //================= Seeding Reviews =================
             //Review template = new Review() { Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6),  Comment = "ola teleia" };
             Review rev1 = new Review() { Identifier = 1, Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6), Comment = "ola teleia" };
@@ -256,8 +292,8 @@
             Review rev91 = new Review() { Identifier = 20, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 3, Value = 3, SubDate = new DateTime(2020, 3, 9), Comment = "Could be better" };
             Review rev10 = new Review() { Identifier = 21, Accuracy = 2, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 10, 23), Comment = "Bad communication" };
             Review rev100 = new Review() { Identifier = 22, Accuracy = 5, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 7, 11), Comment = "Perfect Choice" };
-            Review rev101 = new Review() { Identifier = 23, Accuracy = 4, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 12, 28), Comment = "Awesome" };
-            Review rev11 = new Review() { Identifier = 24, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 12, 31), Comment = "Unbelievable experience" };
+            Review rev101 = new Review() { Identifier = 23, Accuracy = 4, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 2, 28), Comment = "Awesome" };
+            Review rev11 = new Review() { Identifier = 24, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 6, 30), Comment = "Unbelievable experience" };
             Review rev110 = new Review() { Identifier = 25, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 2, Value = 5, SubDate = new DateTime(2020, 5, 15), Comment = "Difficult to find" };
             Review rev111 = new Review() { Identifier = 26, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 5, Value = 5, SubDate = new DateTime(2020, 9, 2), Comment = "Super" };
             Review rev12 = new Review() { Identifier = 27, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 4, 27), Comment = "Superb" };
@@ -265,8 +301,8 @@
             Review rev121 = new Review() { Identifier = 29, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 6, 7), Comment = "Πεντακάθαρο" };
             Review rev13 = new Review() { Identifier = 30, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 5, Value = 1, SubDate = new DateTime(2020, 5, 25), Comment = "Πολυ ακριβό" };
             Review rev130 = new Review() { Identifier = 31, Accuracy = 2, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 3, 20), Comment = "Μικρο μπανιο" };
-            Review rev131 = new Review() { Identifier = 32, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 11, 22), Comment = "Πολυ καλη φιλοξενια" };
-            Review rev14 = new Review() { Identifier = 33, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 12, 30), Comment = "Perfect" };
+            Review rev131 = new Review() { Identifier = 32, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 6, 22), Comment = "Πολυ καλη φιλοξενια" };
+            Review rev14 = new Review() { Identifier = 33, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 2, 20), Comment = "Perfect" };
             Review rev15 = new Review() { Identifier = 34, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 7, 28), Comment = "Excellent" };
 
             Review rev16 = new Review() { Identifier = 35, Accuracy = 5, Checkin = 4, Cleanliness = 5, Location = 4, Value = 5, SubDate = new DateTime(2020, 6, 6), Comment = "ola teleia" };
@@ -275,14 +311,14 @@
             Review rev17 = new Review() { Identifier = 38, Accuracy = 2, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 7, 23), Comment = "Bad communication" };
             Review rev170 = new Review() { Identifier = 39, Accuracy = 5, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 4, 11), Comment = "Perfect Choice" };
             Review rev171 = new Review() { Identifier = 40, Accuracy = 4, Checkin = 5, Cleanliness = 4, Location = 4, Value = 5, SubDate = new DateTime(2020, 5, 28), Comment = "Awesome" };
-            Review rev18 = new Review() { Identifier = 41, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 7, 31), Comment = "Unbelievable experience" };
+            Review rev18 = new Review() { Identifier = 41, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 10, 31), Comment = "Unbelievable experience" };
             Review rev180 = new Review() { Identifier = 42, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 2, Value = 5, SubDate = new DateTime(2020, 7, 15), Comment = "Difficult to find" };
             Review rev181 = new Review() { Identifier = 43, Accuracy = 3, Checkin = 4, Cleanliness = 3, Location = 5, Value = 5, SubDate = new DateTime(2020, 9, 2), Comment = "Super" };
-            Review rev19 = new Review() { Identifier = 44, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 8, 27), Comment = "Superb" };
+            Review rev19 = new Review() { Identifier = 44, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 10, 27), Comment = "Superb" };
             Review rev190 = new Review() { Identifier = 45, Accuracy = 4, Checkin = 4, Cleanliness = 5, Location = 5, Value = 4, SubDate = new DateTime(2020, 9, 10), Comment = "Η καλυτερη επιλογη για Κρητη" };
             Review rev191 = new Review() { Identifier = 46, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 5, 7), Comment = "Πεντακάθαρο" };
             Review rev20 = new Review() { Identifier = 47, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 5, Value = 1, SubDate = new DateTime(2020, 11, 25), Comment = "Πολυ ακριβό" };
-            Review rev21 = new Review() { Identifier = 48, Accuracy = 2, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 12, 20), Comment = "Μικρο μπανιο" };
+            Review rev21 = new Review() { Identifier = 48, Accuracy = 2, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 7, 20), Comment = "Μικρο μπανιο" };
             Review rev22 = new Review() { Identifier = 49, Accuracy = 3, Checkin = 4, Cleanliness = 5, Location = 4, Value = 4, SubDate = new DateTime(2020, 11, 20), Comment = "Πολυ καλη φιλοξενια" };
             Review rev23 = new Review() { Identifier = 50, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 12, 5), Comment = "Perfect" };
             Review rev24 = new Review() { Identifier = 51, Accuracy = 4, Checkin = 5, Cleanliness = 5, Location = 5, Value = 5, SubDate = new DateTime(2020, 5, 28), Comment = "Excellent" };
@@ -296,18 +332,21 @@
 
             //================= Seeding Address =================
             //Address template = new Address() { AddressLine = "", City = "", Counties = CountiesOfGreece.Attica, Countries = Countries.Greece };
-            Address ad1 = new Address() { AddressName = "Ανδρέα Κάλβου", No = "8", ZipCode = "17455", Latitude = "37.9160632", Longitude = "23.7258564", City = "Αθήνα", Area = "Άλιμος" };
-            Address ad2 = new Address() { AddressName = "Αδάμων", No = "21", ZipCode = "14564", Latitude = "38.0918513", Longitude = "23.8019882", City = "Αθήνα", Area = "Κηφισιά" };
-            Address ad3 = new Address() { AddressName = "Δράμας", No = "5", ZipCode = "18648", Latitude = "37.946975", Longitude = "23.623853", City = "Αθήνα", Area = "Μαρούσι" };
-            Address ad4 = new Address() { AddressName = "Αριστοφάνους", No = "21", ZipCode = "16674", Latitude = "37.8742167", Longitude = "23.759905,17", City = "Αθήνα", Area = "Γλυφάδα" };
-            Address ad5 = new Address() { AddressName = "Γυθείου", No = "12", ZipCode = "16342", Latitude = "37.9234159", Longitude = "23.7631328", City = "Αθήνα", Area = "Ηλιούπολη" };
-            Address ad6 = new Address() { AddressName = "Υμηττού", No = "130", ZipCode = "11634", Latitude = "37.9659734", Longitude = "23.7451387", City = "Αθήνα", Area = "Παγκράτι" };
-            Address ad7 = new Address() { AddressName = "Σταδίου", No = "2", ZipCode = "10564", Latitude = "37.976445", Longitude = "23.7323298", City = "Αθήνα", Area = "Κέντρο Αθήνας" };
-            Address ad8 = new Address() { AddressName = "Πανεπιστημίου", No = "12", ZipCode = "10564", Latitude = "37.9778266", Longitude = "23.7332016", City = "Αθήνα", Area = "Κέντρο Αθήνας" };
+            Address ad1 = new Address() { AddressName = "Ανδρέα Κάλβου", No = "10", ZipCode = "17455", Latitude = "37.9161689", Longitude = "23.7281206", City = "Άλιμος", Area = "Αθήνα" };
+            Address ad2 = new Address() { AddressName = "Αδάμων", No = "21", ZipCode = "14564", Latitude = "37.9776277", Longitude = "23.8019882", City = "Κηφισιά", Area = "Αθήνα" };
+            Address ad3 = new Address() { AddressName = "Πανεπιστημίου", No = "10", ZipCode = "10564", Latitude = "37.946975", Longitude = "23.7357912", City = "Αθήνα", Area = "Αθήνα" };
+            Address ad4 = new Address() { AddressName = "Ερμού", No = "101", ZipCode = "10555", Latitude = "37.9768932", Longitude = "23.7243632", City = "Αθήνα", Area = "Κεντρικός Τομέας Αθηνών" };
+            Address ad5 = new Address() { AddressName = "Πλατεία Βαρνάβα", No = "10", ZipCode = "11635", Latitude = "37.9656641", Longitude = "23.7435232", City = "Αθήνα", Area = "Κεντρικός Τομέας Αθηνών" };
+            Address ad6 = new Address() { AddressName = "Υμηττού", No = "130", ZipCode = "11634", Latitude = "37.9659734", Longitude = "23.7451387", City = "Παγκράτι", Area = "Παγκράτι" };
+            Address ad7 = new Address() { AddressName = "Σταδίου", No = "23", ZipCode = "10564", Latitude = "37.9791071", Longitude = "23.7322062", City = "Αθήνα", Area = "Κέντρο Αθήνας" };
+            Address ad8 = new Address() { AddressName = "Πανεπιστημίου", No = "22", ZipCode = "10564", Latitude = "37.9785889", Longitude = "23.7344554", City = "Αθήνα", Area = "Κέντρο Αθήνας" };
             Address ad9 = new Address() { AddressName = "Τσιμισκή", No = "34", ZipCode = "54623", Latitude = "40.6329694", Longitude = "22.9401955", City = "Θεσσαλονίκη", Area = "Κέντρο Θεσσαλονίκη" };
             Address ad10 = new Address() { AddressName = "Εθ.Αντιστάσεως", No = "173", ZipCode = "18648", Latitude = "37.9474722", Longitude = "23.6240855", City = "Πειραιάς", Area = "Δραπετσώνα" };
             Address ad11 = new Address() { AddressName = "Παπαφλεσσα", No = "25", ZipCode = "58768", Latitude = "38.0523321", Longitude = "23.8091868", City = "Πειραιάς", Area = "Δραπετσώνα" };
-            Address ad12 = new Address() { AddressName = "Αριστοτέλους", No = "16", ZipCode = "17455", Latitude = "37.9126442", Longitude = "23.7099781", City = "Αθήνα", Area = "Άλιμος" };
+            Address ad12 = new Address() { AddressName = "Αριστοτέλους", No = "16", ZipCode = "17455", Latitude = "37.9126442", Longitude = "23.7099781", City = "Θεσσαλονίκη", Area = "Θεσσαλονίκη" };
+            Address ad13 = new Address() { AddressName = "Στουρναρη ", No = "44", ZipCode = "10432", Latitude = "37.9881006", Longitude = "23.7272993", City = "Αθήνα", Area = "Κεντρικός Τομέας Αθηνών" };
+            Address ad14 = new Address() { AddressName = "Κάλβου ", No = "20", ZipCode = "11474", Latitude = "37.9924462", Longitude = "23.7441854", City = "Αθήνα", Area = "Αθήνα" };
+
 
 
             #region SEEDPHOTOS
@@ -557,7 +596,7 @@
             #endregion
 
             //================Create Relations ==================
-            
+
 
             p1.Amenities = a1;
             p2.Amenities = a2;
@@ -604,19 +643,19 @@
             p2.Address = ad2;
             p3.Address = ad3;
             p4.Address = ad5;
-            p5.Address = ad11;
+            p5.Address = ad4;
             p6.Address = ad6;
             p7.Address = ad7;
             p8.Address = ad8;
-            p9.Address = ad9;
-            p10.Address = ad10;
+            p9.Address = ad13;
+            p10.Address = ad9;
             p11.Address = ad11;
             p12.Address = ad1;
             p13.Address = ad2;
             p14.Address = ad3;
             p15.Address = ad5;
             p16.Address = ad6;
-            p17.Address = ad7;
+            p17.Address = ad12;
             p18.Address = ad8;
             p19.Address = ad9;
             p20.Address = ad10;
@@ -635,17 +674,17 @@
             p33.Address = ad2;
             p34.Address = ad3;
             p35.Address = ad5;
-            p36.Address = ad6;
-            p37.Address = ad7;
-            p38.Address = ad8;
+            p36.Address = ad7;
+            p37.Address = ad12;
+            p38.Address = ad13;
             p39.Address = ad9;
-            p40.Address = ad10;
+            p40.Address = ad12;
 
             p1.Photos = new List<Photo>() { ph1, ph2, ph3, ph4, ph5 };
             p2.Photos = new List<Photo>() { ph6, ph7, ph8, ph9, ph10 };
             p3.Photos = new List<Photo>() { ph11, ph12, ph13, ph14, ph15 };
             p4.Photos = new List<Photo>() { ph16, ph17, ph18, ph19, ph20 };
-            p5.Photos = new List<Photo>() { ph21, ph22, ph23, ph24, ph25 };
+            p5.Photos = new List<Photo>() { ph46, ph47, ph48, ph49, ph50 };
             p6.Photos = new List<Photo>() { ph26, ph27, ph28, ph29, ph30 };
             p7.Photos = new List<Photo>() { ph31, ph32, ph33, ph34, ph35 };
             p8.Photos = new List<Photo>() { ph36, ph37, ph38, ph39, ph40 };
@@ -685,12 +724,12 @@
             p1.Reviews = new List<Review>() { rev1, rev1b, rev1c };
             p2.Reviews = new List<Review>() { rev2, rev2b, rev2c };
             p3.Reviews = new List<Review>() { rev3, rev3b, rev3c };
-            p4.Reviews = new List<Review>() { rev5, rev5b, rev5c };
+            p4.Reviews = new List<Review>() { rev22 };
             p5.Reviews = new List<Review>() { rev5, rev5b, rev5c };
             p6.Reviews = new List<Review>() { rev6, rev6b, rev6c };
             p7.Reviews = new List<Review>() { rev7 };
             p8.Reviews = new List<Review>() { rev8 };
-           
+
             p9.Reviews = new List<Review>() { rev9 };
             p10.Reviews = new List<Review>() { rev90 };
             p11.Reviews = new List<Review>() { rev91 };
@@ -711,18 +750,18 @@
             p26.Reviews = new List<Review>() { rev16 };
             p27.Reviews = new List<Review>() { rev160 };
             p28.Reviews = new List<Review>() { rev161 };
-            p29.Reviews = new List<Review>() { rev17};
+            p29.Reviews = new List<Review>() { rev17 };
             p30.Reviews = new List<Review>() { rev170 };
             p31.Reviews = new List<Review>() { rev171 };
             p32.Reviews = new List<Review>() { rev18 };
             p33.Reviews = new List<Review>() { rev180 };
             p34.Reviews = new List<Review>() { rev181 };
             p35.Reviews = new List<Review>() { rev19 };
-            p36.Reviews = new List<Review>() { rev190};
+            p36.Reviews = new List<Review>() { rev190 };
             p37.Reviews = new List<Review>() { rev191 };
             p38.Reviews = new List<Review>() { rev20 };
-            p39.Reviews = new List<Review>() { rev21,rev22 };
-            p40.Reviews = new List<Review>() { rev23};
+            p39.Reviews = new List<Review>() { rev21 };
+            p40.Reviews = new List<Review>() { rev23 };
 
 
 
@@ -743,7 +782,7 @@
             rev6c.ApplicationUser = ap3;
             rev7.ApplicationUser = ap1;
             rev8.ApplicationUser = ap2;
-           
+
             rev9.ApplicationUser = ap1;
             rev90.ApplicationUser = ap2;
             rev91.ApplicationUser = ap3;
@@ -798,7 +837,44 @@
             r6c.Place = p6;
             r7.Place = p7;
             r8.Place = p8;
-           
+            r9.Place = p9;
+            r10.Place = p10;
+            r10b.Place = p11;
+            r10c.Place = p12;
+            r20.Place = p13;
+            r20b.Place = p14;
+            r20c.Place = p15;
+            r30.Place = p16;
+            r30b.Place = p17;
+            r30c.Place = p18;
+            r40.Place = p19;
+            r40b.Place = p20;
+            r40c.Place = p21;
+            r50.Place = p22;
+            r50b.Place = p23;
+            r50c.Place = p24;
+            r60.Place = p25;
+            r60b.Place = p26;
+            r60c.Place = p27;
+            r70.Place = p28;
+            r70b.Place = p29;
+            r70c.Place = p30;
+            r80.Place = p31;
+            r80b.Place = p32;
+            r80c.Place = p33;
+            r90.Place = p34;
+            r90a.Place = p35;
+            r90b.Place = p36;
+            r90c.Place = p37;
+            r100.Place = p38;
+            r100b.Place = p39;
+            r100c.Place = p40;
+            r110.Place = p14;
+            r110b.Place = p15;
+            r110c.Place = p20;
+            r210.Place = p21;
+            r210b.Place = p22;
+            r210c.Place = p23;
 
             r1.ApplicationUser = ap1;
             r1b.ApplicationUser = ap2;
@@ -819,39 +895,38 @@
             r8.ApplicationUser = ap2;
 
             context.Reviews.AddOrUpdate(x => x.Identifier, rev1, rev1b, rev1c, rev2, rev2b, rev2c, rev3, rev3b, rev3c, rev5, rev5b, rev5c, rev6, rev6b, rev6c, rev7, rev8, rev9, rev90, rev91,
-            rev10, rev100, rev101, rev11, rev110, rev111, rev12, rev120, rev121, rev13, rev130, rev131, rev14, rev15, rev16,rev160, rev161, rev17,rev170,rev171,rev18,rev180, rev181, rev19, rev190, rev191, rev20, /*rev20b, rev20c,*/ rev21,
-           rev22,rev23,rev24);
-            context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17,                                       
-                                                        a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32,                                       
-                                                        a33, a34, a35, a36, a37, a38, a39, a40);                                                                           
-            context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18,                             
-                                                            p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34,                               
-                                                            p35, p36, p37, p38, p39, p40);                                                                                 
-            context.Reservations.AddOrUpdate(x => x.DaysOfStaying, r1, r1b, r1c, r2, r2b, r2c, r3, r3b, r3c, r5, r5b, r5c, r6, r6b, r6c, r7, r8);                         
-            context.Users.AddOrUpdate(x => x.LastName, ap1, ap2, ap3);                                                                                                    
-            context.Photos.AddOrUpdate(x => x.PhotoId, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19, ph20, ph21 , ph22, ph23, ph24, ph25,
-                                                        ph26, ph27, ph28, ph29, ph30, ph31, ph32, ph33, ph34, ph35, ph36, ph37, ph38,                                     
-                                                        ph39, ph40, ph41, ph42, ph43, ph44, ph45, ph46, ph47, ph48, ph49, ph50, ph51,                                     
-                                                        ph52, ph53, ph54, ph55, ph56, ph57, ph58, ph59, ph60, ph61, ph62, ph63, ph64,                                      
-                                                        ph65, ph66, ph67, ph68, ph69, ph70, ph71, ph72, ph73, ph74, ph75, ph76, ph77,                                     
-                                                        ph78, ph79, ph80, ph81, ph82, ph83, ph84, ph85, ph86, ph87, ph88, ph89, ph90,                                     
-                                                        ph91, ph92, ph93, ph94, ph95, ph96, ph97, ph98, ph99, ph100, ph101, ph102, ph103,                                  
-                                                        ph104, ph105, ph106, ph107, ph108, ph109, ph110, ph111, ph112, ph113, ph114, ph115,                                
+            rev10, rev100, rev101, rev11, rev110, rev111, rev12, rev120, rev121, rev13, rev130, rev131, rev14, rev15, rev16, rev160, rev161, rev17, rev170, rev171, rev18, rev180, rev181, rev19, rev190, rev191, rev20, /*rev20b, rev20c,*/ rev21,
+           rev22, rev23, rev24);
+            context.Amenities.AddOrUpdate(x => x.Count, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17,
+                                                        a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32,
+                                                        a33, a34, a35, a36, a37, a38, a39, a40);
+            context.Places.AddOrUpdate(x => x.ApartmentName, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18,
+                                                            p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34,
+                                                            p35, p36, p37, p38, p39, p40);
+            context.Reservations.AddOrUpdate(x => x.DaysOfStaying, r1, r1b, r1c, r2, r2b, r2c, r3, r3b, r3c, r5, r5b, r5c, r6, r6b, r6c, r7, r8, r9 ,r10, r10b, r10c, r20, r20b, r20c ,r30 ,r30b, r30c, r40, r40b, r40c ,r50 ,r50b ,r50c, r60 ,r60b ,r60c ,r70 ,r70b ,r70c ,r80 ,r80b ,r80c ,r90 ,r90a ,r90b ,r90c, r100, r100b, r100c, r110, r110b, r110c, r210 , r210b, r210c);
+            context.Users.AddOrUpdate(x => x.LastName, ap1, ap2, ap3);
+            context.Photos.AddOrUpdate(x => x.PhotoId, ph1, ph2, ph3, ph4, ph5, ph6, ph7, ph8, ph9, ph10, ph11, ph12, ph13, ph14, ph15, ph16, ph17, ph18, ph19, ph20, ph21, ph22, ph23, ph24, ph25,
+                                                        ph26, ph27, ph28, ph29, ph30, ph31, ph32, ph33, ph34, ph35, ph36, ph37, ph38,
+                                                        ph39, ph40, ph41, ph42, ph43, ph44, ph45, ph46, ph47, ph48, ph49, ph50, ph51,
+                                                        ph52, ph53, ph54, ph55, ph56, ph57, ph58, ph59, ph60, ph61, ph62, ph63, ph64,
+                                                        ph65, ph66, ph67, ph68, ph69, ph70, ph71, ph72, ph73, ph74, ph75, ph76, ph77,
+                                                        ph78, ph79, ph80, ph81, ph82, ph83, ph84, ph85, ph86, ph87, ph88, ph89, ph90,
+                                                        ph91, ph92, ph93, ph94, ph95, ph96, ph97, ph98, ph99, ph100, ph101, ph102, ph103,
+                                                        ph104, ph105, ph106, ph107, ph108, ph109, ph110, ph111, ph112, ph113, ph114, ph115,
                                                         ph116, ph117, ph118, ph119, ph120, ph121, ph122, ph123, ph124, ph125, ph126, ph127,
-                                                        ph128, ph129, ph130, ph131, ph132, ph133, ph134, ph135, ph136, ph137, ph138, ph139,                                
-                                                        ph140, ph141, ph142, ph143, ph144, ph145, ph146, ph147, ph148, ph149, ph150, ph151,                               
-                                                        ph152, ph153, ph154, ph155, ph156, ph157, ph158, ph159, ph160, ph161, ph162, ph163,                               
-                                                        ph164, ph165, ph166, ph167, ph168, ph169, ph170, ph171, ph172, ph173, ph174, ph175,                                
-                                                        ph176, ph177, ph178, ph179, ph180, ph181, ph182, ph183, ph184, ph185, ph186, ph187,                               
-                                                        ph188, ph189, ph190, ph191, ph192, ph193, ph194, ph195, ph196, ph197, ph198, ph199,                               
-                                                        ph200);                                                                                                            
-                                                                                                                                                                          
-                                                                                                                                                                          
-            context.SaveChanges();                                                                                                                                         
-        }                                                                                                                                                                 
-    }                                                                                                                                                                     
-}                                                                                                                                                                          
-                                                                                                                                                                          
-                                                                                                                                                                          
-                                                                                                                                                                           
-                                                                                                                                                                           
+                                                        ph128, ph129, ph130, ph131, ph132, ph133, ph134, ph135, ph136, ph137, ph138, ph139,
+                                                        ph140, ph141, ph142, ph143, ph144, ph145, ph146, ph147, ph148, ph149, ph150, ph151,
+                                                        ph152, ph153, ph154, ph155, ph156, ph157, ph158, ph159, ph160, ph161, ph162, ph163,
+                                                        ph164, ph165, ph166, ph167, ph168, ph169, ph170, ph171, ph172, ph173, ph174, ph175,
+                                                        ph176, ph177, ph178, ph179, ph180, ph181, ph182, ph183, ph184, ph185, ph186, ph187,
+                                                        ph188, ph189, ph190, ph191, ph192, ph193, ph194, ph195, ph196, ph197, ph198, ph199,
+                                                        ph200);
+
+
+            context.SaveChanges();
+        }
+    }
+}
+
+
+
