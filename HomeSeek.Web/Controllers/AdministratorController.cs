@@ -191,10 +191,18 @@ namespace HomeSeek.Web.Controllers
             var reviews = db.Reviews.GetAll();
             var users = db.Users.GetAll();
             var addresses = db.Address.GetAll();
+            var photos = db.Photo.GetAll();
+
+            List<string> photourl = new List<string>();
+            foreach (var place in places)
+            {
+                photourl.Add(place.Photos.Select(x => x.PhotoUrl).FirstOrDefault());
+            }
+            vm.Photos = photourl;
             //  Dictionary<string,decimal> lat = new Dictionary<string,decimal>();
             // Dictionary<string,decimal> longi = new Dictionary<string,decimal>();
-            decimal[] lat = new decimal[11];
-            decimal[] longi = new decimal[11];
+            decimal[] lat = new decimal[addresses.Count()];
+            decimal[] longi = new decimal[addresses.Count()];
             for (int i = 0; i < addresses.Count(); i++)
             {
                 lat[i] = Convert.ToDecimal(addresses[i].Latitude, CultureInfo.InvariantCulture);

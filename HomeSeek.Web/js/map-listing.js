@@ -2,6 +2,7 @@
     "use strict";
     var lat;
     var long;
+    var coord;
     $.ajax({
         url: 'https://localhost:44328/Administrator/statistics',
         method: "GET",
@@ -9,28 +10,32 @@
         data: [],
         success: function (response) {
 
-           
+       
              lat = response.Lat;
              long = response.Long;
-           
+          
         }
     });
-
+    
             function mainMap() {
                 function locationData(locationURL, locationImg, locationTitle, locationAddress, locationCategory, locationStarRating, locationRevievsCounter, locationStatus) {
                     return ('<div class="map-popup-wrap"><div class="map-popup"><div class="infoBox-close"><i class="fal fa-times"></i></div><a href="' + locationURL + '" class="listing-img-content fl-wrap"><div class="infobox-status ' + locationStatus + '">' + locationStatus + '</div><img src="' + locationImg + '" alt=""><div class="card-popup-raining map-card-rainting" data-staRrating="' + locationStarRating + '"><span class="map-popup-reviews-count">( ' + locationRevievsCounter + ' reviews )</span></div></a> <div class="listing-content"><div class="listing-content-item fl-wrap"><div class="map-popup-location-category ' + locationCategory + '"></div><div class="listing-title fl-wrap"><h4><a href=' + locationURL + '>' + locationTitle + '</a></h4><div class="map-popup-location-info"><i class="fas fa-map-marker-alt"></i>' + locationAddress + '</div></div><div class="map-popup-footer"><a href=' + locationURL + ' class="main-link">Details <i class="fal fa-long-arrow-right"></i></a><a href="#" class="infowindow_wishlist-btn"><i class="fal fa-heart"></i></a></div></div></div></div> ')
                 }
                 ////  Map Infoboxes ------------------
+                var locations=[]; 
                
-                var locations = [
+                 for (var i in lat) {
 
-                    [locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[0], long[0], 0, '/images/all/1.jpg'],
-                    [locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[1], long[1], 0, '/images/all/1.jpg'],
-                    [locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[2], long[2], 0, '/images/all/1.jpg'],
-                    [locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[3], long[3], 0, '/images/all/1.jpg'],
-                    [locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[4], long[4], 0, '/images/all/1.jpg'],
 
-                ];
+                     locations.push([locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[i], long[i], 0, '/images/all/1.jpg'])
+                
+                }
+                    //[locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[1], long[1], 0, '/images/all/1.jpg'],
+                    //[locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[2], long[2], 0, '/images/all/1.jpg'],
+                    //[locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[3], long[3], 0, '/images/all/1.jpg'],
+                    //[locationData('listing-single2.html', '/images/all/1.jpg', 'Luxary Resaturant', " 27th Brooklyn New York, USA", 'cafe-cat', "5", "12", "open"), lat[4], long[4], 0, '/images/all/1.jpg'],
+
+              
                 //   Map Infoboxes end ------------------
                 var map = new google.maps.Map(document.getElementById('map-main'), {
                     zoom: 10,
