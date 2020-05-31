@@ -44,6 +44,7 @@ namespace HomeSeek.Web.Models
         public Dictionary<string, decimal> CoordLong { get; set; }
         public decimal[] Lat { get; set; }
         public decimal[] Long { get; set; }
+        public List<string> Photos { get; set; }
 
 
     }
