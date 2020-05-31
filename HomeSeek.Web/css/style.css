@@ -1981,6 +1981,11 @@ section.gray-section .section-separator {
 	font-size: 18px;
 }
 
+.padding-pass {
+	padding-left: 35%;
+	padding-bottom:30%;
+}
+
 .main-register_title {
 	position: absolute;
 	left: 0;

@@ -16,47 +16,57 @@
     <div class="form-group">
         @Html.LabelFor(model => model.PhotoUrl, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <input type="file" name="ImageFile" value="browse" />
+            <input type="file" name="ImageFile" class="form-control-file" value="browse" onchange="readURL(this);" />
+
             @Html.ValidationMessageFor(model => model.PhotoUrl, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.PrimaryPhoto, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(model => model.PrimaryPhoto)
-                @Html.ValidationMessageFor(model => model.PrimaryPhoto, "", new { @class = "text-danger" })
-            </div>
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(model => model.PhotoName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.PhotoName, new { htmlAttributes = new { placeholder = "Όνομα φωτογραφίας", autocomplete = "off", @class = "form-control", @Value=""} })
+            @Html.EditorFor(model => model.PhotoName, new { htmlAttributes = new { placeholder = "Όνομα φωτογραφίας", autocomplete = "off", @class = "form-control", @Value = "" } })
             @Html.ValidationMessageFor(model => model.PhotoName, "", new { @class = "text-danger" })
         </div>
     </div>
-
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Upload Photo" class="btn btn-default" />
+            <img id="blah" src="#" alt="upload-image" class="img-thumbnail " />
         </div>
     </div>
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-10 text-success">
-            @ViewBag.UploadStatus
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Upload Photo" class="btn color2-bg float-btn " />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10 ">
+            <span class="border btn-sm border-success text-success">@ViewBag.UploadStatus</span>
         </div>
     </div>
 </div>
-        }
-
+}
 <a>
 
 
 </a>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-<div>
-    @Html.ActionLink("Συνεχίστε στην κατασκευή του Σπιτιού", "CreatePlace", "Places")
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }</script>
+<div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Συνεχίστε στην κατασκευή του Σπιτιού", "CreatePlace", "Places", new { @class = "control-label col-md-2 float-btn btn border border-primary text-primary" })
+    </div>
 </div>
