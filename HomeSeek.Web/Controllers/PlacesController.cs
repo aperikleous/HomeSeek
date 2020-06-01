@@ -111,12 +111,25 @@ namespace HomeSeek.Web.Controllers
                 totalLocation += review.Location;
                 totalValue += review.Value;
             }
-            ViewBag.AvgOverallRating = Math.Round((overallSumRatingPlace / totalReviews), 1);
-            ViewBag.AvgAccuracy = Math.Round((totalAccuracy / totalReviews), 1);
-            ViewBag.AvgCheckin = Math.Round((totalCheckin / totalReviews), 1);
-            ViewBag.AvgCleanliness = Math.Round((totalCleanliness / totalReviews), 1);
-            ViewBag.AvgLocation = Math.Round((totalLocation / totalReviews), 1);
-            ViewBag.AvgValue = Math.Round((totalValue / totalReviews), 1);
+            if (place.Reviews.Count() == 0)
+            {
+                ViewBag.AvgOverallRating = 0d;
+                ViewBag.AvgAccuracy = 0d;
+                ViewBag.AvgCheckin = 0d;
+                ViewBag.AvgCleanliness = 0d;
+                ViewBag.AvgLocation = 0d;
+                ViewBag.AvgValue = 0d;
+
+            }
+            else
+            {
+                ViewBag.AvgOverallRating = Math.Round((overallSumRatingPlace / totalReviews), 1);
+                ViewBag.AvgAccuracy = Math.Round((totalAccuracy / totalReviews), 1);
+                ViewBag.AvgCheckin = Math.Round((totalCheckin / totalReviews), 1);
+                ViewBag.AvgCleanliness = Math.Round((totalCleanliness / totalReviews), 1);
+                ViewBag.AvgLocation = Math.Round((totalLocation / totalReviews), 1);
+                ViewBag.AvgValue = Math.Round((totalValue / totalReviews), 1);
+            }
             ViewBag.TotalReviews = totalReviews;
             if (place == null)
             {
