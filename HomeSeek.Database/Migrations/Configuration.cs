@@ -305,6 +305,11 @@
             Address ad12 = new Address() { AddressName = "Αριστοτέλους", No = "16", ZipCode = "17455", Latitude = "37.9126442", Longitude = "23.7099781", City = "Θεσσαλονίκη", Area = "Θεσσαλονίκη" };
             Address ad13 = new Address() { AddressName = "Στουρναρη ", No = "44", ZipCode = "10432", Latitude = "37.9881006", Longitude = "23.7272993", City = "Αθήνα", Area = "Κεντρικός Τομέας Αθηνών" };
             Address ad14 = new Address() { AddressName = "Κάλβου ", No = "20", ZipCode = "11474", Latitude = "37.9924462", Longitude = "23.7441854", City = "Αθήνα", Area = "Αθήνα" };
+            Address ad15 = new Address() { AddressName = "Παπάγου ", No = "3", ZipCode = "45221", Latitude = "39.6418187", Longitude = "20.8642248", City = "Ιωάννινα", Area = "Ανατολή" };
+            Address ad16 = new Address() { AddressName = "Φαβιέρου ", No = "11", ZipCode = "26223", Latitude = "38.2543337", Longitude = "21.73996929", City = "Πάτρα", Area = "Αχαΐα" };
+            Address ad17 = new Address() { AddressName = "Καλογερα ", No = "2", ZipCode = "84600", Latitude = "37.4459977", Longitude = "25.3283735", City = "Μύκονος", Area = "Μύκονος" };
+            Address ad18 = new Address() { AddressName = "Ξυλούρη ", No = "29", ZipCode = "71307", Latitude = "35.3290957", Longitude = "25.142856", City = "Ηράκλειο", Area = "Ηράκλειο" };
+            Address ad19 = new Address() { AddressName = "Τσιμισκή ", No = "137", ZipCode = "54621", Latitude = "40.6277854", Longitude = "22.9511839", City = "Θεσσαλονίκη", Area = "Θεσσαλονίκη" };
 
 
             #region SEEDPHOTOS
@@ -851,6 +856,8 @@
             r6c.ApplicationUser = ap3;
             r7.ApplicationUser = ap1;
             r8.ApplicationUser = ap2;
+
+            context.Addresses.AddOrUpdate(x => x.Latitude, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8, ad9, ad10, ad11, ad12, ad13, ad14, ad15, ad16, ad17, ad18, ad19);
 
             context.Reviews.AddOrUpdate(x => x.Identifier, rev1, rev1b, rev1c, rev2, rev2b, rev2c, rev3, rev3b, rev3c, rev5, rev5b, rev5c, rev6, rev6b, rev6c, rev7, rev8, rev9, rev90, rev91,
             rev10, rev100, rev101, rev11, rev110, rev111, rev12, rev120, rev121, rev13, rev130, rev131, rev14, rev15, rev16, rev160, rev161, rev17, rev170, rev171, rev18, rev180, rev181, rev19, rev190, rev191, rev20, /*rev20b, rev20c,*/ rev21,

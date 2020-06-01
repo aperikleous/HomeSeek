@@ -38,7 +38,7 @@
               
                 //   Map Infoboxes end ------------------
                 var map = new google.maps.Map(document.getElementById('map-main'), {
-                    zoom: 10,
+                    zoom: 7,
                     scrollwheel: true,
                     center: new google.maps.LatLng(38.1, 23.82),
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
