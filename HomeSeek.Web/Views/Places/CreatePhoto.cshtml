@@ -1,51 +1,65 @@
 ﻿@model HomeSeek.Entities.Photo
 
 
+<div class="reg-overlay"></div>
+<div class="main-register-holder tabs-act">
+    <div class="main-register fl-wrap">
+        <div class="main-register_title text-center">Upload Photo</div>
+        <div class="tabs-container">
+            <div class="tab">
 
 
-<h2>Upload Photo</h2>
+                @using (Html.BeginForm("CreatePhoto", "Places", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
 
-@using (Html.BeginForm("CreatePhoto", "Places", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PhotoUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <input type="file" name="ImageFile" class="form-control-file" value="browse" onchange="readURL(this);" />
 
-<div class="form-horizontal">
-    <h4>Ανεβάστε φωτογραφίες</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(model => model.PhotoUrl, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <input type="file" name="ImageFile" class="form-control-file" value="browse" onchange="readURL(this);" />
+                                @Html.ValidationMessageFor(model => model.PhotoUrl, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PhotoName, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PhotoName, new { htmlAttributes = new { placeholder = "Όνομα φωτογραφίας", autocomplete = "off", @class = "form-control", @Value = "" } })
+                                @Html.ValidationMessageFor(model => model.PhotoName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <img id="blah" src="#" alt="upload-image" class="img-thumbnail " />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Upload Photo" class="control-label float-btn btn border border-primary text-primary" />
+                            </div>
+                        </div>
 
-            @Html.ValidationMessageFor(model => model.PhotoUrl, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.PhotoName, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.PhotoName, new { htmlAttributes = new { placeholder = "Όνομα φωτογραφίας", autocomplete = "off", @class = "form-control", @Value = "" } })
-            @Html.ValidationMessageFor(model => model.PhotoName, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <img id="blah" src="#" alt="upload-image" class="img-thumbnail " />
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Upload Photo" class="btn color2-bg float-btn " />
-        </div>
-    </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10 ">
+                                <span class="border btn text-success">@ViewBag.UploadStatus</span>
+                            </div>
+                        </div>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10 ">
-            <span class="border btn-sm border-success text-success">@ViewBag.UploadStatus</span>
+                    </div>
+                }
+                <div class="form-group">
+
+                    <div  class="col-md-offset-2 col-md-10 ">
+                        @Html.ActionLink("Next", "CreatePlace", "Places", new { @class = "btn color2-bg float-btn m-5" })
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-}
 <a>
 
 
@@ -65,8 +79,4 @@
             reader.readAsDataURL(input.files[0]);
         }
     }</script>
-<div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            @Html.ActionLink("Συνεχίστε στην κατασκευή του Σπιτιού", "CreatePlace", "Places", new { @class = "control-label col-md-2 float-btn btn border border-primary text-primary" })
-    </div>
-</div>
+

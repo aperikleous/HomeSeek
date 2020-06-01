@@ -40,7 +40,7 @@
                         Price Per Day<span><input type="text" class="btn text-center text-info text-left" value="@ViewBag.PricePerDay" /> </span>
                     </li>
                     <li>
-                        Clean Cost<span><input type="text" class="btn text-center text-info text-left" value="@ViewBag.CleanCost" /> </span>
+                        Clean Cost<span><input type="text" class="btn text-center text-info text-left " value="@ViewBag.CleanCost" /> </span>
                     </li>
                     <li>
                         Payment Date<span>
@@ -57,7 +57,7 @@
         <div class="cart-total color2-bg fl-wrap">
             <span class="cart-total_item_title">Total Cost</span>
             <strong>
-                @Html.EditorFor(model => model.TotalAmount, new { htmlAttributes = new { @class = "btn text-info", @Value = ViewBag.TotalPrice } })
+                @Html.EditorFor(model => model.TotalAmount, new { htmlAttributes = new { @class = "btn text-white", @Value = ViewBag.TotalPrice } })
                 @Html.ValidationMessageFor(model => model.TotalAmount, "", new { @class = "text-danger" })
             </strong>
             @Html.EditorFor(model => model.TotalFees, new { htmlAttributes = new { @Value = ViewBag.DaysOfStaying, @class = "", @readonly = "readonly", hidden = "hidden" } })

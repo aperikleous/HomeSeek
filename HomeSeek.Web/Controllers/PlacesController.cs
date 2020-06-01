@@ -178,7 +178,7 @@ namespace HomeSeek.Web.Controllers
 
                     string path = Path.Combine(Server.MapPath("~/Content/Images"), Path.GetFileName(ImageFile.FileName));
                     ImageFile.SaveAs(path);
-                    ViewBag.UploadStatus = " Η φωτογραφία ανέβηκε επιτυχώς.Μπορείτε να ανεβάσετε και άλλη. Διαφορετικά προχωρήστε στην καταχώρηση του σπιτιού";
+                    ViewBag.UploadStatus = "Photo was uploaded successfully. You can upload another one.";
                     photo.PhotoUrl = "~/Content/Images/" + ImageFile.FileName;
                     db.Photo.Add(photo);
                     db.Complete();

@@ -6,86 +6,95 @@
 }
 
 
+<div class="reg-overlay"></div>
+<div class="main-register-holder tabs-act">
+    <div class="main-register fl-wrap">
+        <div class="main-register_title text-center">Upload Photo</div>
+        <div class="tabs-container">
+            <div class="tab">
+                <div @*style="padding-left:30%; text-align:center;"*@>
 
-<div style="padding-left:30%; text-align:center;">
-
-    <div class="text-left">
-        <h3>Καταχώρησε τη διεύθυνση του ακινήτου</h3>
-        <input id="searchInput" type="text" placeholder="Enter a location" style="width:800px; max-width:800px; height:45px; text-align:left;">
-    </div>
+                    <div class="text-left">
+                        <h3>Enter address of the place</h3>
+                        <input id="searchInput" type="text" placeholder="Enter a location" style="width:500px; max-width:500px; height:45px; text-align:left;">
+                    </div>
 
 
 
 
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div class="form-horizontal">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-horizontal">
 
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.AddressName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.AddressName, new { htmlAttributes = new { placeholder = "Διεύθυνση", autocomplete = "off", @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.AddressName, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.AddressName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.AddressName, new { htmlAttributes = new { placeholder = "Διεύθυνση", autocomplete = "off", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.AddressName, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.No, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.No, new { htmlAttributes = new { placeholder = "Αριθμός", autocomplete = "off", @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.No, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.No, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.No, new { htmlAttributes = new { placeholder = "Αριθμός", autocomplete = "off", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.No, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.ZipCode, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { placeholder = "Ταχυδρομικός κώδικας", autocomplete = "off", @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ZipCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { placeholder = "Ταχυδρομικός κώδικας", autocomplete = "off", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
 
-                </div>
-            </div>
+                                </div>
+                            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Latitude, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { placeholder = "Latitude", autocomplete = "off", @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Latitude, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Latitude, htmlAttributes: new { @class = "control-label col-md-2"})
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { placeholder = "Latitude", autocomplete = "off", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Latitude, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.Longitude, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { placeholder = "Longitude", autocomplete = "off", @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Longitude, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.Area, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Area, new { htmlAttributes = new { placeholder = "Περιοχή", autocomplete = "off", @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Area, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { placeholder = "Πόλη", autocomplete = "off", @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Next" class="btn color2-bg float-btn mb-2" />
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Longitude, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { placeholder = "Longitude", autocomplete = "off", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Longitude, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Area, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.Area, new { htmlAttributes = new { placeholder = "Περιοχή", autocomplete = "off", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Area, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { placeholder = "Πόλη", autocomplete = "off", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Next" class="btn color2-bg float-btn mb-2" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+
                 </div>
             </div>
         </div>
-    }
-
+    </div>
 </div>
 
 

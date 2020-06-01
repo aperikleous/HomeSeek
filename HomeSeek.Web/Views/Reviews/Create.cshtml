@@ -4,89 +4,94 @@
     ViewBag.Title = "Create";
 }
 
-<div class="col-6 center-block">
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
+    <div class="col-5 center-block mt-2">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-horizontal">
-            <h4>Review</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="listsearch-input-item">
-                @Html.LabelFor(model => model.Accuracy, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-6">
-                    @Html.DropDownListFor(model => model.Accuracy, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
-                    @Html.ValidationMessageFor(model => model.Accuracy, "", new { @class = "text-danger" })
+            <div class="cart-details fl-wrap block_box">
+                <div class="cart-total color2-bg fl-wrap mb-3">
+                    <p class="text-white text-center" , style="font-size:1.35rem;"> Do a Review </p>
                 </div>
-            </div>
 
-            <div class="listsearch-input-item">
-                @Html.LabelFor(model => model.Checkin, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-6">
-                    @Html.DropDownListFor(model => model.Checkin, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
-                    @Html.ValidationMessageFor(model => model.Checkin, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="listsearch-input-item">
-                @Html.LabelFor(model => model.Cleanliness, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-6">
-                    @Html.DropDownListFor(model => model.Cleanliness, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
-                    @Html.ValidationMessageFor(model => model.Cleanliness, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="listsearch-input-item">
-                @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-6">
-                    @Html.DropDownListFor(model => model.Location, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
-                    @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="listsearch-input-item">
-                @Html.LabelFor(model => model.Value, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-6">
-                    @Html.DropDownListFor(model => model.Value, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
-                    @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="listsearch-input-item">
-                @Html.LabelFor(model => model.SubDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-6">
-                    @Html.TextBoxFor(model => model.SubDate, new { @class = "text-danger", @Value = ViewBag.SubDate })
-                    @Html.ValidationMessageFor(model => model.SubDate, "", new { @class = "text-danger" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-6">
-                    @Html.TextBox("PlaceId", "PlaceId", new { type = "hidden" })
-                </div>
-            </div>
-            <div class="profile-edit-container fl-wrap block_box">
-                <div class="custom-form">
-                    @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-6">
-                        @Html.TextBoxFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger", @cols = "40", @rows = "3", @placeholder = "Datails" })
+                <div class="justify-content-center">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="listsearch-input-item">
+                        @Html.LabelFor(model => model.Accuracy, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Accuracy, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
+                            @Html.ValidationMessageFor(model => model.Accuracy, "", new { @class = "text-danger" })
+                        </div>
                     </div>
-                </div>
-            </div>
 
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Create" class="btn color2-bg float-btn" />
+                    <div class="listsearch-input-item">
+                        @Html.LabelFor(model => model.Checkin, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Checkin, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
+                            @Html.ValidationMessageFor(model => model.Checkin, "", new { @class = "text-danger" })
+                        </div>
                     </div>
+
+                    <div class="listsearch-input-item">
+                        @Html.LabelFor(model => model.Cleanliness, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Cleanliness, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
+                            @Html.ValidationMessageFor(model => model.Cleanliness, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="listsearch-input-item">
+                        @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Location, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
+                            @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="listsearch-input-item">
+                        @Html.LabelFor(model => model.Value, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Value, Enumerable.Range(1, 5).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "chosen-select no-search-select" })
+                            @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="listsearch-input-item">
+                        @Html.LabelFor(model => model.SubDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.SubDate, new { @class = "text-danger", @Value = ViewBag.SubDate })
+                            @Html.ValidationMessageFor(model => model.SubDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            @Html.TextBox("PlaceId", "PlaceId", new { type = "hidden" })
+                        </div>
+                    </div>
+                    <div class="profile-edit-container fl-wrap block_box">
+                        <div class="custom-form">
+                            @Html.LabelFor(model => model.Comment, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.Comment, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger", @cols = "40", @rows = "3", @placeholder = "Datails" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-total color2-bg fl-wrap">
+                        <span class="cart-total_item_title"></span>
+                        <input type="submit" value="Create" class="btn btn-outline-light" />
+                    </div>
+
                 </div>
             </div>
-    }
-</div>
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+        }
     </div>
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
 
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-    }
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }

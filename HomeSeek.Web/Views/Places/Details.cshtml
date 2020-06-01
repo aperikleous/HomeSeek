@@ -62,9 +62,9 @@
                                     <div class="fl-wrap list-single-header-column  block_box">
                                         <div class="listing-rating-count-wrap single-list-count">
                                             <div class="review-score">
-                                                @ViewBag.AvgOverallRating
+                                                @ViewBag.AvgOverallRating.ToString("0.0")
                                             </div>
-                                            <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((ViewBag.AvgOverallRating),0).ToString("0.0"))"></div>
+                                            <div class="listing-rating card-popup-rainingvis" data-starrating2="@(Math.Round((ViewBag.AvgOverallRating),0))"></div>
                                             <br>
                                             <div class="reviews-count">
                                                 @if (@ViewBag.TotalReviews > 1)
@@ -296,35 +296,42 @@
             <!-- list-single-sidebar -->
             <div class="col-md-4">
                 <!--box-widget-item -->
+
                 <div class="box-widget-item fl-wrap block_box">
-                    <div class="box-widget-item-header">
-                        <h3>Book a Reservation </h3>
+                    <div class="card-header font-weight-light">
+                        <h3 class="my-0 font-weight-normal">Book a Reservation </h3>
                     </div>
                     <div class="box-widget">
                         <div class="box-widget-content">
                             @* ============================================================================================================== *@
 
-                            @using (Html.BeginForm("Create", "Reservations", FormMethod.Get, new { @class = "form-inline" }))
+                            @using (Html.BeginForm("Create", "Reservations", FormMethod.Get, new { @class = "" }))
                             {
-                                <fieldset>
-                                    <div class="form-group mb-2">
-                                        @Html.Hidden("PlaceId", null, new { @class = "form-control" })
-                                    </div>
-                                    <div class="form-group mb-2 d-inline-block">
-                                        <div class="pricerange fl-wrap "><span>Price Per Day: </span> @Model.PricePerDay €</div>
-                                    </div>
+                            <fieldset>
+                                <div class="form-group mb-2">
+                                    @Html.Hidden("PlaceId", null, new { @class = "form-control" })
+                                </div>
+                                <h2 class="card-title pricing-card-title">
+                                    € @Model.PricePerDay
+                                    <small class="text-muted">/ day</small>
+                                </h2>
+                                <h5 class="card-title pricing-card-title">
+                                    € @Model.CleanCost
+                                    <small class="text-muted">clean cost</small>
+                                </h5>
 
-                                    <div class="form-group mb-2 d-inline-block">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
                                         @Html.Label("Check-in", new { @for = "checkin", @class = "font-weight-bold" })
                                         @Html.TextBox("checkin", null, new { type = "date", @class = "form-control", placeholder = "checkin" })
                                     </div>
-                                    <div class="form-group mb-2 d-inline-block">
+                                    <div class="form-group col-md-6">
                                         @Html.Label("Check-out", new { @for = "checkout", @class = "font-weight-bold" })
                                         @Html.TextBox("checkout", null, new { type = "date", @class = "form-control", placeholder = "checkout" })
-                                        <button class="form-control mt-2 book-btn" type="submit">Book Room Now</button>
                                     </div>
-
-                                </fieldset>
+                                    <button class="form-control mt-2 book-btn" type="submit">Book Room Now</button>
+                                </div>
+                            </fieldset>
                             }                        
                         </div>
                     </div>

@@ -258,6 +258,8 @@
     <Content Include="fonts\lg.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\11christopher-jolly-GqbU78bdJFM-unsplash.jpg" />
+    <Content Include="images\11paul-postema-mr0Dp231IEw-unsplash %281%29.jpg" />
     <Content Include="images\all\1.jpg" />
     <Content Include="images\all\59.jpg" />
     <Content Include="images\all\menu\1.jpg" />
@@ -279,6 +281,7 @@
     <Content Include="images\clouds.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\gallery\thumbnail\1.png" />
+    <Content Include="images\hello-lightbulb-YC8qqp50BdA-unsplash.jpg" />
     <Content Include="images\loading.gif" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo2.png" />
